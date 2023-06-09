@@ -2,67 +2,22 @@
 <html>
   <head>
     <title>Website with Navigable Tabs</title>
-    <style>
-      #findSeal {
-        border: none;
-        background-color: lightblue;
-        border-radius: 4px;
-      }
-      #MonkSeal {
-        font-size: 16px;
-        margin-left: 60px;
-        width: 110px;
-        font-weight: bold;
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      }
-      ul {
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 60px;
-        list-style-type: none;
-
-        overflow: hidden;
-        background-color: white;
-        border-bottom: 3px solid lightblue;
-      }
-
-      li {
-        padding-bottom: 5px;
-        font-size: 14px;
-        float: left;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
-      }
-
-      li a {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      /* Change the link color to #111 (black) on hover */
-      li a:hover {
-        background-color: lightblue;
-      }
-      .active {
-        background-color: #04aa6d;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mainStyle.css" />
   </head>
   <body>
-    <ul>
-      <li id="MonkSeal">Hawaiian Monk Seal</li>
-      <li><a href="Screens/home.html">HOME</a></li>
-      <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
-      <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
-      <li><a href="Screens/aboutUs.html">ABOUT US</a></li>
-      <li style="float: right"><button id="findSeal">Find A Seal</button></li>
-    </ul>
+    
+      <ul>
+        <div id="wrapper">
+        <li id="MonkSeal">Hawaiian Monk Seal</li>
+        <li><a href="Screens/home.html">HOME</a></li>
+        <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
+        <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
+        <li><a href="Screens/aboutUs.html">ABOUT US</a></li>
+        <li><button id="findSeal">Find Seals</button></li>
+        </div>
+      </ul>
+    
     <script type="text/javascript"></script>
   </body>
 </html>
