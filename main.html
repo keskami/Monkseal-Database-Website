@@ -1,90 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Website with Navigable Tabs</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .sidebar {
-      background-color: #333;
-      color: #fff;
-      width: 250px;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-      top: 0;
-      transition: width 0.3s;
-    }
-
-    .content {
-      margin-left: 250px;
-      padding: 20px;
-    }
-
-    .menu-item {
-      padding: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .menu-item:hover {
-      background-color: #555;
-    }
-
-    .active {
-      background-color: #555;
-    }
-
-    @media (max-width: 568px) {
-      .sidebar {
-        width: 0;
+  <head>
+    <title>Website with Navigable Tabs</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
       }
 
-      .content {
-        margin-left: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="sidebar" id="sidebar">
-    <div class="menu-item" onclick="changeTab(0)">Menu</div>
-    <div class="menu-item" onclick="changeTab(1)">Monk Seals</div>
-    <div class="menu-item" onclick="changeTab(2)">Resources</div>
-    <div class="menu-item" onclick="changeTab(3)">About Us</div>
-  </div>
-
-  <div class="content">
-    <h1 id="tab-title">Menu</h1>
-    <p id="tab-content">This is the content for the Menu tab.</p>
-  </div>
-
-  <script>
-    function changeTab(tabIndex) {
-      var titles = ["Menu", "Monk Seals", "Resources", "About Us"];
-      var contents = [
-        "This is the content for the Menu tab.",
-        "This is the content for the Monk Seals tab.",
-        "This is the content for the Resources tab.",
-        "This is the content for the About Us tab."
-      ];
-
-      var titleElement = document.getElementById("tab-title");
-      var contentElement = document.getElementById("tab-content");
-      var menuItems = document.getElementsByClassName("menu-item");
-
-      for (var i = 0; i < menuItems.length; i++) {
-        menuItems[i].classList.remove("active"); // remove the current screen from view
+      li {
+        float: left;
       }
 
-      titleElement.textContent = titles[tabIndex];
-      contentElement.textContent = contents[tabIndex];
-      menuItems[tabIndex].classList.add("active"); // add selected screen to the view
-    }
-  </script>
-</body>
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li {
+        border-right: 1px solid #bbb;
+      }
+
+      li:last-child {
+        border-right: none;
+        border-left: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #111;
+      }
+      .active {
+        background-color: #04aa6d;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="Screens/home.html">Home</a></li>
+      <li><a href="Screens/learnMore.html">Learn More</a></li>
+      <li><a href="Screens/oceanActivities.html">Ocean Activities</a></li>
+      <li><a href="Screens/aboutUs.html">About Us</a></li>
+    </ul>
+    <script type = "text/javascript">
+
+    </script>
+  </body>
 </html>
