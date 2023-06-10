@@ -117,6 +117,7 @@ li a:hover {
     display: none;
   }
   #MonkSeal {
+    width: 190px;
     text-align: center;
     display: block;
     font-size: 15px;
@@ -168,7 +169,7 @@ li a:hover {
     display: none;
   }
   #MonkSeal {
-    width: 90px;
+    width: 100px;
     text-align: center;
     display: block;
     font-size: 17px;
