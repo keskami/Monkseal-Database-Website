@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 .img-monk{
     display: block;
     width: calc(100vw - 45px);
@@ -23,6 +24,7 @@ progress {
     margin-right: auto;
     margin-top: 22px;
     margin-bottom: 20px;
+
   }
   progress::-webkit-progress-bar {
     border: 1.5px solid #555;
@@ -36,22 +38,27 @@ progress {
   }
 
   .question{
-    text-align: left;
-    padding-left: 20px;
+    margin-right: 300px;
     font-family: NimbusBold;
-    font-size:  10vw;    
+    font-size:  8.5vw; 
+   
     color:rgb(37, 150, 190);
   }
 
   .description{
-    text-align: left;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+
     font-family: MontserratLight;
-    font-size:  4.5vw;    
+    font-size:  3.2vw;    
     color:rgb(30, 30, 30);
+
   }
+
+  .allText{
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 23px;
+  }
+
 
   button{
     display: block;
@@ -67,7 +74,29 @@ progress {
     color: rgb(37, 150, 190);;
     font-size: 6vw;
     font-family: MontserratLight;
+
     
+  }
+
+  @media only screen and (min-width: 700px) {
+    .img-monk{
+        width: 650px;
+    }
+    progress {
+        width: 650px;
+    }
+    button{
+        width: 650px;
+    }
+    .allText{
+        margin-left: calc(((100vw - 655px) / 2));
+    }
+    .question{
+        font-size: 60px;
+    }
+    .description{
+        font-size: 22px;
+    }
   }
 
   @font-face {
