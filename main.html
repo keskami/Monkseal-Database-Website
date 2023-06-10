@@ -4,20 +4,53 @@
     <title>Website with Navigable Tabs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="mainStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    
-      <ul>
-        <div id="wrapper">
+    <ul class="topnav">
+      <li id="MonkSeal">Hawaiian Monk Seal</li>
+      <li class="right">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+      <li class="right"id="reportNumber">Report a sighting <b>(888) 256-9840</b></li>
+    </ul>
+
+    <div id="myLinks">
+      <ul id="verticalMenu">
+        <li><a href="Screens/home.html">HOME</a></li>
+        <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
+        <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
+        <li><a href="Screens/aboutUs.html">ABOUT US</a></li>
+        <li><button id="findSeal">Find Seals</button></li>
+      </ul>
+    </div>
+
+    <ul id="tabletUL">
+      <div id="wrapper">
         <li id="MonkSeal">Hawaiian Monk Seal</li>
         <li><a href="Screens/home.html">HOME</a></li>
         <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
         <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
         <li><a href="Screens/aboutUs.html">ABOUT US</a></li>
         <li><button id="findSeal">Find Seals</button></li>
-        </div>
-      </ul>
-    
-    <script type="text/javascript"></script>
+        <li class="right"id="reportNumber">Report a sighting <b>(888) 256-9840</b></li>
+      </div>
+    </ul>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
