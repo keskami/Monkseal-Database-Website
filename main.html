@@ -11,37 +11,37 @@
   </head>
   <body>
     <div class="topnav">
-      <li id="MonkSeal">Hawaiian Monk Seal</li>
+      <li id="MonkSeal">Hawaiian <br> Monk Seal</li>
       <li class="right">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </li>
       <li class="right" id="reportNumber">
-        <p>Report a sighting <br> (888) 256-9840</p>
+        Report a sighting <br> <b>(888) 256-9840</b>
       </li>
     </div>
 
-    <div>
-      <ul id="verticalMenu">
+    <div id="verticalMenu">
+      <ul >
         <li><a href="Screens/home.html">HOME</a></li>
         <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
         <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
-        <li><a href="Screens/aboutUs.html">ABOUT US</a></li>
+        <li><a href="Screens/aboutUs.html">ABOUT</a></li>
         <li><button id="findSeal">Find Seals</button></li>
       </ul>
     </div>
     <ul id="tabletUL">
     <div id="wrapper">
       
-        <li id="MonkSeal">Hawaiian Monk Seal</li>
+        <li id="MonkSeal">Hawaiian <br> Monk Seal</li>
         <li><a href="Screens/home.html">HOME</a></li>
         <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
         <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
-        <li><a href="Screens/aboutUs.html">ABOUT US</a></li>
+        <li><a href="Screens/aboutUs.html">ABOUT</a></li>
         <li><button id="findSeal">Find Seals</button></li>
         <li class="right" id="reportNumber">
-          Report a sighting <b>(888) 256-9840</b>
+          Report a sighting <br> <b>(888) 256-9840</b>
         </li>
       
     </div>
@@ -49,10 +49,15 @@
     <script type="text/javascript">
       function myFunction() {
         var x = document.getElementById("verticalMenu");
-        if (x.style.display === "block") {
-          x.style.display = "none";
+        if (x.style.visibility === "visible") {
+          x.style.visibility = "hidden";
+          x.style.opacity = "0";
+          x.style.height = "0";
         } else {
-          x.style.display = "block";
+          x.style.visibility = "visible";
+          x.style.opacity = "1";
+          x.style.height = "350px"
+
         }
       }
     </script>

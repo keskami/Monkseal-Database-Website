@@ -39,13 +39,16 @@
 }
 
 #verticalMenu {
+    
   text-align: center;
   background-color: #dddddd;
-  display: block;
   color: blue;
   font-size: 20px;
   list-style-type: none;
   border: 1px solid black;
+  visibility: hidden;
+  transition: opacity 0.75s, visibility 0.75s, height 0.75s;
+  height: 0;
 }
 
 li {
