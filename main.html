@@ -10,17 +10,19 @@
     />
   </head>
   <body>
-    <ul class="topnav">
+    <div class="topnav">
       <li id="MonkSeal">Hawaiian Monk Seal</li>
       <li class="right">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </li>
-      <li class="right"id="reportNumber">Report a sighting <b>(888) 256-9840</b></li>
-    </ul>
+      <li class="right" id="reportNumber">
+        <p>Report a sighting <br> (888) 256-9840</p>
+      </li>
+    </div>
 
-    <div id="myLinks">
+    <div>
       <ul id="verticalMenu">
         <li><a href="Screens/home.html">HOME</a></li>
         <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
@@ -29,22 +31,24 @@
         <li><button id="findSeal">Find Seals</button></li>
       </ul>
     </div>
-
     <ul id="tabletUL">
-      <div id="wrapper">
+    <div id="wrapper">
+      
         <li id="MonkSeal">Hawaiian Monk Seal</li>
         <li><a href="Screens/home.html">HOME</a></li>
         <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
         <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
         <li><a href="Screens/aboutUs.html">ABOUT US</a></li>
         <li><button id="findSeal">Find Seals</button></li>
-        <li class="right"id="reportNumber">Report a sighting <b>(888) 256-9840</b></li>
-      </div>
-    </ul>
-
+        <li class="right" id="reportNumber">
+          Report a sighting <b>(888) 256-9840</b>
+        </li>
+      
+    </div>
+  </ul>
     <script type="text/javascript">
       function myFunction() {
-        var x = document.getElementById("myLinks");
+        var x = document.getElementById("verticalMenu");
         if (x.style.display === "block") {
           x.style.display = "none";
         } else {

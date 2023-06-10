@@ -18,14 +18,13 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-
 #reportNumber {
   width: 100px;
-  padding: 20px;
+  padding: 18px;
   text-align: center;
 }
-.right{
-    float:right;
+.right {
+  float: right;
 }
 
 #wrapper {
@@ -40,16 +39,13 @@
 }
 
 #verticalMenu {
-  margin-top: 60px;
   text-align: center;
   background-color: #dddddd;
   display: block;
   color: blue;
-  padding: 12px;
-  text-decoration: none;
   font-size: 20px;
   list-style-type: none;
-  border-bottom: 3px solid lightblue;
+  border: 1px solid black;
 }
 
 li {
@@ -63,20 +59,21 @@ li a {
   color: black;
   text-align: center;
   text-decoration: none;
+  padding: 10px;
 }
 
-/* Change the link color to #111 (black) on hover */
+/* Change the link color to #111 (lightblue) on hover */
 li a:hover {
   background-color: lightblue;
 }
 
 .topnav {
-  width: 100%;
-  height: 40%;
   margin-top: 40px;
   list-style-type: none;
   background-color: white;
   border-bottom: 3px solid lightblue;
+  display: inline-block;
+  width: 100%;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -87,28 +84,26 @@ li a:hover {
 /* Style navigation menu links */
 .topnav a {
   color: black;
-  padding: 14px 16px;
-  text-decoration: none;
   font-size: 17px;
   display: block;
 }
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: white;
   display: block;
+  padding: 10px;
 }
 
 /* Add a grey background color on mouse-over */
 
 @media only screen and (min-width: 768px) {
-    #reportNumber {
-        width: 250px;
-        padding: 20px;
-        text-align: center;
-      }
-  #tabletUL {
-    display: block;
+  #reportNumber {
+    width:170px;
+    padding: 20px;
+    text-align: center;
+  }
+  #wrapper{
+    width:90%;
   }
   .topnav {
     display: none;
@@ -117,25 +112,21 @@ li a:hover {
     display: none;
   }
   #MonkSeal {
-    width: 190px;
+    width: 120px;
     text-align: center;
     display: block;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
   li {
-    font-size: 15px;
-    padding: 14px 20px;
+    font-size: 13px;
+    padding: 14px 15px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
   }
-  #wrapper {
-    width: 730px;
-  }
   #tabletUL {
-    height: 40%;
     margin-top: 60px;
     list-style-type: none;
     background-color: white;
@@ -145,7 +136,7 @@ li a:hover {
     align-items: center;
   }
   #findSeal {
-    font-size: 15px;
+    font-size: 13px;
     padding: 6px;
     border: none;
     background-color: lightblue;
@@ -154,11 +145,10 @@ li a:hover {
 }
 
 @media only screen and (min-width: 1000px) {
-    #reportNumber {
-        width: 150px;
-        padding: 20px;
-        text-align: center;
-      }
+  #reportNumber {
+    padding: 20px;
+    text-align: center;
+  }
   #tabletUL {
     display: block;
   }
@@ -169,16 +159,15 @@ li a:hover {
     display: none;
   }
   #MonkSeal {
-    width: 100px;
     text-align: center;
     display: block;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
   li {
-    font-size: 16px;
+    font-size: 14px;
     padding: 14px 20px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
@@ -197,7 +186,7 @@ li a:hover {
     align-items: center;
   }
   #findSeal {
-    font-size: 16px;
+    font-size: 14px;
     padding: 6px;
     border: none;
     background-color: lightblue;
