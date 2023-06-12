@@ -2,12 +2,6 @@
   margin: 0;
   padding: 0;
 }
-#findSeal {
-  padding: 6px;
-  border: none;
-  background-color: lightblue;
-  border-radius: 4px;
-}
 #MonkSeal {
   float: left;
   width: 100px;
@@ -71,7 +65,7 @@ li a:hover {
 }
 
 .topnav {
-  margin-top: 40px;
+  padding-top: 40px;
   list-style-type: none;
   background-color: white;
   border-bottom: 3px solid lightblue;
@@ -95,6 +89,18 @@ li a:hover {
 .topnav a.icon {
   display: block;
   padding: 10px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 /* Add a grey background color on mouse-over */
@@ -130,7 +136,7 @@ li a:hover {
       sans-serif;
   }
   #tabletUL {
-    margin-top: 60px;
+    padding-top: 55px;
     list-style-type: none;
     background-color: white;
     border-bottom: 3px solid lightblue;
@@ -138,13 +144,7 @@ li a:hover {
     justify-content: center;
     align-items: center;
   }
-  #findSeal {
-    font-size: 13px;
-    padding: 6px;
-    border: none;
-    background-color: lightblue;
-    border-radius: 4px;
-  }
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -179,20 +179,12 @@ li a:hover {
     width: 900px;
   }
   #tabletUL {
-    height: 40%;
-    margin-top: 50px;
+    padding-top: 50px;
     list-style-type: none;
     background-color: white;
     border-bottom: 3px solid lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  #findSeal {
-    font-size: 14px;
-    padding: 6px;
-    border: none;
-    background-color: lightblue;
-    border-radius: 4px;
   }
 }

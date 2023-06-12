@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/mainStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="iphoneMenu">
+      <div class="topnav">
+        <li id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </li>
+        <li class="right">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
+        <li class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </li>
+      </div>
+
+      <div id="verticalMenu">
+        <ul>
+          <li><a href="/main.html">HOME</a></li>
+          <li><a href="learnMore.html">LEARN MORE</a></li>
+          <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+          <li><a href="aboutUs.html">ABOUT</a></li>
+          <li><a href="findSeals.html">FIND A SEAL</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul id="tabletUL">
+      <div id="wrapper">
+        <li id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </li>
+        <li><a href="/main.html">HOME</a></li>
+        <li><a href="learnMore.html">LEARN MORE</a></li>
+        <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+        <li><a href="aboutUs.html">ABOUT</a></li>
+        <li><a href="findSeals.html">FIND A SEAL</a></li>
+        <li class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </li>
+      </div>
+    </ul>
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("verticalMenu");
+        if (x.style.visibility === "visible") {
+          x.style.visibility = "hidden";
+          x.style.opacity = "0";
+          x.style.height = "0";
+        } else {
+          x.style.visibility = "visible";
+          x.style.opacity = "1";
+          x.style.height = "350px";
+        }
+      }
+
+      window.onscroll = function () {
+        menuIphoneScroll();
+      };
+
+      // Get the navbar
+      var navbar = document.getElementById("iphoneMenu");
+      var navbar2 = document.getElementById("tabletUL");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      var sticky2 = navbar2.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function menuIphoneScroll() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+
+        if (window.pageYOffset >= sticky2) {
+          navbar2.classList.add("sticky");
+        } else {
+          navbar2.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
