@@ -33,8 +33,8 @@
 }
 
 #verticalMenu {
-  position:absolute;
-  width:99.5%;
+  position: absolute;
+  width: 99.5%;
   text-align: center;
   background-color: #dddddd;
   color: blue;
@@ -48,7 +48,7 @@
 
 li {
   font-size: 13px;
-  padding: 14px 16px;
+  padding: 10px 16px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -58,6 +58,14 @@ li a {
   text-align: center;
   text-decoration: none;
   padding: 10px;
+}
+
+.bottomNav {
+  list-style-type: none;
+  color: white;
+  padding: 0;
+  float: left;
+  font-size: 14px;
 }
 
 /* Change the link color to #111 (lightblue) on hover */
@@ -98,38 +106,140 @@ img {
   margin-right: auto;
   width: 80%;
 }
-#sealName{
-  float:left;
+#sealName {
+  float: left;
   margin-left: 10%;
-  margin-top: 5%
+  margin-top: 5%;
 }
 #sealID {
-  float:right;
+  float: right;
   margin-right: 30%;
-  margin-top: 5%
+  margin-top: 5%;
 }
-#sealIdentity{
-  border-bottom: 1px solid black;
-  overflow:hidden;
-  padding-bottom: 3%;
+#sealIdentity {
+  overflow: hidden;
+  padding-bottom: 5px;
 }
-#sealInfo{
+#sealInfo {
   padding: 4% 5% 0 5%;
-    padding-bottom: 3%;
+  padding-bottom: 3%;
 }
 
 #sealInfo p {
   padding-right: 40px;
 }
 
+#firstMenuSection {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 20px 0 20px 0;
+}
 
+.menuSection {
+  border-bottom: 1px solid black;
+  padding: 30px 0 30px 0;
+}
+
+#learn {
+  text-align: center;
+  padding: 30px 0 30px 0;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+}
+
+#tagNumber {
+  float: left;
+  padding-bottom: 20px;
+}
+
+#buttonContainer {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#button {
+  padding: 7px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  background-color: #008ed6;
+  color: white;
+  border: none;
+}
+
+#lightBlueSection {
+  border-top: 1px solid black;
+  padding: 50px 0px 30px 0px;
+  text-align: center;
+  background-color: #008ed6;
+}
+
+#h2White {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+}
+
+#logoImgContainer {
+  display: inline-block;
+}
+
+#noaaImg {
+  float: left;
+  width: 35%;
+  padding: 35px 0 0 0;
+  margin-left: 35px;
+}
+
+#mmcImg {
+  float: right;
+  width: 35%;
+  padding-top: 20px;
+  margin-right: 35px;
+}
+
+#darkBlueSection {
+  padding: 30px 10px 50px 10px;
+  background-color: #080870;
+  display: flex;
+}
+
+#smallNavMenu {
+  list-style-type: none;
+  border-right: 1px solid white;
+  width: 40%;
+  float: left;
+}
+
+#socialContainer {
+  float: right;
+  width: 30%;
+  padding: 0 10px 0 40px;
+  border-right: 1px solid white;
+}
+
+#social {
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#facebook {
+  background-color: #080870;
+  border: none;
+  width: 30%;
+}
+
+#instagram {
+  background-color: #080870;
+  border: none;
+  width: 30%;
+}
 
 /* Add a grey background color on mouse-over */
 
 @media only screen and (min-width: 768px) {
   #reportNumber {
-  
-    float:right;
+    float: right;
     text-align: center;
   }
 
@@ -140,7 +250,6 @@ img {
     display: none;
   }
   #MonkSeal {
-
     text-align: center;
     display: block;
     font-size: 12px;
@@ -162,7 +271,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   img {
@@ -171,22 +279,22 @@ img {
     margin-right: auto;
     width: 80%;
   }
-  #sealName{
-    float:left;
+  #sealName {
+    float: left;
     margin-left: 30%;
-    margin-top: 5%
+    margin-top: 5%;
   }
   #sealID {
-    float:right;
+    float: right;
     margin-right: 30%;
-    margin-top: 5%
+    margin-top: 5%;
   }
-  #sealIdentity{
+  #sealIdentity {
     border-bottom: 1px solid black;
-    overflow:hidden;
+    overflow: hidden;
     padding-bottom: 3%;
   }
-  #sealInfo{
+  #sealInfo {
     margin: 4% 0 0 5%;
     font-size: 22px;
     border-bottom: 1px solid black;
@@ -194,15 +302,12 @@ img {
   }
   #sealInfo p {
     padding-right: 40px;
-    
   }
-
-
 }
 
 @media only screen and (min-width: 1000px) {
   #reportNumber {
-    float:right;
+    float: right;
     text-align: center;
   }
   #tabletUL {
