@@ -300,13 +300,19 @@ img {
     padding-bottom: 3%;
   }
   #sealInfo {
-    margin: 4% 0 0 5%;
+    margin-left: 5%;
     font-size: 22px;
     border-bottom: 1px solid black;
     padding-bottom: 3%;
   }
   #sealInfo p {
     padding-right: 40px;
+  }
+
+  #firstMenuSection {
+    border-bottom: 1px solid black;
+    border-top:none;
+    padding: 0 0 20px 0;
   }
 }
 
