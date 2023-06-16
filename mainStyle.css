@@ -186,15 +186,15 @@ img {
 #noaaImg {
   float: left;
   width: 35%;
-  padding: 35px 0 0 0;
-  margin-left: 35px;
+  padding: 45px 0 0 0;
+  margin-left: 17%;
 }
 
 #mmcImg {
   float: right;
-  width: 35%;
-  padding-top: 20px;
-  margin-right: 35px;
+  width: 25%;
+  padding-top: 45px;
+  margin-right: 19%;
 }
 
 #darkBlueSection {
@@ -205,34 +205,39 @@ img {
 
 #smallNavMenu {
   list-style-type: none;
-  border-right: 1px solid white;
   width: 40%;
   float: left;
 }
 
 #socialContainer {
-  float: right;
   width: 30%;
-  padding: 0 10px 0 40px;
+  padding: 0 30px 0 30px;
   border-right: 1px solid white;
+  border-left: 1px solid white;
+  display:inline-block;
+  text-align: center;
+}
+
+#socialImg {
+  width:50%;
+  margin:0 auto 0 auto;
 }
 
 #social {
   color: white;
-  text-align: center;
   padding-bottom: 20px;
 }
 
 #facebook {
   background-color: #080870;
   border: none;
-  width: 30%;
+  width: 45%;
 }
 
 #instagram {
   background-color: #080870;
   border: none;
-  width: 30%;
+  width: 45%;
 }
 
 /* Add a grey background color on mouse-over */
