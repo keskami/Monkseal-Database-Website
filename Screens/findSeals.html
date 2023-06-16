@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="homeStyle.css" />
     <link rel="stylesheet" href="/mainStyle.css" />
-    <script src="findSeals.js"></script>
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -56,22 +56,34 @@
         </li>
       </div>
     </ul>
-    <img class="img-monk" src="/img/waterMonk.jpg" alt="water monk seal" />
+    <img class="img-monk" src="/img/sleepMonk.jpeg" alt="water monk seal" />
     <progress value="10" max="50"></progress>
     <div class="allText">
       <h1 class="question">Island</h1>
       <p class="description">Please select the island the monk seal is on.</p>
     </div>
+   
+    <div class="allButtons">
+    <div class="topButtons">
+      
+    <button type="button" class="btn">Hawai‘i</button>
     
+    <button type="button" class="btn">Kaho‘olawe</button>
+    <button type="button" class="btn">Kauai</button>
+    <button type="button" class="btn">Lanai</button>
+    </div>
+    <div class="botButtons">
+    <button type="button" class="btn">Moloka‘i</button>
+    <button type="button" class="btn">Ni‘ihau</button>
+    <button type="button" class="btn">Maui</button>
+    <button type="button" class="btn">Oahu</button>
+    <script src="findSeals.js"></script>
+    <div class="botButtons"></div>
+  </div>
 
-    <button type="button">Hawai‘i</button>
-    <button type="button">Kaho‘olawe</button>
-    <button type="button">Kauai</button>
-    <button type="button">Lanai</button>
-    <button type="button">Moloka‘i</button>
-    <button type="button">Ni‘ihau</button>
-    <button type="button">Maui</button>
-    <button type="button">Oahu</button>
+  <div>
+  </div><button class="mainButtons" onclick="location.href='bleachNumber.html'">Next</button>
+  </div>
     <script type="text/javascript">
       function myFunction() {
         var x = document.getElementById("verticalMenu");
@@ -86,6 +98,32 @@
         }
       }
 
+      window.onscroll = function () {
+        menuIphoneScroll();
+      };
+
+      // Get the navbar
+      var navbar = document.getElementById("iphoneMenu");
+      var navbar2 = document.getElementById("tabletUL");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      var sticky2 = navbar2.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function menuIphoneScroll() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+
+        if (window.pageYOffset >= sticky2) {
+          navbar2.classList.add("sticky");
+        } else {
+          navbar2.classList.remove("sticky");
+        }
+      }
     </script>
   </body>
 </html>

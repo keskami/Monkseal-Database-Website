@@ -1,17 +1,9 @@
-function getValues(spreadsheetId, range) {
-    return new Promise((resolve, reject) => {
-      gapi.client.sheets.spreadsheets.values.get({
-        spreadsheetId: spreadsheetId,
-        range: range,
-      }).then((response) => {
-        const result = response.result;
-        const numRows = result.values ? result.values.length : 0;
-        console.log(`${numRows} rows retrieved.`);
-        resolve(response);
-      }).catch((err) => {
-        document.getElementById('content').innerText = err.message;
-        reject(err);
-      });
-    });
-  }
-  
+let productButtons = document.querySelectorAll('button.btn');
+
+productButtons.forEach(productButton => {
+  productButton.addEventListener('click', e => {
+    let button = e.currentTarget;
+    productButtons.forEach(btn => btn !== button && btn.classList.remove('selected'));
+    button.classList.toggle('selected');
+  });
+});
