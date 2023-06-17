@@ -108,12 +108,12 @@ img {
 }
 #sealName {
   float: left;
-  margin-left: 10%;
+  margin-left: 25%;
   margin-top: 5%;
 }
 #sealID {
   float: right;
-  margin-right: 30%;
+  margin-right: 25%;
   margin-top: 5%;
 }
 #sealIdentity {
@@ -214,13 +214,13 @@ img {
   padding: 0 30px 0 30px;
   border-right: 1px solid white;
   border-left: 1px solid white;
-  display:inline-block;
+  display: inline-block;
   text-align: center;
 }
 
 #socialImg {
-  width:50%;
-  margin:0 auto 0 auto;
+  width: 50%;
+  margin: 0 auto 0 auto;
 }
 
 #social {
@@ -286,13 +286,15 @@ img {
   }
   #sealName {
     float: left;
-    margin-left: 30%;
+    margin-left: 25%;
     margin-top: 5%;
+    font-size: 20px;
   }
   #sealID {
     float: right;
-    margin-right: 30%;
+    margin-right: 25%;
     margin-top: 5%;
+    font-size: 20px;
   }
   #sealIdentity {
     border-bottom: 1px solid black;
@@ -302,7 +304,7 @@ img {
   #sealInfo {
     margin-left: 5%;
     font-size: 22px;
-    border-bottom: 1px solid black;
+
     padding-bottom: 3%;
   }
   #sealInfo p {
@@ -311,9 +313,16 @@ img {
 
   #firstMenuSection {
     border-bottom: 1px solid black;
-    border-top:none;
+    border-top: none;
     padding: 0 0 20px 0;
   }
+  #smallNavMenu li{
+    padding: 10px 0 10px 30px;
+  }
+  #smallNavMenu li a{
+    font-size: 16px;
+  }
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -353,5 +362,107 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  #tabletMenuContainer{
+    display: inline-block
+  }
+
+  #tabletMenuInfo{
+    float:right;
+    width:50%;
+  }
+
+  #tabletLargeMenu{
+    margin-top:1030px
+  }
+
+  #sealImg {
+    display: block;
+    margin: 100px 0 0 0;
+    padding: 0 10px;
+    background-color: lightgray;
+    width: 45%;
+    float:left
+  }
+  #sealName {
+    float: left;
+    margin-left: 25%;
+    margin-top: 5%;
+  }
+  #sealID {
+    float: right;
+    margin-right: 25%;
+    margin-top: 5%;
+  }
+  #sealIdentity {
+    overflow: hidden;
+    padding-bottom: 5px;
+  }
+  #sealInfo {
+    padding: 4% 5% 0 5%;
+    padding-bottom: 3%;
+    border: none;
+  }
+  
+  #sealInfo p {
+    padding-right: 40px;
+  }
+
+  #firstMenuSection{
+    border:none;
+  }
+
+  .menuSection {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  
+  
+  #learn {
+    border-top: 1px solid black;
+  }
+  
+  #darkBlueSection {
+    padding: 30px 10px 50px 30px;
+    background-color: #080870;
+    display: flex;
+  }
+  
+  #smallNavMenu {
+    list-style-type: none;
+    width: 20%;
+    float: left;
+  }
+  
+  #socialContainer {
+    width: 20%;
+    padding: 0 30px 0 30px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  #socialImg {
+    width: 70%;
+    margin: auto;
+  }
+  
+  #social {
+    color: white;
+    padding-bottom: 20px;
+  }
+  
+  #facebook {
+    background-color: #080870;
+    border: none;
+    width: 45%;
+  }
+  
+  #instagram {
+    background-color: #080870;
+    border: none;
+    width: 45%;
   }
 }
