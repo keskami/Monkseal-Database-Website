@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap");
+
+.infoTitle {
+  margin: 5% 0 0 10%;
+  width: 40%;
+  text-align: left;
+}
+
+.infoTitle h1 {
+  border-bottom: 2px solid lightblue;
+  padding: 0 0 10px 0;
+  margin-bottom: 5%;
+  font-size: 26px;
+}
+
+.info p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  padding: 0 10% 0 10%;
+  font-size: 18px;
+  text-indent: 6%;
+}
+#border{
+    border-top: 1px solid black;
+    margin:5% 0 0 0;
+    padding: 0 0 2% 0;
+}

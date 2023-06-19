@@ -149,7 +149,7 @@ progress {
 
     width: calc(100vw / 3);
     height: 55px;
-    background-color: white
+    background-color: white;
     color: rgb(37, 150, 190);
     border-radius: 100px;
   
