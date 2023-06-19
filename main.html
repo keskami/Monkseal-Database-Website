@@ -36,7 +36,7 @@
           <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
           <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
           <li><a href="Screens/aboutUs.html">ABOUT</a></li>
-          <li><a href="/Screens/findSeals.html">FIND SEALS</a></li>
+          <li><a href="/Screens/findSeals.html">FIND A SEAL</a></li>
         </ul>
       </div>
     </div>
@@ -50,7 +50,7 @@
         <li><a href="Screens/learnMore.html">LEARN MORE</a></li>
         <li><a href="Screens/oceanActivities.html">OCEAN ACTIVITES</a></li>
         <li><a href="Screens/aboutUs.html">ABOUT</a></li>
-        <li><a href="/Screens/findSeals.html">FIND SEALS</a></li>
+        <li><a href="/Screens/findSeals.html">FIND A SEAL</a></li>
         <li id="reportNumber">
           Report a sighting <br />
           <b>(888) 256-9840</b>
@@ -127,7 +127,7 @@
           Hawaiian Monk Seal
         </h2>
         <div id="buttonContainer">
-          <button id="protectButton">Protecting Seals</button>
+          <button id="protectButton" onclick="openProtectingSeals()">Protecting Seals</button>
         </div>
         <div id="lightBlueSection">
           <h2 id="h2White">In partnership with</h2>
@@ -161,26 +161,43 @@
               </div>
 
               <div id="socialImg">
-                <button id="facebook">
+                <button id="facebook"
+                onclick="openFacebook()">
                   <img src="/img/facebook.png" />
                 </button>
-                <button id="instagram">
+                <button id="instagram" onclick="openInstagram()">
                   <img src="/img/instagram.png" />
                 </button>
               </div>
             </div>
           </div>
           <form>
-            <label for="name">Name</label><br>
-            <input type="text" name="name"><br>
-            <label for="email">Email</label><br>
-            <input type="text" name="email"><br>
-            <h2 id="signup">
-              Sign up for updates from <br />
-              the Marine Mammal Center
-            </h2>
-            <input type="submit">
+            <div id="inputDiv">
+              <label for="name">Name</label><br>
+              <input type="text" name="name"><br>
+              <label for="email">Email</label><br>
+              <input type="text" name="email"><br>
+            </div>
+            <div id="submitDiv">
+              <h2 id="signup">
+                Sign up for updates from <br />
+                the Marine Mammal Center
+              </h2>
+              <input type="submit" onclick="signup()">
+            </div>
           </form>
+          <div id="thirdDarkBlueSection">
+            <img src="/img/sealClipart.jpeg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
+              vel turpis nunc eget. Nisl vel pretium lectus quam id leo in vitae.
+              Risus commodo viverra maecenas accumsan. Massa eget egestas purus
+              viverra accumsan in nisl nisi scelerisque. Nulla pharetra diam sit
+              amet nisl suscipit. Consectetur adipiscing elit ut aliquam. Nunc sed
+              blandit libero volutpat sed cras ornare arcu dui. Sed tempus urna et
+              pharetra pharetra massa massa. Lobortis elementum nibh tellus
+              molestie.</p>
+          </div>
         </div>
       </div>
     </div>    
@@ -197,6 +214,18 @@
           x.style.opacity = "1";
           x.style.height = "290px";
         }
+      }
+      function openFacebook() {
+        window.open("https://www.facebook.com/themarinemammalcenter/")
+      }
+      function openInstagram() {
+        window.open("https://www.instagram.com/themarinemammalcenter/")
+      }
+      function signup() {
+        window.open("https://give.marinemammalcenter.org/a/sign-up-for-email")
+      }
+      function openProtectingSeals() {
+        window.open("https://www.fisheries.noaa.gov/feature-story/ten-ways-we-can-help-hawaiian-monk-seals")
       }
     </script>
   </body>
