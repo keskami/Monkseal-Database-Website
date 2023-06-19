@@ -123,6 +123,8 @@ img {
 #sealInfo {
   padding: 4% 5% 0 5%;
   padding-bottom: 3%;
+  font-size: 18px;
+  margin: 0 5% 0 5%
 }
 
 #sealInfo p {
@@ -157,7 +159,7 @@ img {
   padding-bottom: 30px;
 }
 
-#button {
+#protectButton {
   padding: 7px;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -200,20 +202,19 @@ img {
 #darkBlueSection {
   padding: 30px 10px 50px 10px;
   background-color: #080870;
-  display: flex;
+  display: inline-block;
 }
 
 #smallNavMenu {
   list-style-type: none;
-  width: 40%;
+  width: 55%;
   float: left;
 }
 
 #socialContainer {
   width: 30%;
-  padding: 0 30px 0 30px;
+  padding: 0 20px 0 30px;
   border-right: 1px solid white;
-  border-left: 1px solid white;
   display: inline-block;
   text-align: center;
 }
@@ -239,6 +240,42 @@ img {
   border: none;
   width: 45%;
 }
+
+#firstDarkBlueSection{
+  width:100%;
+}
+form{
+ width:100%;
+ margin-top:18%;
+ text-align:center;
+}
+input{
+  width: 60%;
+  padding: 8px 15px;
+  margin-bottom:20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+label{
+  color:white;
+}
+input[type=submit] {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  background-color: #008ed6;
+  color: white;
+  width:30%;
+  border:none;
+}
+#signup{
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 19px;
+  margin-bottom: 20px;
+  color:white;
+}
+
+
 
 /* Add a grey background color on mouse-over */
 
@@ -282,17 +319,17 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 70%;
   }
   #sealName {
     float: left;
-    margin-left: 25%;
+    margin-left: 30%;
     margin-top: 5%;
     font-size: 20px;
   }
   #sealID {
     float: right;
-    margin-right: 25%;
+    margin-right: 30%;
     margin-top: 5%;
     font-size: 20px;
   }
@@ -302,13 +339,12 @@ img {
     padding-bottom: 3%;
   }
   #sealInfo {
-    margin-left: 5%;
-    font-size: 22px;
-
+    margin: 0 10% 0 10%;
+    font-size: 20px;
     padding-bottom: 3%;
   }
   #sealInfo p {
-    padding-right: 40px;
+    padding-right: 70px;
   }
 
   #firstMenuSection {
@@ -321,6 +357,44 @@ img {
   }
   #smallNavMenu li a{
     font-size: 16px;
+  }
+
+  #learn{
+    font-size: 25px;
+  }
+  
+  #protectButton{
+    font-size: 15px;
+  }
+
+  #socialContainer {
+    width: 30%;
+    padding: 0 30px 0 30px;
+    border-right: 1px solid white;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  #socialImg {
+    width: 50%;
+    margin: 0 auto 0 auto;
+  }
+  
+  #social {
+    color: white;
+    padding-bottom: 20px;
+  }
+  
+  #facebook {
+    background-color: #080870;
+    border: none;
+    width: 45%;
+  }
+  
+  #instagram {
+    background-color: #080870;
+    border: none;
+    width: 45%;
   }
 
 }
@@ -370,30 +444,27 @@ img {
 
   #tabletMenuInfo{
     float:right;
-    width:50%;
+    width:40%;
+    margin-right: 5%;
   }
 
   #tabletLargeMenu{
-    margin-top:1030px
+    margin-top:800px
   }
 
-  #sealImg {
+  #img-seal {
     display: block;
-    margin: 100px 0 0 0;
-    padding: 0 10px;
-    background-color: lightgray;
-    width: 45%;
-    float:left
+    width: 47.5%;
+    float:left;
+    padding: 2.5% 2.5% 2.5% 5%
   }
   #sealName {
-    float: left;
-    margin-left: 25%;
+    margin-left: 10%;
     margin-top: 5%;
   }
   #sealID {
-    float: right;
-    margin-right: 25%;
     margin-top: 5%;
+    margin-right:30%;
   }
   #sealIdentity {
     overflow: hidden;
@@ -402,7 +473,9 @@ img {
   #sealInfo {
     padding: 4% 5% 0 5%;
     padding-bottom: 3%;
+    margin: 0;
     border: none;
+    font-size: 16px;
   }
   
   #sealInfo p {
@@ -421,6 +494,13 @@ img {
   
   #learn {
     border-top: 1px solid black;
+    font-size: 30px;
+    padding-top:55px;
+  }
+
+  #protectButton{
+    font-size: 20px;
+    margin-bottom: 30px;
   }
   
   #darkBlueSection {
