@@ -118,6 +118,17 @@ progress {
     scroll-margin-block-start: 100px;
   }
 
+  .foundSeals{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: calc(100vw - 100px);
+    border-radius: 10px;
+    border: 2px solid #555;
+    border-color: rgb(37, 150, 190);
+  }
 
 
   .generalBtn{
@@ -272,6 +283,7 @@ progress {
     text-align: left;
     margin-left:calc((100vw - (100vw - 80px)) / 3);
     padding-bottom: 20px;
+    margin-top: 5px;
   }
 
   .scarQhead{
@@ -310,6 +322,9 @@ progress {
     .img-monk{
         width: 650px;
     }
+    .foundSeals{
+      width: 600px;
+  }
     progress {
         width: 650px;
     }
