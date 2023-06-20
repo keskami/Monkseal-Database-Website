@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#infoTitle {
+  margin: 5% 0 0 10%;
+  text-align: left;
+  width: 20%;
+}
+
+#infoTitle h1 {
+  border-bottom: 2px solid lightblue;
+  padding: 0 0 10px 15px;
+  margin-bottom: 5%;
+  font-size: 36px;
+}
+
+#info p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin: 3% 10% 0 10%;
+  padding-bottom: 5%;
+  font-size: 18px;
+  text-indent: 6%;
+  border-bottom: 0.5px solid black;
+}
+#info img {
+  margin: 5% 10% 8% 10%;
+}
+
+#interactionTitle {
+  display: flex;
+  width: 90%;
+  margin: 0 0 0 10%;
+}
+#interactionTitle h2 {
+  margin: auto 0 auto 3%;
+  width: 50%;
+  font-size: 25px;
+  color: #00467F
+}
+#interactionTitle img {
+  margin: 0;
+  width: 13%;
+}
+#list ul {
+    list-style-type:circle;
+    margin: 3% 5% 0 5%
+}
