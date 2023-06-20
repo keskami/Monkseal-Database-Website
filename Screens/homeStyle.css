@@ -253,6 +253,17 @@ progress {
     padding-top: 20px;
   }
 
+  .unfortunately{
+    display: block;
+    margin-top: calc(100vh / 4);
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size:  6.5vw;    
+    color:rgb(37, 150, 190);
+    text-align: center;
+  }
+
   .scarInstructions{
     display: block;
     font-family: MontserratLight;
@@ -352,6 +363,9 @@ progress {
     }
     .extraQuestion{
       font-size: 22px;
+  }
+  .unfortunately{
+    font-size: 43px;
   }
   .bleachInput{
     width: 300px;
