@@ -82,6 +82,7 @@ progress {
     font-family: MontserratLight;
     font-size:  3.5vw;    
     color:rgb(30, 30, 30);
+    margin-left: 3px;
   }
 
   .extraQuestion{
@@ -114,9 +115,10 @@ progress {
     font-size: 3vw;
     font-family: MontserratLight;
     cursor: pointer;
-
     scroll-margin-block-start: 100px;
   }
+
+
 
   .generalBtn{
     display: inline-block;
@@ -174,9 +176,7 @@ progress {
   }
 
   .sumbitButton{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline;
     margin-top: -30px;
     margin-bottom: 50px;
     width: calc(100vw / 3);
@@ -185,7 +185,22 @@ progress {
     color: white;
     border-radius: 100px;
     font-size: 3.5vw ;
-  
+  }
+
+  .indecipherableButton{
+    display: inline;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    width: calc(100vw / 3);
+    height: 50px;
+    background-color: white;
+    color:  rgb(37, 150, 190);
+    border-radius: 100px;
+    font-size: 3.5vw ;
+  }
+
+  .enterNumbuttons{
+    text-align: center;
   }
 
   .mainButtons:hover{
@@ -221,7 +236,8 @@ progress {
 .scarText{
   position:sticky;
   position: -webkit-sticky;
-  top:0
+  top:0px;
+  background-color:white;
 }
 
   .scarQuestion{
@@ -234,6 +250,7 @@ progress {
     color:rgb(37, 150, 190);
     text-align: left;
     margin-left:calc((100vw - (100vw - 80px)) / 3);
+    padding-top: 20px;
   }
 
   .scarInstructions{
@@ -243,6 +260,7 @@ progress {
     color:rgb(107, 106, 106);
     text-align: left;
     margin-left:calc((100vw - (100vw - 80px)) / 3);
+    padding-bottom: 20px;
   }
 
   .scarQhead{
@@ -254,6 +272,7 @@ progress {
     font-size:  4.0vw;    
     text-align: left;
     margin-left: 15px;
+    
   }
   
 
@@ -316,6 +335,11 @@ progress {
       height: 50px;
       font-size: 22px;
     }
+    .indecipherableButton{
+      width: 225px;
+      height: 50px;
+      font-size: 22px;
+    }
     .allText{
         margin-left: calc(((100vw - 655px) / 2));
         margin-right: calc(((100vw - 655px) / 2));
@@ -332,6 +356,7 @@ progress {
   .bleachInput{
     width: 300px;
     font-size: 100px;
+    height: 200px;
   }
   .scarQuestion{
     font-size: 30px;
