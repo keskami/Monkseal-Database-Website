@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-
 #MonkSeal {
   float: left;
   width: 100px;
@@ -19,10 +18,10 @@
   text-align: center;
 }
 
-#topnav{
+#topnav {
   width: 100%;
   padding: 15px 0 5px 0;
-  border-bottom: 1px solid lightblue;
+  border-bottom: 3px solid lightblue;
   overflow: hidden;
   vertical-align: middle;
 }
@@ -33,12 +32,12 @@
   padding: 10px 16px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-#topnav a{
+#topnav a {
   color: black;
   text-align: center;
   text-decoration: none;
 }
-#topnav a i{
+#topnav a i {
   vertical-align: middle;
   color: black;
   text-align: center;
@@ -47,7 +46,7 @@
 }
 
 .right {
-  float:right;
+  float: right;
 }
 
 #wrapper {
@@ -153,7 +152,7 @@ img {
   padding: 4% 5% 0 5%;
   padding-bottom: 3%;
   font-size: 18px;
-  margin: 0 5% 0 5%
+  margin: 0 5% 0 5%;
 }
 
 #sealInfo p {
@@ -238,7 +237,7 @@ img {
   list-style-type: none;
   width: 50%;
   float: left;
-  padding-left:20px;
+  padding-left: 20px;
 }
 
 #socialContainer {
@@ -271,55 +270,52 @@ img {
   width: 45%;
 }
 
-#firstDarkBlueSection{
-  width:100%;
-  margin-top:5%
+#firstDarkBlueSection {
+  width: 100%;
+  margin-top: 5%;
 }
-form{
- width:100%;
- margin-top:18%;
- text-align:center;
+form {
+  width: 100%;
+  margin-top: 18%;
+  text-align: center;
 }
-input{
+input {
   width: 60%;
   padding: 8px 15px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   border-radius: 5px;
 }
-label{
-  color:white;
+label {
+  color: white;
 }
-input[type=submit] {
+input[type="submit"] {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   background-color: #008ed6;
   color: white;
-  width:30%;
-  border:none;
+  width: 30%;
+  border: none;
 }
-#signup{
+#signup {
   font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-size: 19px;
   margin-bottom: 20px;
-  color:white;
+  color: white;
 }
 
-#thirdDarkBlueSection img{
+#thirdDarkBlueSection img {
   width: 30%;
-  float:left;
+  float: left;
   margin: 10% 0 0 10%;
-  
 }
-#thirdDarkBlueSection p{
+#thirdDarkBlueSection p {
   width: 40%;
-  float:right;
-  margin:10% 10% 0 0 ;
-  color:white;
+  float: right;
+  margin: 10% 10% 0 0;
+  color: white;
 }
-
-
 
 /* Add a grey background color on mouse-over */
 
@@ -327,6 +323,16 @@ input[type=submit] {
   #reportNumber {
     float: right;
     text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 13px;
+    padding: 14px 2px;
+  }
+
+  #reportNumber a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
   }
 
   #topnav {
@@ -338,13 +344,13 @@ input[type=submit] {
   #MonkSeal {
     text-align: center;
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
   li {
-    font-size: 12px;
+    font-size: 13px;
     padding: 14px 2px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
@@ -396,18 +402,18 @@ input[type=submit] {
     border-top: none;
     padding: 0 0 20px 0;
   }
-  #smallNavMenu li{
+  #smallNavMenu li {
     padding: 10px 0 10px 60px;
   }
-  #smallNavMenu li a{
+  #smallNavMenu li a {
     font-size: 16px;
   }
 
-  #learn{
+  #learn {
     font-size: 25px;
   }
-  
-  #protectButton{
+
+  #protectButton {
     font-size: 15px;
   }
 
@@ -418,42 +424,50 @@ input[type=submit] {
     display: inline-block;
     text-align: center;
   }
-  
+
   #socialImg {
     width: 50%;
     margin: 0 auto 0 auto;
   }
-  
+
   #social {
     color: white;
     padding-bottom: 20px;
   }
-  
+
   #facebook {
     background-color: #080870;
     border: none;
     width: 45%;
   }
-  
+
   #instagram {
     background-color: #080870;
     border: none;
     width: 45%;
   }
 
-  form{
-    width:100%;
-    margin-top:12%;
-    text-align:center;
-   }
-
-
+  form {
+    width: 100%;
+    margin-top: 12%;
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   #reportNumber {
     float: right;
     text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 15px;
+    padding: 14px 10px;
+  }
+
+  #reportNumber a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
   }
   #tabletUL {
     display: block;
@@ -489,25 +503,25 @@ input[type=submit] {
     align-items: center;
   }
 
-  #tabletMenuContainer{
-    display: inline-block
+  #tabletMenuContainer {
+    display: inline-block;
   }
 
-  #tabletMenuInfo{
-    float:right;
-    width:40%;
+  #tabletMenuInfo {
+    float: right;
+    width: 40%;
     margin-right: 5%;
   }
 
-  #tabletLargeMenu{
-    margin-top:800px
+  #tabletLargeMenu {
+    margin-top: 800px;
   }
 
   #img-seal {
     display: block;
     width: 47.5%;
-    float:left;
-    padding: 2.5% 2.5% 2.5% 5%
+    float: left;
+    padding: 2.5% 2.5% 2.5% 5%;
   }
   #sealName {
     margin-left: 10%;
@@ -515,7 +529,7 @@ input[type=submit] {
   }
   #sealID {
     margin-top: 5%;
-    margin-right:30%;
+    margin-right: 30%;
   }
   #sealIdentity {
     overflow: hidden;
@@ -528,138 +542,135 @@ input[type=submit] {
     border: none;
     font-size: 16px;
   }
-  
+
   #sealInfo p {
     padding-right: 40px;
   }
 
-  #firstMenuSection{
-    border:none;
+  #firstMenuSection {
+    border: none;
   }
 
   .menuSection {
     border-top: 1px solid black;
     border-bottom: none;
   }
-  
-  
+
   #learn {
     border-top: 1px solid black;
     font-size: 30px;
-    padding-top:55px;
+    padding-top: 55px;
   }
 
-  #protectButton{
+  #protectButton {
     font-size: 20px;
     margin-bottom: 30px;
   }
-  
+
   #darkBlueSection {
     padding: 40px 10px 50px 10px;
     background-color: #080870;
     display: inline-block;
-    width:100%;
+    width: 100%;
   }
-  
+
   #smallNavMenu {
     list-style-type: none;
     width: 50%;
     float: left;
-    padding-left:20px;
+    padding-left: 20px;
   }
-  
+
   #socialContainer {
-    width:30%;
-    padding : 0 10px 35px 10px;
+    width: 30%;
+    padding: 0 10px 35px 10px;
     border-right: 1px solid white;
     border-left: 1px solid white;
     display: inline-block;
     text-align: center;
   }
-  
+
   #socialImg {
     width: 50%;
     margin: 0 auto 0 auto;
   }
-  
+
   #social {
     color: white;
     padding-bottom: 20px;
   }
-  
+
   #facebook {
     background-color: #080870;
     border: none;
     width: 45%;
   }
-  
+
   #instagram {
     background-color: #080870;
     border: none;
     width: 45%;
   }
-  
-  #firstDarkBlueSection{
-    width:50%;
-    margin-top:5%;
-    float:left;
-    
+
+  #firstDarkBlueSection {
+    width: 50%;
+    margin-top: 5%;
+    float: left;
   }
-  form{
-   width:50%;
-   text-align:center;
-   float:right;
-   margin: 3% 0 0 0;
+  form {
+    width: 50%;
+    text-align: center;
+    float: right;
+    margin: 3% 0 0 0;
   }
-  input{
+  input {
     width: 100%;
     padding: 8px 15px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     border-radius: 5px;
   }
-  label{
-    color:white;
+  label {
+    color: white;
     float: left;
-    margin: 0 0 0 7%
+    margin: 0 0 0 7%;
   }
-  input[type=submit] {
+  input[type="submit"] {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     background-color: #008ed6;
     color: white;
-    width:30%;
-    border:none;
-    float:left;
+    width: 30%;
+    border: none;
+    float: left;
     margin: 0 0 0 10%;
   }
-  #signup{
+  #signup {
     font-family: "Open Sans", sans-serif;
     font-style: italic;
     font-size: 17px;
     margin: 15px 0 34px 10%;
-    color:white;
+    color: white;
     text-align: left;
   }
-  #submitDiv{
-    float:right;
-    width:50%
+  #submitDiv {
+    float: right;
+    width: 50%;
   }
-  #inputDiv{
-    float:left;
-    width:50%
+  #inputDiv {
+    float: left;
+    width: 50%;
   }
-  
-  #thirdDarkBlueSection img{
+
+  #thirdDarkBlueSection img {
     width: 30%;
-    float:left;
+    float: left;
     margin: 10% 0 0 10%;
-    
   }
-  #thirdDarkBlueSection p{
+  #thirdDarkBlueSection p {
     width: 40%;
-    float:right;
-    margin:10% 10% 0 0 ;
-    color:white;
+    float: right;
+    margin: 10% 10% 0 0;
+    color: white;
   }
 }
