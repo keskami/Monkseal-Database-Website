@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="homeStyle.css" />
     <link rel="stylesheet" href="/mainStyle.css" />
-    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap");
+    </style>
   </head>
   <body>
     <div id="iphoneMenu">
@@ -36,7 +37,6 @@
           <li><a href="learnMore.html">LEARN MORE</a></li>
           <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
           <li><a href="aboutUs.html">ABOUT</a></li>
-
         </ul>
       </div>
     </div>
@@ -51,25 +51,71 @@
         <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
         <li><a href="aboutUs.html">ABOUT</a></li>
         <li id="findSeal2"><a href="findSeals.html">FIND A SEAL</a></li>
-        <p class="right" id="reportNumber">
+        <p id="reportNumber">
           Report a sighting <br />
           <b>(888) 256-9840</b>
         </p>
       </div>
     </ul>
-    <img class="img-monk" src="/img/bleachSeal.jpeg" alt="water monk seal" />
-    <progress value="28.6" max="100"></progress>
-    <div class="allText">
-      <h1 class="question">Bleach Number</h1>
-      <p class="description">Please enter the bleach number below</p>
+    <img id="img-seal" src="/img/waterMonk.jpg" alt="water monk seal" />
+    <div id="tabletMenuInfo">
+      <div id="sealIdentity">
+        <div id="sealName">
+          <p>Name</p>
+          <h1>Ka'ena</h1>
+        </div>
+        <div id="sealID">
+          <p>ID</p>
+          <h1>R040</h1>
+        </div>
+      </div>
+
+      <div id="sealInfo">
+        <div id="firstMenuSection">
+          <p><i>Scarring</i></p>
+          <p>1. Dorsal: Cookie Cutter Bite</p>
+          <p>2. Ventral, Mid-body: Probable large shark</p>
+          <br />
+          <p><i>Bleach Marks</i></p>
+          <p>Right-lateral, Head/neck</p>
+          <br />
+          <p><i>Sighting Locations</i></p>
+          <p>Island of Hawaii</p>
+          <br />
+          <div id="tagNumber">
+            <p><i>Last Tag Number</i></p>
+            <p>A125</p>
+          </div>
+          <div>
+            <p><i>Last Bleach Number</i></p>
+            <p>N17 (Dec. 2019)</p>
+          </div>
+        </div>
+
+        <div class="menuSection">
+          <p>
+            <i>Birthplace</i>
+          </p>
+          <p>Island of Hawaii</p>
+        </div>
+        <div class="menuSection">
+          <p>
+            <i>Story</i>
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
+            vel turpis nunc eget. Nisl vel pretium lectus quam id leo in vitae.
+            Risus commodo viverra maecenas accumsan. Massa eget egestas purus
+            viverra accumsan in nisl nisi scelerisque. Nulla pharetra diam sit
+            amet nisl suscipit. Consectetur adipiscing elit ut aliquam. Nunc sed
+            blandit libero volutpat sed cras ornare arcu dui. Sed tempus urna et
+            pharetra pharetra massa massa. Lobortis elementum nibh tellus
+            molestie.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <input class="bleachInput" type="text"  name="bleachNum" placeholder="N18"><br><br>
-    <div class="enterNumbuttons">
-      <button class="indecipherableButton generalBtn" onclick="location.href='recognizableScars1.html'">Indecipherable</button>
-     <button class="sumbitButton generalBtn" onclick="location.href='recognizableScars1.html'">Sumbit</button>
-  </div>
-
     <script type="text/javascript">
       function myFunction() {
         var x = document.getElementById("verticalMenu");

@@ -34,11 +34,11 @@
 
       <div id="verticalMenu">
         <ul>
+          <li id="findSeal"><a href="findSeals.html">FIND A SEAL</a></li>
           <li><a href="/main.html">HOME</a></li>
           <li><a href="learnMore.html">LEARN MORE</a></li>
           <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
           <li><a href="aboutUs.html">ABOUT</a></li>
-          <li><a href="findSeals.html">FIND A SEAL</a></li>
         </ul>
       </div>
     </div>
@@ -52,7 +52,7 @@
         <li><a href="learnMore.html">LEARN MORE</a></li>
         <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
         <li><a href="aboutUs.html">ABOUT</a></li>
-        <li><a href="findSeals.html">FIND A SEAL</a></li>
+        <li id="findSeal2"><a href="findSeals.html">FIND A SEAL</a></li>
         <p class="right" id="reportNumber">
           Report a sighting <br />
           <b>(888) 256-9840</b>
@@ -99,9 +99,11 @@
         and raise awareness of ongoing conservation efforts.
       </p>
     </div>
-    <div class="infoTitle">
-      <h1>Appearance</h1>
-    </div>
+    <a id="appearance_info">
+      <div class="infoTitle">
+        <h1>Appearance</h1>
+      </div>
+    </a>
     <div class="info">
       <p>
         Newborn monk seal pups are born all black, but they typically shed this
@@ -154,9 +156,11 @@
         pelvis.
       </p>
     </div>
-    <div class="infoTitle">
-      <h1>Behavior & Diet</h1>
-    </div>
+    <a id="behavior_info">
+      <div class="infoTitle">
+        <h1>Behavior & Diet</h1>
+      </div>
+    </a>
     <div class="info">
       <p>
         Monk seals spend two-thirds of their time foraging at sea and use coral
@@ -199,9 +203,11 @@
         beaches over and over, but they do not defend territories.
       </p>
     </div>
-    <div class="infoTitle">
-      <h1>Lifespan & Reproduction</h1>
-    </div>
+    <a id="lifespan_info">
+      <div class="infoTitle">
+        <h1>Lifespan & Reproduction</h1>
+      </div>
+    </a>
     <div class="info">
       <p>
         Monk seals can live to over 30 years of age, but few actually live that
@@ -237,91 +243,87 @@
         feel the need to go further out for food.
       </p>
     </div>
-    <div id="border">
-    </div>
-    
-      <h2 id="learn2">
-        Learn how you can <br />
-        help the endangered <br />
-        Hawaiian Monk Seal
-      </h2>
-      <div id="buttonContainer">
-        <button id="protectButton" onclick="openProtectingSeals()">
-          Protecting Seals
-        </button>
-      </div>
-      <div id="lightBlueSection">
-        <h2 id="h2White">In partnership with</h2>
-        <div id="logoImgContainer">
-          <img src="/img/noaa.png" id="noaaImg" />
-          <img src="/img/mmc.png" id="mmcImg" />
-        </div>
-      </div>
-      <div id="darkBlueSection">
-        <div id="firstDarkBlueSection">
-          <ul id="smallNavMenu">
-            <li><a href="main.html" class="bottomNav">Home</a></li>
-            <li>
-              <a href="Screens/learnMore.html" class="bottomNav">Learn More</a>
-            </li>
-            <li>
-              <a href="Screens/oceanActivities.html" class="bottomNav"
-                >Ocean Activities</a
-              >
-            </li>
-            <li><a href="Screens/aboutUs.html" class="bottomNav">About</a></li>
-            <li>
-              <a href="/Screens/findSeals.html" class="bottomNav"
-                >Find a Seal</a
-              >
-            </li>
-          </ul>
-          <div id="socialContainer">
-            <div id="social">
-              <p>Social</p>
-            </div>
+    <div id="border"></div>
 
-            <div id="socialImg">
-              <button id="facebook" onclick="openFacebook()">
-                <img src="/img/facebook.png" />
-              </button>
-              <button id="instagram" onclick="openInstagram()">
-                <img src="/img/instagram.png" />
-              </button>
-            </div>
+    <h2 id="learn2">
+      Learn how you can <br />
+      help the endangered <br />
+      Hawaiian Monk Seal
+    </h2>
+    <div id="buttonContainer">
+      <button id="protectButton" onclick="openProtectingSeals()">
+        Protecting Seals
+      </button>
+    </div>
+    <div id="lightBlueSection">
+      <h2 id="h2White">In partnership with</h2>
+      <div id="logoImgContainer">
+        <img src="/img/noaa.png" id="noaaImg" />
+        <img src="/img/mmc.png" id="mmcImg" />
+      </div>
+    </div>
+    <div id="darkBlueSection">
+      <div id="firstDarkBlueSection">
+        <ul id="smallNavMenu">
+          <li><a href="main.html" class="bottomNav">Home</a></li>
+          <li>
+            <a href="Screens/learnMore.html" class="bottomNav">Learn More</a>
+          </li>
+          <li>
+            <a href="Screens/oceanActivities.html" class="bottomNav"
+              >Ocean Activities</a
+            >
+          </li>
+          <li><a href="Screens/aboutUs.html" class="bottomNav">About</a></li>
+          <li>
+            <a href="/Screens/findSeals.html" class="bottomNav">Find a Seal</a>
+          </li>
+        </ul>
+        <div id="socialContainer">
+          <div id="social">
+            <p>Social</p>
           </div>
-        </div>
-        <form>
-          <div id="inputDiv">
-            <label for="name">Name</label><br />
-            <input type="text" name="name" /><br />
-            <label for="email">Email</label><br />
-            <input type="text" name="email" /><br />
+
+          <div id="socialImg">
+            <button id="facebook" onclick="openFacebook()">
+              <img src="/img/facebook.png" />
+            </button>
+            <button id="instagram" onclick="openInstagram()">
+              <img src="/img/instagram.png" />
+            </button>
           </div>
-          <div id="submitDiv">
-            <h2 id="signup">
-              Sign up for updates from <br />
-              the Marine Mammal Center
-            </h2>
-            <input type="submit" onclick="signup()" />
-          </div>
-        </form>
-        <div id="thirdDarkBlueSection">
-          <img src="/img/sealClipart.jpeg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
-            vel turpis nunc eget. Nisl vel pretium lectus quam id leo in vitae.
-            Risus commodo viverra maecenas accumsan. Massa eget egestas purus
-            viverra accumsan in nisl nisi scelerisque. Nulla pharetra diam sit
-            amet nisl suscipit. Consectetur adipiscing elit ut aliquam. Nunc sed
-            blandit libero volutpat sed cras ornare arcu dui. Sed tempus urna et
-            pharetra pharetra massa massa. Lobortis elementum nibh tellus
-            molestie.
-          </p>
         </div>
       </div>
-    
+      <form>
+        <div id="inputDiv">
+          <label for="name">Name</label><br />
+          <input type="text" name="name" /><br />
+          <label for="email">Email</label><br />
+          <input type="text" name="email" /><br />
+        </div>
+        <div id="submitDiv">
+          <h2 id="signup">
+            Sign up for updates from <br />
+            the Marine Mammal Center
+          </h2>
+          <input type="submit" onclick="signup()" />
+        </div>
+      </form>
+      <div id="thirdDarkBlueSection">
+        <img src="/img/sealClipart.jpeg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
+          vel turpis nunc eget. Nisl vel pretium lectus quam id leo in vitae.
+          Risus commodo viverra maecenas accumsan. Massa eget egestas purus
+          viverra accumsan in nisl nisi scelerisque. Nulla pharetra diam sit
+          amet nisl suscipit. Consectetur adipiscing elit ut aliquam. Nunc sed
+          blandit libero volutpat sed cras ornare arcu dui. Sed tempus urna et
+          pharetra pharetra massa massa. Lobortis elementum nibh tellus
+          molestie.
+        </p>
+      </div>
+    </div>
 
     <script type="text/javascript">
       function myFunction() {

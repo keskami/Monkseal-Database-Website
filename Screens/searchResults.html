@@ -31,11 +31,12 @@
 
       <div id="verticalMenu">
         <ul>
+          <li id="findSeal"><a href="findSeals.html">FIND A SEAL</a></li>
           <li><a href="/main.html">HOME</a></li>
           <li><a href="learnMore.html">LEARN MORE</a></li>
           <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
           <li><a href="aboutUs.html">ABOUT</a></li>
-          <li><a href="findSeals.html">FIND A SEAL</a></li>
+
         </ul>
       </div>
     </div>
@@ -45,11 +46,12 @@
           Hawaiian <br />
           Monk Seal
         </li>
+        
         <li><a href="/main.html">HOME</a></li>
         <li><a href="learnMore.html">LEARN MORE</a></li>
         <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
         <li><a href="aboutUs.html">ABOUT</a></li>
-        <li><a href="findSeals.html">FIND A SEAL</a></li>
+        <li id="findSeal2"><a href="findSeals.html">FIND A SEAL</a></li>
         <p class="right" id="reportNumber">
           Report a sighting <br />
           <b>(888) 256-9840</b>
@@ -63,7 +65,7 @@
       <p class="scarInstructions">Click to explore</p>
     </div>
 
-    <img class="foundSeals" src ="/img/sleepMonk.jpeg" alt="water monk seal" />
+    <img class="foundSeals" src ="/img/sleepMonk.jpeg" alt="water monk seal" onclick="selectSeal()"/>
     <img class="foundSeals"src="/img/scarSeal.jpeg" alt="water monk seal" />
     <img class="foundSeals"src="/img/waterMonk.jpg" alt="water monk seal" />
 
@@ -83,6 +85,10 @@
           x.style.opacity = "1";
           x.style.height = "290px";
         }
+      }
+
+      function selectSeal() {
+        location.href = "sealResults.html"
       }
     </script>
   </body>
