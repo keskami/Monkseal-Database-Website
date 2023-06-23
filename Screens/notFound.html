@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="homeStyle.css" />
     <link rel="stylesheet" href="/mainStyle.css" />
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -13,29 +13,29 @@
   </head>
   <body>
     <div id="iphoneMenu">
-      <div class="topnav">
-        <li id="MonkSeal">
+      <div id="topnav">
+        <p id="MonkSeal">
           Hawaiian <br />
           Monk Seal
-        </li>
-        <li class="right">
+        </p>
+        <p class="right">
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
-        </li>
-        <li class="right" id="reportNumber">
+        </p>
+        <p class="right" id="reportNumber">
           Report a sighting <br />
           <b>(888) 256-9840</b>
-        </li>
+        </p>
       </div>
 
       <div id="verticalMenu">
         <ul>
+          <li id="findSeal"><a href="findSeals.html">FIND A SEAL</a></li>
           <li><a href="/main.html">HOME</a></li>
           <li><a href="learnMore.html">LEARN MORE</a></li>
           <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
           <li><a href="aboutUs.html">ABOUT</a></li>
-          <li><a href="findSeals.html">FIND A SEAL</a></li>
         </ul>
       </div>
     </div>
@@ -49,23 +49,28 @@
         <li><a href="learnMore.html">LEARN MORE</a></li>
         <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
         <li><a href="aboutUs.html">ABOUT</a></li>
-        <li><a href="findSeals.html">FIND A SEAL</a></li>
-        <li class="right" id="reportNumber">
+        <li id="findSeal2"><a href="findSeals.html">FIND A SEAL</a></li>
+        <p class="right" id="reportNumber">
           Report a sighting <br />
           <b>(888) 256-9840</b>
-        </li>
+        </p>
       </div>
     </ul>
     <div class="allText">
-     
-      <p class="unfortunately">Unfortunately, we couldn't find that the seal in our databsae.</p>
+      <p class="unfortunately">
+        Unfortunately, we couldn't find that the seal in our databsae.
+      </p>
     </div>
-   <div class="yesNo">
-    <div>
-   <button class="yes generalBtn" onclick="location.href='findSeals.html'">Try Again</button>
-</div>
-   <button class="no generalBtn" onclick="location.href='/main.html'">Return Home</button>
-  </div>
+    <div class="yesNo">
+      <div>
+        <button class="yes generalBtn" onclick="location.href='findSeals.html'">
+          Try Again
+        </button>
+      </div>
+      <button class="no generalBtn" onclick="location.href='/main.html'">
+        Return Home
+      </button>
+    </div>
     <script type="text/javascript">
       function myFunction() {
         var x = document.getElementById("verticalMenu");

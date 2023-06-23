@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#infoTitle {
+    margin: 5% 0 0 10%;
+    text-align: left;
+    width: 60%;
+  }
+  
+  #infoTitle h1 {
+    border-bottom: 2px solid lightblue;
+    padding: 0 0 10px 15px;
+    margin-bottom: 5%;
+    font-size: 35px;
+  }
+  
+  #info p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    margin: 3% 10% 0 10%;
+    padding-bottom: 5%;
+    font-size: 18px;
+    text-indent: 6%;
+    border-bottom: 0.5px solid black;
+  }
+  #info img {
+    margin: 5% 10% 0 10%;
+  }
+
+  #factOptions{
+    margin: 5% 10% 0 10%;
+    padding-bottom:5%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+  }
+
+  .parallelogram {
+    width: 30%;
+    margin: 1%;
+    height: 300px;
+    transform: skew(-5deg);
+    border: 2px solid black;
+    display:inline-block;
+    
+    text-align: center;
+  }
+
+  .parallelogram:hover{
+    background-color: lightblue;
+  }
+
+  .circle{
+    margin:20% auto 0 auto;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 50%;
+    transform: skew(5deg);
+  }
+  .parallelogram h2{
+    transform: skew(5deg);
+    font-size: 14px;
+    margin-top: 60%;
+  }
+  .fact{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6% auto 0 auto;
+    text-align: center;
+  }
+  #factCircle{
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 5% 0 5%;
+  }
+  .fact p{
+    width:50%;
+    font-size: 16px;;
+  }
+  #factContainer{
+    padding-bottom: 8%;
+    width: 90%;
+    margin:auto;
+    border-bottom: 1px solid black
+  }
