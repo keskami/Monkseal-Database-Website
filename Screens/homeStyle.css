@@ -69,12 +69,21 @@ progress {
     border-radius: 7px;
   }
 
+
   .question{
-  
+    display: block;
     font-family: NimbusBold;
     font-size:  8.5vw; 
-   
     color:rgb(37, 150, 190);
+  }
+
+  .icons{
+    vertical-align: middle;
+    font-family: NimbusBold;
+    font-size:  4.0vw; 
+    margin-bottom: px;
+    color:rgb(37, 150, 190);
+    text-align: right;
   }
 
   .description{
@@ -102,6 +111,7 @@ progress {
   }
 
   .scarBtn{
+    text-align: left;
     display: block;
     width: calc(100vw - 100px);
     height: 80px;
@@ -295,7 +305,7 @@ progress {
     font-size:  4.0vw;    
     text-align: left;
     margin-left: 15px;
-    
+    margin-right: 5px;
   }
   
 
@@ -317,6 +327,95 @@ progress {
     color: white;
     
   }
+
+  /*for select body part pages*/
+ 
+
+  .fa-solid {
+    
+    position: relative;
+    background-color: rgba(106, 69, 69, 0.591);
+    padding: 0.4vw 0.4vw;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 2.0vw;
+    margin-top: px;
+    
+  
+}
+
+
+
+.container {
+  display: inline-flex;
+  vertical-align: middle;
+  position: relative; 
+}
+
+/* Container Tooltip */
+.tooltip {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+/* Style text tooltip */
+.tooltipText {
+    margin-left: 24px;
+    width: calc(100vw / 2);
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    bottom: 150%;
+    padding: 13px 13px;
+    border-radius: 20px;
+    font-size: 2.0vw;
+    font-family: MontserratLight;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.fb { color: white;}
+
+
+
+/*  Membuat dan style tip*/
+.tooltipText::after {
+    content: '';
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(37, 149, 190, 0.665) transparent transparent transparent;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-left: 5%;
+    
+}
+
+/* Style Icon */
+
+
+
+
+
+
+/* Hover text tooltip */
+.tooltip:hover .tooltipText{
+    opacity: 1;
+    transform: translateY(-10px);
+    background-color: rgba(37, 149, 190, 0.665);
+}
+
+/* Hover Background icon */
+.facebook:hover .fa-solid {
+  background-color: rgb(37, 150, 190);
+}
+
+/*for find seal page*/
+
 
   @media only screen and (min-width: 700px) {
     .img-monk{
@@ -396,9 +495,16 @@ progress {
   .scarBtn{
     width: 600px;
   }
-
-    
+  .fa-solid{
+    font-size: 18px;
+    padding: 3px 3px;
   }
+  .tooltipText{
+    width: 350px;
+    font-size: 15px;
+  }
+}
+
 
   @media only screen and (min-width: 430px) {
     .scarQhead{
