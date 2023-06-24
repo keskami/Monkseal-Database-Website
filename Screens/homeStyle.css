@@ -263,6 +263,7 @@ progress {
   top:0px;
   background-color:white;
 
+
 }
 
   .scarQuestion{
@@ -297,7 +298,8 @@ progress {
     text-align: left;
     margin-left:calc((100vw - (100vw - 80px)) / 3);
     padding-bottom: 20px;
-    margin-top: 5px;
+    margin-top: 5px; 
+    
   }
 
   .scarQhead{
@@ -342,18 +344,13 @@ progress {
     border-radius: 100px;
     color: #fff;
     font-size: 2.0vw;
-    margin-top: 5px;
+    margin-top: 4.3px;
    z-index: 2;
 
   
 }
 
-.container { 
-  display: inline-flex;
-  vertical-align: middle;
-  position: relative;
-  margin-bottom: 10px; 
-}
+
 
 .container1 {
 
@@ -363,15 +360,6 @@ progress {
 
 }
 
-/* Container Tooltip */
-.tooltip {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 40px;
-    cursor: pointer;
-}
 
 .tooltip1 {
   position: relative;
@@ -384,29 +372,16 @@ progress {
 }
 
 /* Style text tooltip */
-.tooltipText {
-    margin-left: 130%;
-    width: calc(100vw / 3);
-    text-align: center;
-    background-color: #fff;
-    position: absolute;
-    bottom: 90%;
-    padding: 13px 13px;
-    border-radius: 20px;
-    font-size: 2.0vw;
-    font-family: MontserratLight;
-    opacity: 0;
-    transition: all .5s;
-}
+
 
 .tooltipText1 {
-  margin-left: calc(100vw - (100vw / 1.016));
+  margin-left: calc(100vw / 2);
   width: calc(100vw / 2.5);
-  z-index: 1;
+  z-index: 4;
   text-align: center;
   background-color: #fff;
   position: absolute;
-  bottom: 70%;
+  margin-top: 105%;
   padding: 5px 5px;
   border-radius: 20px;
   font-size: 2.0vw;
@@ -419,29 +394,17 @@ progress {
 .fb { color: white;}
 
 
-.tooltipText::after {
-  content: '';
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgba(37, 149, 190, 0.665) transparent transparent transparent;
-  position: absolute;
-  top: 100%;
-  left: 40%;
- 
-  
-}
 
 /*  Membuat dan style tip*/
 .tooltipText1::after {
     content: '';
     border-width: 5px;
     border-style: solid;
-    border-color: rgba(37, 149, 190, 0.665) transparent transparent transparent;
+    border-color: transparent rgba(37, 149, 190, 0.665) transparent transparent;
     position: absolute;
-    top: 100%;
-    left: 40%;
-    margin-left: 5%;
-    
+    top: 50%;
+    right: 100%;
+
 }
 
 /* Style Icon */
@@ -451,12 +414,7 @@ progress {
 
 
 
-/* Hover text tooltip */
-.tooltip:hover .tooltipText{
-    opacity: 1;
-    transform: translateY(-10px);
-    background-color: rgba(37, 149, 190, 0.665);
-}
+
 
 
 .facebook:hover .tooltipText1{
@@ -566,7 +524,8 @@ progress {
   .tooltipText1{
     width: 350px;
     font-size: 12px;
-    margin-left: 26px;
+    margin-left: 400px;
+    margin-top: 17px;
   }
 }
 
@@ -579,6 +538,7 @@ progress {
     .scarQbody{
       font-size: 15px;
     }
+
   }
 
 
