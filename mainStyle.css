@@ -63,7 +63,7 @@
 }
 
 #verticalMenu {
-  z-index: 1;
+  z-index: 4;
   position: absolute;
   width: 99.5%;
   text-align: center;
