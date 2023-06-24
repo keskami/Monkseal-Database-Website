@@ -111,6 +111,7 @@ progress {
   }
 
   .scarBtn{
+    
     text-align: left;
     display: block;
     width: calc(100vw - 100px);
@@ -126,6 +127,7 @@ progress {
     font-family: MontserratLight;
     cursor: pointer;
     scroll-margin-block-start: 100px;
+    
   }
 
   .foundSeals{
@@ -255,10 +257,12 @@ progress {
   }
 
 .scarText{
+  z-index: 3;
   position:sticky;
   position: -webkit-sticky;
   top:0px;
   background-color:white;
+
 }
 
   .scarQuestion{
@@ -297,7 +301,7 @@ progress {
   }
 
   .scarQhead{
-    display: block;
+    display: inline-block;
     margin-top: 7px;
     margin-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -306,6 +310,7 @@ progress {
     text-align: left;
     margin-left: 15px;
     margin-right: 5px;
+    vertical-align: middle;
   }
   
 
@@ -332,24 +337,30 @@ progress {
  
 
   .fa-solid {
-    
-    position: relative;
     background-color: rgba(106, 69, 69, 0.591);
     padding: 0.4vw 0.4vw;
     border-radius: 100px;
     color: #fff;
     font-size: 2.0vw;
-    margin-top: px;
-    
+    margin-top: 5px;
+   z-index: 2;
+
   
 }
 
-
-
-.container {
+.container { 
   display: inline-flex;
   vertical-align: middle;
+  position: relative;
+  margin-bottom: 10px; 
+}
+
+.container1 {
+
+  display: inline-block;
   position: relative; 
+
+
 }
 
 /* Container Tooltip */
@@ -362,14 +373,24 @@ progress {
     cursor: pointer;
 }
 
+.tooltip1 {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
 /* Style text tooltip */
 .tooltipText {
-    margin-left: 24px;
-    width: calc(100vw / 2);
+    margin-left: 130%;
+    width: calc(100vw / 3);
     text-align: center;
     background-color: #fff;
     position: absolute;
-    bottom: 150%;
+    bottom: 90%;
     padding: 13px 13px;
     border-radius: 20px;
     font-size: 2.0vw;
@@ -378,12 +399,40 @@ progress {
     transition: all .5s;
 }
 
+.tooltipText1 {
+  margin-left: calc(100vw - (100vw / 1.016));
+  width: calc(100vw / 2.5);
+  z-index: 1;
+  text-align: center;
+  background-color: #fff;
+  position: absolute;
+  bottom: 70%;
+  padding: 5px 5px;
+  border-radius: 20px;
+  font-size: 2.0vw;
+  font-family: MontserratLight;
+  opacity: 0;
+  transition: all .5s;
+  cursor:default;
+}
+
 .fb { color: white;}
 
 
+.tooltipText::after {
+  content: '';
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(37, 149, 190, 0.665) transparent transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+ 
+  
+}
 
 /*  Membuat dan style tip*/
-.tooltipText::after {
+.tooltipText1::after {
     content: '';
     border-width: 5px;
     border-style: solid;
@@ -409,8 +458,18 @@ progress {
     background-color: rgba(37, 149, 190, 0.665);
 }
 
+
+.facebook:hover .tooltipText1{
+  opacity: 1;
+  transform: translateY(-10px);
+  background-color: rgba(37, 149, 190, 0.665);
+
+}
+
+
+
 /* Hover Background icon */
-.facebook:hover .fa-solid {
+.fa-solid:hover{
   background-color: rgb(37, 150, 190);
 }
 
@@ -496,14 +555,21 @@ progress {
     width: 600px;
   }
   .fa-solid{
-    font-size: 18px;
+    font-size: 14px;
     padding: 3px 3px;
   }
   .tooltipText{
     width: 350px;
     font-size: 15px;
+    margin-left: 130%;
+  }
+  .tooltipText1{
+    width: 350px;
+    font-size: 12px;
+    margin-left: 26px;
   }
 }
+
 
 
   @media only screen and (min-width: 430px) {
