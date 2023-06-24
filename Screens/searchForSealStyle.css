@@ -9,7 +9,8 @@
 .label h2 {
   font-family: "Open Sans", sans-serif;
   float: left;
-  width: 30%;
+  width: 100%;
+  padding-bottom: 3%;
 }
 .label input {
   width: 100%;
@@ -40,16 +41,35 @@ option:hover,
 }
 
 .checkboxButtons input {
-  
+  width: 20px;
+  padding: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
-.checkboxButtons fieldset {
+
+input[type="submit"] {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  background-color: #008ed6;
+  color: white;
+  width: 30%;
+  border: none;
+}
+
+.checkboxButtons fieldset{
   width: 70%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-
+  border:none;
 }
+
 label{
   color: black;
+}
+
+#border{
+  border-bottom:1px solid black;
+  margin: 10% auto 0 auto;
+  width: 80%;
   
 }
