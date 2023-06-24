@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/mainStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="searchForSealStyle.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <div id="iphoneMenu">
+      <div id="topnav">
+        <p id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </p>
+        <p class="right">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </p>
+        <p class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </p>
+      </div>
+
+      <div id="verticalMenu">
+        <ul>
+          <li id="findSeal"><a href="findSeals.html">FIND A SEAL</a></li>
+          <li><a href="/main.html">HOME</a></li>
+          <li><a href="learnMore.html">LEARN MORE</a></li>
+          <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+          <li><a href="aboutUs.html">ABOUT</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul id="tabletUL">
+      <div id="wrapper">
+        <li id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </li>
+        <li><a href="/main.html">HOME</a></li>
+        <li><a href="learnMore.html">LEARN MORE</a></li>
+        <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+        <li><a href="aboutUs.html">ABOUT</a></li>
+        <li id="findSeal2"><a href="findSeals.html">FIND A SEAL</a></li>
+        <p class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </p>
+      </div>
+    </ul>
+    <div class="label">
+      <h2>Search</h2>
+      <input type="search" list="" name="seals" id="input" />
+      <datalist id="seals">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </datalist>
+    </div>
+
+    <div class="label">
+      <h2>Scar Location</h2>
+    </div>
+    <div class="checkboxButtons">
+      <fieldset>
+        <input type="checkbox" name="headFace" id="headFace" value="headFace" />
+        <label for="headFace"> Head & Face </label>
+        <br />
+        <input type="checkbox" name="dorsal" id="dorsal" value="dorsal" />
+        <label for="dorsal"> Dorsal </label>
+        <br />
+        <input type="checkbox" name="ventral" id="ventral" value="ventral" />
+        <label for="ventral"> Ventral </label>
+        <br />
+        <input
+          type="checkbox"
+          name="rightLateral"
+          id="rightLateral"
+          value="rightLateral"
+        />
+        <label for="rightLateral"> Right-Lateral </label>
+        <br />
+        <input
+          type="checkbox"
+          name="leftLateral"
+          id="leftLateral"
+          value="leftLateral"
+        />
+        <label for="leftLateral"> Left-Lateral </label>
+        <br />
+        <input
+          type="checkbox"
+          name="rightForeflipper"
+          id="rightForeflipper"
+          value="rightForeflipper"
+        />
+        <label for="rightForeflipper"> Right Foreflipper </label>
+        <br />
+        <input
+          type="checkbox"
+          name="leftForeflipper"
+          id="leftForeflipper"
+          value="leftForeflipper"
+        />
+        <label for="leftForeflipper"> Left Foreflipper </label>
+        <br />
+        <input
+          type="checkbox"
+          name="hindflipper"
+          id="hindflipper"
+          value="hindflipper"
+        />
+        <label for="hindflipper"> Hindflipper </label>
+        <br />
+      </fieldset>
+    </div>
+
+    <h2 id="learn">
+      Learn how you can <br />
+      help the endangered <br />
+      Hawaiian Monk Seal
+    </h2>
+    <div id="buttonContainer">
+      <button id="protectButton" onclick="openProtectingSeals()">
+        Protecting Seals
+      </button>
+    </div>
+    <div id="lightBlueSection">
+      <h2 id="h2White">In partnership with</h2>
+      <div id="logoImgContainer">
+        <img src="/img/noaa.png" id="noaaImg" />
+        <img src="/img/mmc.png" id="mmcImg" />
+      </div>
+    </div>
+    <div id="darkBlueSection">
+      <div id="firstDarkBlueSection">
+        <ul id="smallNavMenu">
+          <li><a href="main.html" class="bottomNav">Home</a></li>
+          <li>
+            <a href="Screens/learnMore.html" class="bottomNav">Learn More</a>
+          </li>
+          <li>
+            <a href="Screens/oceanActivities.html" class="bottomNav"
+              >Ocean Activities</a
+            >
+          </li>
+          <li><a href="Screens/aboutUs.html" class="bottomNav">About</a></li>
+          <li>
+            <a href="/Screens/findSeals.html" class="bottomNav">Find a Seal</a>
+          </li>
+        </ul>
+        <div id="socialContainer">
+          <div id="social">
+            <p>Social</p>
+          </div>
+
+          <div id="socialImg">
+            <button id="facebook" onclick="openFacebook()">
+              <img src="/img/facebook.png" />
+            </button>
+            <button id="instagram" onclick="openInstagram()">
+              <img src="/img/instagram.png" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <form>
+        <div id="inputDiv">
+          <label for="name">Name</label><br />
+          <input type="text" name="name" /><br />
+          <label for="email">Email</label><br />
+          <input type="text" name="email" /><br />
+        </div>
+        <div id="submitDiv">
+          <h2 id="signup">
+            Sign up for updates from <br />
+            the Marine Mammal Center
+          </h2>
+          <input type="submit" onclick="signup()" />
+        </div>
+      </form>
+      <div id="thirdDarkBlueSection">
+        <img src="/img/sealClipart.jpeg" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
+          vel turpis nunc eget. Nisl vel pretium lectus quam id leo in vitae.
+          Risus commodo viverra maecenas accumsan. Massa eget egestas purus
+          viverra accumsan in nisl nisi scelerisque. Nulla pharetra diam sit
+          amet nisl suscipit. Consectetur adipiscing elit ut aliquam. Nunc sed
+          blandit libero volutpat sed cras ornare arcu dui. Sed tempus urna et
+          pharetra pharetra massa massa. Lobortis elementum nibh tellus
+          molestie.
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("verticalMenu");
+        if (x.style.visibility === "visible") {
+          x.style.visibility = "hidden";
+          x.style.opacity = "0";
+          x.style.height = "0";
+        } else {
+          x.style.visibility = "visible";
+          x.style.opacity = "1";
+          x.style.height = "290px";
+        }
+      }
+
+      input.onfocus = function () {
+        seals.style.display = "block";
+        input.style.borderRadius = "5px 5px 0 0";
+      };
+      for (let option of seals.options) {
+        option.onclick = function () {
+          input.value = option.value;
+          seals.style.display = "none";
+          input.style.borderRadius = "5px";
+        };
+      }
+      input.oninput = function () {
+        var text = input.value.toUpperCase();
+        for (let option of seals.options) {
+          if (option.value.toUpperCase().indexOf(text) > -1) {
+            option.style.display = "block";
+          } else {
+            option.style.display = "none";
+          }
+        }
+      };
+      var currentFocus = -1;
+      input.onkeydown = function (e) {
+        if (e.keyCode == 40) {
+          currentFocus++;
+          addActive(seals.options);
+        } else if (e.keyCode == 38) {
+          currentFocus--;
+          addActive(seals.options);
+        } else if (e.keyCode == 13) {
+          e.preventDefault();
+          if (currentFocus > -1) {
+            if (seals.options) seals.options[currentFocus].click();
+          }
+        }
+      };
+
+      function addActive(x) {
+        if (!x) return false;
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = x.length - 1;
+        x[currentFocus].classList.add("active");
+      }
+      function removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+          x[i].classList.remove("active");
+        }
+      }
+    </script>
+  </body>
+</html>
