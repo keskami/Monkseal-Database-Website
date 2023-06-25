@@ -6,7 +6,7 @@
 #infoTitle {
     margin: 5% 0 0 10%;
     text-align: left;
-    width: 60%;
+    width: 50%;
   }
   
   #infoTitle h1 {
@@ -45,8 +45,7 @@
     height: 300px;
     transform: skew(-5deg);
     border: 2px solid black;
-    display:inline-block;
-    
+    display:block;
     text-align: center;
   }
 
@@ -55,7 +54,7 @@
   }
 
   .circle{
-    margin:20% auto 0 auto;
+    margin:20% auto 50% auto;
     width: 80px;
     height: 80px;
     border: 1px solid black;
@@ -65,7 +64,6 @@
   .parallelogram h2{
     transform: skew(5deg);
     font-size: 14px;
-    margin-top: 60%;
   }
   .fact{
     width:100%;
@@ -94,9 +92,58 @@
   }
 
   @media only screen and (min-width: 768px) {
-   
+
+    #infoTitle{
+      width: 40%;
+    }
+    .parallelogram h2{
+      font-size: 20px;
+    }
+    .parallelogram{
+      height: 350px;
+    }
+    .circle{
+      width: 120px;
+      height: 120px;
+      margin:20% auto 40% auto;
+    }
+    #factCircle{
+      width: 140px;
+      height: 140px;
+    }
+    .fact p{
+      width:50%;
+      font-size: 20px;
+    }
   }
 
   @media only screen and (min-width: 1000px) {
+    .parallelogram {
+      height: 400px;
+    }
+
+    .parallelogram h2{
+      font-size: 20px;
+    }
+
+    .circle{
+      margin:20% auto 25% auto;
+      width: 140px;
+      height: 140px;
+    }
+
+    #infoTitle{
+      width: 30%;
+    }
+
+
+    #factCircle{
+      width: 160px;
+      height: 160px;
+    }
+    .fact p{
+      width:50%;
+      font-size: 22px;
+    }
 
   }

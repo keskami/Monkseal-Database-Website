@@ -96,8 +96,8 @@
           <li>(Source: Fishing with Aloha Brochure.pdf)</li>
         </li>
         <li>Register and monitor your gillnets.</li>
-        <li><a href="https://www.fisheries.noaa.gov/pacific-islands/endangered-species-conservation/nearshore-fisheries-and-interactions-hawaiian-monk">Learn more</a></li>
-        <iframe src='//players.brightcove.net/659677166001/4b3c8a9e-7bf7-43dd-b693-2614cc1ed6b7_default/index.html?videoId=6273431169001' allowfullscreen frameborder=0></iframe>
+        <li><button id="protectButton" onClick="learnMore()">Learn more</button></li>
+        <iframe src='//players.brightcove.net/659677166001/4b3c8a9e-7bf7-43dd-b693-2614cc1ed6b7_default/index.html?videoId=6273431169001' allowfullscreen frameborder=0 id="iframe"></iframe>
       </ul>
     </div>
     <div class="subTitle">
@@ -230,6 +230,9 @@
           x.style.opacity = "1";
           x.style.height = "350px";
         }
+      }
+      function learnMore() {
+        location.href = "https://www.fisheries.noaa.gov/pacific-islands/endangered-species-conservation/nearshore-fisheries-and-interactions-hawaiian-monk"
       }
     </script>
   </body>
