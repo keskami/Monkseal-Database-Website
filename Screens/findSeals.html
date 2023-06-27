@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/a89fb0fef9.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <script src="dataArray.js"></script>
     <div id="iphoneMenu">
       <div id="topnav">
         <p id="MonkSeal">
@@ -77,7 +78,7 @@
    
     <div class="allButtons">
     <div class="topButtons">
-    <button type="button" class="btn generalBtn">Hawai‘i</button>
+    <button type="button" class="btn generalBtn" onclick="selectIsland(Hawaii)">Hawai‘i</button>
     
     <button type="button" class="btn generalBtn">Kaho‘olawe</button>
     <button type="button" class="btn generalBtn">Kauai</button>
@@ -93,7 +94,7 @@
   </div>
 
   <div>
-  </div><button class="mainButtons generalBtn" onclick="location.href='bleachNumber1.html'">Next</button>
+  </div><button class="mainButtons generalBtn" onclick="selectIsland()">Next</button>
   </div>
     <script type="text/javascript">
       function myFunction() {
