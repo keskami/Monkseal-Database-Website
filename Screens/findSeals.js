@@ -7,3 +7,4 @@ productButtons.forEach(productButton => {
     button.classList.toggle('selected');
   });
 });
+
