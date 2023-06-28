@@ -12,6 +12,7 @@
     />
   </head>
   <body>
+    <script src="dataArray.js"></script>
     <div id="iphoneMenu">
       <div id="topnav">
         <p id="MonkSeal">
@@ -67,30 +68,30 @@
    
     <div class="scarButtons">
      
-    <button type="button" class="btn scarBtn">
+    <button type="button" class="btn scarBtn" id="headFace">
         <p class="scarQhead">Head & Face</p>
         <p class="scarQbody">Scarring on the face, head, or neck of a seal.</p>
      </button>
-     <button type="button" class="btn scarBtn">
+     <button type="button" class="btn scarBtn" id="dorsal">
         <p class="scarQhead">Dorsal</p>
         <p class="scarQbody">Scarring along the seal's back.</p>
      </button>
-     <button type="button" class="btn scarBtn">
+     <button type="button" class="btn scarBtn" id="ventral">
         <p class="scarQhead">Ventral</p>
         <p class="scarQbody">Scarring along the seal's underside or belly.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button><button type="button" class="btn scarBtn" id="rightLateral">
         <p class="scarQhead">Right-Lateral</p>
         <p class="scarQbody">Scarring along the seal's right side.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button><button type="button" class="btn scarBtn" id="leftLateral">
         <p class="scarQhead">Left-Lateral</p>
         <p class="scarQbody">Scarring along the seal's left side.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button><button type="button" class="btn scarBtn" id="rightForeflipper">
         <p class="scarQhead">Right Foreflipper</p>
         <p class="scarQbody">Scarring on the seal's front-right flipper</p>
-     </button><button type="button" class="btn scarBtn">
+     </button><button type="button" class="btn scarBtn" id="leftForeflipper">
         <p class="scarQhead">Left Foreflipper</p>
         <p class="scarQbody">Scarring on the seal's front-left flipper.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button><button type="button" class="btn scarBtn" id="hindFlipper">
         <p class="scarQhead">Hind Flipper</p>
         <p class="scarQbody">Scarring on the seal's backmost flipper.</p>
      </button>
@@ -98,7 +99,7 @@
 
 
   <div>
-  </div><button class="mainButtons generalBtn" onclick="location.href='sealTags1.html'">Next</button>
+  </div><button class="mainButtons generalBtn" onclick="selectNaturalBleachLocation()">Next</button>
   </div>
     <script type="text/javascript">
       function myFunction() {

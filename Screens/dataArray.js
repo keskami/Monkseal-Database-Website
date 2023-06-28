@@ -1,27 +1,75 @@
+const inputs = [null, null, null, null, null]
 
-var island = null;
-var bleachNumber = null;
-let inputs = [null,  null, null, null, null]
 
 function selectIsland() {
-    island = document.querySelector('.btn.generalBtn.selected').textContent;
+    if (typeof (Storage) !== "undefined") {
+        localStorage.island = document.querySelector('.btn.generalBtn.selected').textContent
+    } else {
+        // Sorry! No Web Storage support..
+    }
+    console.log(localStorage.island)
     location.href = 'bleachNumber1.html';
-    console.log(island)
 }
 
 function selectBleachNumber() {
-    bleachNumber = document.getElementsByClassName('bleachInput').value
-    console.log(inputs[1]);
+    if (typeof (Storage) !== "undefined") {
+        localStorage.bleachNumber = document.querySelector('.bleachInput').value
+    } else {
+        // Sorry! No Web Storage support..
+    }
+    console.log(localStorage.bleachNumber);
     location.href = 'recognizableScars1.html'
-    console.log(bleachNumber)
 }
+
+function selectScarLocation() {
+    let id = []
+    if (typeof (Storage) !== "undefined") {
+        const selected = document.getElementsByClassName('selected')
+        for (i = 0; i < selected.length; i++) {
+            id = id.concat(selected[i].id)
+        }
+        localStorage.scarLocation = id
+    } else {
+        // Sorry! No Web Storage support..
+    }
+    console.log(localStorage.scarLocation);
+    location.href = 'naturalBleach1.html'
+}
+
+function selectNaturalBleachLocation() {
+    let id = []
+    if (typeof (Storage) !== "undefined") {
+        const selected = document.getElementsByClassName('selected')
+        for (i = 0; i < selected.length; i++) {
+            id = id.concat(selected[i].id)
+        }
+        localStorage.naturalBleachLocation = id
+    } else {
+        // Sorry! No Web Storage support..
+    }
+    console.log(localStorage.naturalBleachLocation);
+    location.href = 'sealTags1.html'
+}
+
 
 
 
 function results() {
-    location.href = 'searchResults.html'
-    inputs = [island, bleachNumber, null, null, null];
+    if (typeof (Storage) !== "undefined") {
+        localStorage.tagNumber= document.querySelector('.bleachInput').value
+    } else {
+        // Sorry! No Web Storage support..
+    }
+    console.log(localStorage.tagNumber);
+
+    inputs[0] = localStorage.island
+    inputs[1] = localStorage.bleachNumber
+    inputs[2] = localStorage.scarLocation
+    inputs[3] = localStorage.naturalBleachLocation
+    inputs[4] = localStorage.tagNumber
     console.log(inputs)
+    location.href = 'searchResults.html'
+    inputs = [null, null, null, null, null]
 }
 
 

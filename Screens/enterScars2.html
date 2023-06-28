@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/a89fb0fef9.js" crossorigin="anonymous"></script>
   </head>
   <body>
-  
+    <script src="dataArray.js"></script>
     <div id="iphoneMenu">
       <div id="topnav">
         <p id="MonkSeal">
@@ -71,7 +71,7 @@
     <div class="scarButtons">
      
       
-    <button type="button" class="btn scarBtn">
+    <button type="button" class="btn scarBtn" id="headFace">
       
         <p class="scarQhead">Head & Face
           <p class="container1">
@@ -87,7 +87,7 @@
        
      </button>
      
-     <button type="button" class="btn scarBtn">
+     <button type="button" class="btn scarBtn" id="dorsal">
         <p class="scarQhead">Dorsal
           <p class="container1">
             <div class="tooltip1 facebook">
@@ -99,7 +99,7 @@
         <p class="scarQbody">Scarring along the seal's back.</p>
         
      </button>
-     <button type="button" class="btn scarBtn">
+     <button type="button" class="btn scarBtn" id="ventral">
         <p class="scarQhead">Ventral
           <p class="container1">
             <div class="tooltip1 facebook">
@@ -109,7 +109,8 @@
       </p>
         </p>
         <p class="scarQbody">Scarring along the seal's underside or belly.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button>
+     <button type="button" class="btn scarBtn" id="rightLateral">
         <p class="scarQhead">Right-Lateral
           <p class="container1">
             <div class="tooltip1 facebook">
@@ -119,7 +120,8 @@
       </p>
         </p>
         <p class="scarQbody">Scarring along the seal's right side.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button>
+     <button type="button" class="btn scarBtn" id="leftLateral">
         <p class="scarQhead">Left-Lateral
           <p class="container1">
             <div class="tooltip1 facebook">
@@ -129,7 +131,8 @@
       </p>
         </p>
         <p class="scarQbody">Scarring along the seal's left side.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button>
+     <button type="button" class="btn scarBtn" id="rightForeflipper">
         <p class="scarQhead">Right Foreflipper
           <p class="container1">
             <div class="tooltip1 facebook">
@@ -139,7 +142,8 @@
       </p>
         </p>
         <p class="scarQbody">Scarring on the seal's front-right flipper</p>
-     </button><button type="button" class="btn scarBtn">
+     </button>
+     <button type="button" class="btn scarBtn" id="leftForeflipper">
         <p class="scarQhead">Left Foreflipper
           <p class="container1">
             <div class="tooltip1 facebook">
@@ -149,7 +153,8 @@
       </p>
         </p>
         <p class="scarQbody">Scarring on the seal's front-left flipper.</p>
-     </button><button type="button" class="btn scarBtn">
+     </button>
+     <button type="button" class="btn scarBtn" id="hindFlipper">
         <p class="scarQhead">Hind Flipper
           <p class="container1">
             <div class="tooltip1 facebook">
@@ -164,7 +169,7 @@
 
 
   <div>
-  </div><button class="mainButtons generalBtn" onclick="location.href='naturalBleach1.html'">Next</button>
+  </div><button class="mainButtons generalBtn" onclick="selectScarLocation()">Next</button>
   </div>
     <script type="text/javascript">
       function myFunction() {
