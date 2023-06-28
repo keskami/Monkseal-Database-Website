@@ -560,8 +560,4 @@ progress {
     src: url("/fonts/MontserratLight.ttf") format("opentype");
 }
 
-@font-face {
-  font-family: Montserrat;
-  src: url("/fonts/MontserratVariable.ttf") format("opentype");
-}
   

@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="homeStyle.css" />
     <link rel="stylesheet" href="/mainStyle.css" />
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://kit.fontawesome.com/a89fb0fef9.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a89fb0fef9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <script src="dataArray.js"></script>
@@ -39,7 +42,6 @@
           <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
           <li><a href="aboutUs.html">ABOUT</a></li>
           <li><a href="searchForSeal.html">SEARCH FOR A SEAL</a></li>
-          
         </ul>
       </div>
     </div>
@@ -68,34 +70,44 @@
         Island
         <div class="container1">
           <div class="tooltip1 facebook">
-              <span class="tooltipText1 fb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate sagittis tortor, et sagittis ipsum accumsan sit amet. Vivamus justo dui, tristique volutpat mollis vel, pulvinar sed lectus. Nulla facilisi. Morbi odio sapien, gravida quis sodales ac, porta eu odio. Quisque bibendum nulla id neque viverra, at aliquam libero auctor. Aliquam lobortis feugiat odio ultrices elementum. Mauris laoreet arcu odio.</span>
-              <i class="fa-solid fa-circle-info"></i>
+            <span class="tooltipText1 fb"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              vulputate sagittis tortor, et sagittis ipsum accumsan sit amet.
+              Vivamus justo dui, tristique volutpat mollis vel, pulvinar sed
+              lectus. Nulla facilisi. Morbi odio sapien, gravida quis sodales
+              ac, porta eu odio. Quisque bibendum nulla id neque viverra, at
+              aliquam libero auctor. Aliquam lobortis feugiat odio ultrices
+              elementum. Mauris laoreet arcu odio.</span
+            >
+            <i class="fa-solid fa-circle-info"></i>
           </div>
-      </div>
+        </div>
       </h1>
       <p class="description">Please select the island the monk seal is on.</p>
     </div>
-   
-    <div class="allButtons">
-    <div class="topButtons">
-    <button type="button" class="btn generalBtn" onclick="selectIsland(Hawaii)">Hawai‘i</button>
-    
-    <button type="button" class="btn generalBtn">Kaho‘olawe</button>
-    <button type="button" class="btn generalBtn">Kauai</button>
-    <button type="button" class="btn generalBtn">Lanai</button>
-    </div>
-    <div class="botButtons">
-    <button type="button" class="btn generalBtn">Moloka‘i</button>
-    <button type="button" class="btn generalBtn">Ni‘ihau</button>
-    <button type="button" class="btn generalBtn">Maui</button>
-    <button type="button" class="btn generalBtn">Oahu</button>
-    <script src="findSeals.js"></script>
-    <div class="botButtons"></div>
-  </div>
 
-  <div>
-  </div><button class="mainButtons generalBtn" onclick="selectIsland()">Next</button>
-  </div>
+    <div class="allButtons">
+      <div class="topButtons">
+        <button type="button" class="btn generalBtn">Hawai‘i</button>
+
+        <button type="button" class="btn generalBtn">Kaho‘olawe</button>
+        <button type="button" class="btn generalBtn">Kauai</button>
+        <button type="button" class="btn generalBtn">Lanai</button>
+      </div>
+      <div class="botButtons">
+        <button type="button" class="btn generalBtn">Moloka‘i</button>
+        <button type="button" class="btn generalBtn">Ni‘ihau</button>
+        <button type="button" class="btn generalBtn">Maui</button>
+        <button type="button" class="btn generalBtn">Oahu</button>
+        <script src="findSeals.js"></script>
+        <div class="botButtons"></div>
+      </div>
+
+      <div></div>
+      <button class="mainButtons generalBtn" onclick="selectIsland()">
+        Next
+      </button>
+    </div>
     <script type="text/javascript">
       function myFunction() {
         var x = document.getElementById("verticalMenu");
