@@ -1,4 +1,4 @@
-const inputs = [null, null, null, null, null]
+let inputs = [null, null, null, null, null]
 
 
 function selectIsland() {
@@ -69,6 +69,10 @@ function results() {
     inputs[4] = localStorage.tagNumber
     console.log(inputs)
     location.href = 'searchResults.html'
+    //add code for grabbing data from database here. 
+    //the array for all results is in "input"
+
+
     inputs = [null, null, null, null, null]
 }
 

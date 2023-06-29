@@ -6,7 +6,7 @@
 #infoTitle {
     margin: 5% 0 0 10%;
     text-align: left;
-    width: 50%;
+    width: 60%;
   }
   
   #infoTitle h1 {
@@ -21,7 +21,7 @@
     font-weight: 300;
     margin: 3% 10% 0 10%;
     padding-bottom: 5%;
-    font-size: 18px;
+    font-size: 14px;
     text-indent: 6%;
     border-bottom: 0.5px solid black;
   }
@@ -42,9 +42,9 @@
   .parallelogram {
     width: 30%;
     margin: 1%;
-    height: 300px;
+    height: 250px;
     transform: skew(-5deg);
-    border: 2px solid black;
+    border: 1px solid black;
     display:block;
     text-align: center;
   }
@@ -55,8 +55,8 @@
 
   .circle{
     margin:20% auto 50% auto;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     border: 1px solid black;
     border-radius: 50%;
     transform: skew(5deg);

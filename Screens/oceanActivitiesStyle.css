@@ -42,9 +42,12 @@
   font-size: 22px;
   color: #00467f;
 }
+#subtitle2{
+  font-size: 18px;
+}
 .subTitle img {
   margin: 0;
-  width: 13%;
+  width: 16%;
 }
 #list ul {
   list-style-type: circle;
@@ -98,6 +101,9 @@
   .subTitle h2 {
     font-size: 30px;
   }
+  #subtitle2{
+    font-size: 30px;
+  }
   #list p {
     font-size: 20px;
   }
@@ -115,6 +121,9 @@
     height: 400px;
   }
   .subTitle h2 {
+    font-size: 35px;
+  }
+  #subtitle2{
     font-size: 35px;
   }
   #list p {
