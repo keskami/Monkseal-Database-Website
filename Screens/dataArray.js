@@ -24,6 +24,7 @@ function selectBleachNumber() {
 function selectScarLocation() {
     if (typeof (Storage) !== "undefined") {
         const selected = document.getElementsByClassName('selected')
+        localStorage.scarLength = selected.length
         for (i = 0; i < selected.length; i++) {
             localStorage.setItem('scarLocation' + i, selected[i].id)
         }
@@ -37,6 +38,7 @@ function selectScarLocation() {
 function selectNaturalBleachLocation() {
     if (typeof (Storage) !== "undefined") {
         const selected = document.getElementsByClassName('selected')
+        localStorage.bleachLength = selected.length
         for (i = 0; i < selected.length; i++) {
             localStorage.setItem('naturalBleachLocation' + i, selected[i].id)
         }
@@ -60,13 +62,14 @@ function results() {
 
     inputs[0] = localStorage.island
     inputs[1] = localStorage.bleachNumber
-    inputs[2] = localStorage.scarLocation0
-    inputs[3] = localStorage.scarLocation1
-    inputs[4] = localStorage.scarLocation2
-    inputs[5] = localStorage.scarLocation3
-    inputs[6] = localStorage.naturalBleachLocation0
-    inputs[7] = localStorage.naturalBleachLocation1
-    inputs[8] = localStorage.tagNumber
+    inputs[2] = localStorage.tagNumber
+    for (i = 0; i < parseInt(localStorage.scarLength); i++) {
+        inputs[i + 3] = localStorage.getItem('scarLocation' + i)
+    }
+    for (i = 0; i < parseInt(localStorage.bleachLength); i++) {
+        inputs[i + 3 + parseInt(localStorage.scarLength)] = localStorage.getItem('naturalBleachLocation' + i)
+    }
+    
     console.log(inputs)
     location.href = 'searchResults.html'
     //add code for grabbing data from database here. 
