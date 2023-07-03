@@ -48,25 +48,23 @@
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-
-.sealLabel{
+.sealLabel {
   display: flex;
   margin: 1% auto 5% auto;
   width: 80%;
   align-items: center;
-  padding-bottom:8px;
-  border-bottom: 1px solid #0399D9;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #0399d9;
 }
-.name{
+.name {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 35px;
   color: #0399d9;
 }
-.sealID{
-  margin-left:auto;
+.sealID {
+  margin-left: auto;
 }
-
 
 .modal-content {
   background-color: #fefefe;
@@ -77,9 +75,8 @@
 #modalHeader {
   display: flex;
   justify-content: center;
-  padding:20px 0 35px 0;
+  padding: 20px 0 35px 0;
   border-bottom: 1px solid #0399d9;
-  margin: 0 0 5% 0;
 }
 
 #modalHeader p {
@@ -96,7 +93,7 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   background-color: white;
-  border:none;
+  border: none;
 }
 
 #modalHeader button:hover,
@@ -104,6 +101,48 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+#filterBtn {
+  display: flex;
+  width: 80%;
+  margin: 4% auto 0 auto;
+  background-color: white;
+  border:none;
+}
+
+#filterBtn p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color:#0399d9;
+  margin: auto 0 auto 0
+}
+
+#filterBtn select {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin-left: auto;
+  color: #0399d9;
+  border: none;
+}
+
+#filterBtn input {
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #0399d9;
+  width: 30%;
+  text-align: right;
+  font-size: 16px;
+  margin: auto 0 auto auto
+}
+
+#filterBtn i{
+  border: none;
+  background-color: white;
+  margin:auto 0 auto auto;
 }
 
 label {

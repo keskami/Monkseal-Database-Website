@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/mainStyle.css" />
     <link rel="stylesheet" href="homeStyle.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
     <link rel="stylesheet" href="searchForSealStyle.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap");
@@ -17,6 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="/icons/all.css">
+
   </head>
 
   <body>
@@ -123,10 +122,20 @@
           <p>Filters</p>
           <button>Clear</button>
         </div>
-        <button id="islandBtn">
+        <button id="filterBtn">
           <p>Island</p>
-          <p></p>
+          <select name="islands" id="islands">
+            <option value="Oahu">Oahu</option>
+            <option value="Hawai'i">Hawai'i</option>
+          </select>
         </button>
+        <button id="filterBtn">
+          <p>Tag Number</p>
+          <input type="text" placeholder="123" id="tagNum" name="tagNum">
+        </button>
+        <button id="filterBtn">
+          <p>Bleach Number</p>
+          <button onclick="bleachNumOpen()"><i class='fa fa-chevron-right'></i></button>
         <div class="checkboxButtons">
           <fieldset>
             <div>
