@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;400&family=Open+Sans:wght@400&display=swap");
 @import url("https://fontawesome.com/icons/sliders?f=classic&s=solid");
+
 
 * {
   margin: 0;
@@ -25,7 +26,7 @@
 #filterButton p {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #0399d9;
 }
 
@@ -68,7 +69,8 @@
 
 .modal-content {
   background-color: #fefefe;
-  height: 100%;
+  overflow-y: auto;
+  height: 85%;
   width: 100%; /* Could be more or less, depending on screen size */
 }
 
@@ -91,7 +93,7 @@
   color: #0399d9;
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   background-color: white;
   border: none;
 }
@@ -114,7 +116,7 @@
 #filterBtn p {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #0399d9;
   margin: auto 0 auto 0;
 }
@@ -155,19 +157,29 @@
 label {
   color: #0399d9;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+#inputDiv label{
+  color: white;
 }
 
 #scarDropdown {
   display: none;
 }
 
+#bleachDropdown {
+  display: none;
+}
+
 .checkboxButtons {
   margin-top: 5%;
+  align-items: center;
+  display: flex;
 }
 
 .checkboxButtons input {
-  width: 10px;
+  width: 12px;
   padding: 0;
   margin-bottom: 0;
   box-sizing: border-box;
@@ -175,9 +187,8 @@ label {
   transform: scale(1.5);
   margin: 10px 10px 0 0;
   float: right;
-  color: #0399d9;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 input[type="submit"] {
@@ -213,7 +224,9 @@ input[type="submit"] {
   left: 0;
   right: 0;
   text-align: center;
-  width: 90%;
+  width: 80%;
+  padding: 0 10% 0 10%;
+  height:15%;
   background-color: white;
 }
 #submitFilter button{
@@ -221,14 +234,29 @@ input[type="submit"] {
   color: white;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  font-size: 16px;
   width: 100%;
   height: 40px;
   border-radius: 30px;
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #submitFilter div{
   border-bottom: 1px solid #0399d9;
-
   margin-bottom: 5%;
+}
+
+#submitFilter button p{
+  height:20px;
+  width: 20px;
+  background-color: white;
+  color:#0399d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

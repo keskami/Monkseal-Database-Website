@@ -123,18 +123,19 @@
         </div>
         <div id="filterBtn">
           <p>Island</p>
-          <select name="islands" id="islands">
+          <select name="islands" id="islands" onchange="changeFilterNum()">
+            <option value="" disabled selected hidden>Island</option>
             <option value="Oahu">Oahu</option>
-            <option value="Hawai'i">Hawai'i</option>
+            <option value="Hawaii">Hawai'i</option>
           </select>
         </div>
         <div id="filterBtn">
           <p>Tag Number</p>
-          <input type="text" placeholder="123" id="tagNum" name="tagNum" />
+          <input type="text" placeholder="123" id="tagNum" name="tagNum" oninput="changeFilterNum()"/>
         </div>
         <div id="filterBtn">
           <p>Bleach Number</p>
-          <input type="text" placeholder="123" id="bleachNum" name="tagNum" />
+          <input type="text" placeholder="123" id="bleachNum" name="tagNum" oninput="changeFilterNum()"/>
         </div>
         <div id="divider"></div>
         <div id="filterBtn">
@@ -144,7 +145,7 @@
           </button>
         </div>
         <div class="checkboxButtons" id="scarDropdown">
-          <fieldset>
+          <fieldset onchange="changeFilterNum()">
             <div>
               <input
                 type="checkbox"
@@ -230,11 +231,11 @@
           </button>
         </div>
         <div class="checkboxButtons" id="bleachDropdown">
-          <fieldset>
+          <fieldset onchange="changeFilterNum()">
             <div>
               <input
                 type="checkbox"
-                name="headFace"
+                name="checkbox"
                 id="headFace"
                 value="headFace"
               />
@@ -242,14 +243,14 @@
             </div>
             <br />
             <div>
-              <input type="checkbox" name="dorsal" id="dorsal" value="dorsal" />
+              <input type="checkbox" name="checkbox" id="dorsal" value="dorsal" />
               <label for="dorsal"> Dorsal </label>
             </div>
             <br />
             <div>
               <input
                 type="checkbox"
-                name="ventral"
+                name="checkbox"
                 id="ventral"
                 value="ventral"
               />
@@ -259,7 +260,7 @@
             <div>
               <input
                 type="checkbox"
-                name="rightLateral"
+                name="checkbox"
                 id="rightLateral"
                 value="rightLateral"
               />
@@ -269,7 +270,7 @@
             <div>
               <input
                 type="checkbox"
-                name="leftLateral"
+                name="checkbox"
                 id="leftLateral"
                 value="leftLateral"
               />
@@ -279,7 +280,7 @@
             <div>
               <input
                 type="checkbox"
-                name="rightForeflipper"
+                name="checkbox"
                 id="rightForeflipper"
                 value="rightForeflipper"
               />
@@ -289,7 +290,7 @@
             <div>
               <input
                 type="checkbox"
-                name="leftForeflipper"
+                name="checkbox"
                 id="leftForeflipper"
                 value="leftForeflipper"
               />
@@ -299,7 +300,7 @@
             <div>
               <input
                 type="checkbox"
-                name="hindflipper"
+                name="checkbox"
                 id="hindflipper"
                 value="hindflipper"
               />
@@ -310,7 +311,7 @@
         </div>
         <div id="submitFilter">
           <div></div>
-          <button>Apply 4 Filters</button>
+          <button onclick="applyFilters()">Apply&nbsp;&nbsp;<p id="filterNum">0</p>&nbsp;&nbsp;Filters</button>
         </div>
       </div>
     </div>
