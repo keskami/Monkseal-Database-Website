@@ -119,7 +119,7 @@
         <div id="modalHeader">
           <button id="close" onclick="closeModal()">Close</button>
           <p>Filters</p>
-          <button>Clear</button>
+          <button onclick="clearModal()" onclick="changeFilterNum()">Clear</button>
         </div>
         <div id="filterBtn">
           <p>Island</p>
@@ -131,11 +131,23 @@
         </div>
         <div id="filterBtn">
           <p>Tag Number</p>
-          <input type="text" placeholder="123" id="tagNum" name="tagNum" oninput="changeFilterNum()"/>
+          <input
+            type="text"
+            placeholder="123"
+            id="tagNum"
+            name="tagNum"
+            oninput="changeFilterNum()"
+          />
         </div>
         <div id="filterBtn">
           <p>Bleach Number</p>
-          <input type="text" placeholder="123" id="bleachNum" name="tagNum" oninput="changeFilterNum()"/>
+          <input
+            type="text"
+            placeholder="123"
+            id="bleachNum"
+            name="tagNum"
+            oninput="changeFilterNum()"
+          />
         </div>
         <div id="divider"></div>
         <div id="filterBtn">
@@ -149,7 +161,7 @@
             <div>
               <input
                 type="checkbox"
-                name="headFace"
+                name="checkbox"
                 id="headFace"
                 value="headFace"
               />
@@ -164,7 +176,7 @@
             <div>
               <input
                 type="checkbox"
-                name="ventral"
+                name="checkbox"
                 id="ventral"
                 value="ventral"
               />
@@ -174,7 +186,7 @@
             <div>
               <input
                 type="checkbox"
-                name="rightLateral"
+                name="checkbox"
                 id="rightLateral"
                 value="rightLateral"
               />
@@ -184,7 +196,7 @@
             <div>
               <input
                 type="checkbox"
-                name="leftLateral"
+                name="checkbox"
                 id="leftLateral"
                 value="leftLateral"
               />
@@ -194,7 +206,7 @@
             <div>
               <input
                 type="checkbox"
-                name="rightForeflipper"
+                name="checkbox"
                 id="rightForeflipper"
                 value="rightForeflipper"
               />
@@ -204,7 +216,7 @@
             <div>
               <input
                 type="checkbox"
-                name="leftForeflipper"
+                name="checkbox"
                 id="leftForeflipper"
                 value="leftForeflipper"
               />
@@ -214,7 +226,7 @@
             <div>
               <input
                 type="checkbox"
-                name="hindflipper"
+                name="checkbox"
                 id="hindflipper"
                 value="hindflipper"
               />
@@ -243,7 +255,12 @@
             </div>
             <br />
             <div>
-              <input type="checkbox" name="checkbox" id="dorsal" value="dorsal" />
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="dorsal"
+                value="dorsal"
+              />
               <label for="dorsal"> Dorsal </label>
             </div>
             <br />
@@ -311,12 +328,15 @@
         </div>
         <div id="submitFilter">
           <div></div>
-          <button onclick="applyFilters()">Apply&nbsp;&nbsp;<p id="filterNum">0</p>&nbsp;&nbsp;Filters</button>
+          <button onclick="applyFilters()">
+            Apply&nbsp;&nbsp;
+            <p id="filterNum">0</p>
+            &nbsp;&nbsp;Filters
+          </button>
         </div>
       </div>
     </div>
     <div id="border"></div>
-
 
     <h2 id="learn">
       Learn how you can <br />

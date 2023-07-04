@@ -59,7 +59,7 @@ function applyFilters() {
         var bleachNum = document.getElementById("bleachNum")
         var selectedScars = document.querySelectorAll('input[type="checkbox"]:checked')
         var selectedBleach = document.querySelectorAll('input[id="bleachDropdown"]:checked')
-        
+
         if (islands.value != "") {
             localStorage.i = parseInt(localStorage.i) + 1
             localStorage.setItem("var" + localStorage.i, islands.value)
@@ -101,7 +101,7 @@ function changeFilterNum() {
         var bleachNum = document.getElementById("bleachNum")
         var selectedScars = document.querySelectorAll('input[type="checkbox"]:checked')
         var selectedBleach = document.querySelectorAll('input[id="bleachDropdown"]:checked')
-        
+
         if (islands.value != "") {
             localStorage.i = parseInt(localStorage.i) + 1
         }
@@ -122,5 +122,21 @@ function changeFilterNum() {
         // Sorry! No Web Storage support..
     }
     filterNum.textContent = localStorage.i
+}
+
+function clearModal() {
+    var islands = document.getElementById('islands')
+    var tagNum = document.getElementById('tagNum')
+    var bleachNum = document.getElementById("bleachNum")
+    var selected = document.getElementsByName("checkbox")
+
+
+    islands.value = ""
+    tagNum.value = ""
+    bleachNum.value = ""
+    for (var i = 0; i < selected.length; i++) {
+        selected[i].checked = false;
+    }
+
 }
 
