@@ -19,6 +19,34 @@ window.onclick = function (event) {
     }
 }
 
-function bleachNumOpen() {
+function scarsOpen() {
+    var arrow =  document.getElementById("expandIcon")
+    var scarBtns = document.getElementById("scarDropdown")
+    if (arrow.style.rotate == "90deg"){
+        arrow.style.rotate = "0deg"
+        scarBtns.style.display = "none"
+    }
+    else{
+        arrow.style.rotate = "90deg"
+        scarBtns.style.display = "block"
+    }
     
+    
+
+}
+
+function bleachOpen() {
+    var arrow =  document.getElementById("expandIcon2")
+    var scarBtns = document.getElementById("bleachDropdown")
+    if (arrow.style.rotate == "90deg"){
+        arrow.style.rotate = "0deg"
+        scarBtns.style.display = "none"
+    }
+    else{
+        arrow.style.rotate = "90deg"
+        scarBtns.style.display = "block"
+    }
+    
+    
+
 }

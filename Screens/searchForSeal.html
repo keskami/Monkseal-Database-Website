@@ -14,8 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="/icons/all.css">
-
+    <link rel="stylesheet" href="/icons/all.css" />
   </head>
 
   <body>
@@ -122,21 +121,29 @@
           <p>Filters</p>
           <button>Clear</button>
         </div>
-        <button id="filterBtn">
+        <div id="filterBtn">
           <p>Island</p>
           <select name="islands" id="islands">
             <option value="Oahu">Oahu</option>
             <option value="Hawai'i">Hawai'i</option>
           </select>
-        </button>
-        <button id="filterBtn">
+        </div>
+        <div id="filterBtn">
           <p>Tag Number</p>
-          <input type="text" placeholder="123" id="tagNum" name="tagNum">
-        </button>
-        <button id="filterBtn">
+          <input type="text" placeholder="123" id="tagNum" name="tagNum" />
+        </div>
+        <div id="filterBtn">
           <p>Bleach Number</p>
-          <button onclick="bleachNumOpen()"><i class='fa fa-chevron-right'></i></button>
-        <div class="checkboxButtons">
+          <input type="text" placeholder="123" id="bleachNum" name="tagNum" />
+        </div>
+        <div id="divider"></div>
+        <div id="filterBtn">
+          <p>Scars</p>
+          <button onclick="scarsOpen()">
+            <i class="fa fa-chevron-right" id="expandIcon"></i>
+          </button>
+        </div>
+        <div class="checkboxButtons" id="scarDropdown">
           <fieldset>
             <div>
               <input
@@ -216,27 +223,99 @@
           </fieldset>
         </div>
 
-        <div class="checkboxButtons">
+        <div id="filterBtn">
+          <p>Bleach Marks</p>
+          <button onclick="bleachOpen()">
+            <i class="fa fa-chevron-right" id="expandIcon2"></i>
+          </button>
+        </div>
+        <div class="checkboxButtons" id="bleachDropdown">
           <fieldset>
             <div>
-              <input type="radio" name="islands" id="Oahu" value="Oahu" />
-              <label for="Oahu"> Oahu </label>
+              <input
+                type="checkbox"
+                name="headFace"
+                id="headFace"
+                value="headFace"
+              />
+              <label for="headFace"> Head & Face </label>
+            </div>
+            <br />
+            <div>
+              <input type="checkbox" name="dorsal" id="dorsal" value="dorsal" />
+              <label for="dorsal"> Dorsal </label>
             </div>
             <br />
             <div>
               <input
-                type="radio"
-                name="islands"
-                id="bigIsland"
-                value="bigIsland"
+                type="checkbox"
+                name="ventral"
+                id="ventral"
+                value="ventral"
               />
-              <label for="bigIsland"> Big Island </label>
+              <label for="ventral"> Ventral </label>
             </div>
+            <br />
+            <div>
+              <input
+                type="checkbox"
+                name="rightLateral"
+                id="rightLateral"
+                value="rightLateral"
+              />
+              <label for="rightLateral"> Right-Lateral </label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="checkbox"
+                name="leftLateral"
+                id="leftLateral"
+                value="leftLateral"
+              />
+              <label for="leftLateral"> Left-Lateral </label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="checkbox"
+                name="rightForeflipper"
+                id="rightForeflipper"
+                value="rightForeflipper"
+              />
+              <label for="rightForeflipper"> Right Foreflipper </label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="checkbox"
+                name="leftForeflipper"
+                id="leftForeflipper"
+                value="leftForeflipper"
+              />
+              <label for="leftForeflipper"> Left Foreflipper </label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="checkbox"
+                name="hindflipper"
+                id="hindflipper"
+                value="hindflipper"
+              />
+              <label for="hindflipper"> Hindflipper </label>
+            </div>
+            <br />
           </fieldset>
+        </div>
+        <div id="submitFilter">
+          <div></div>
+          <button>Apply 4 Filters</button>
         </div>
       </div>
     </div>
     <div id="border"></div>
+
 
     <h2 id="learn">
       Learn how you can <br />
