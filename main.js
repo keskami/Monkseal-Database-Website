@@ -10,3 +10,15 @@ function myFunction() {
       x.style.height = "350px";
     }
   }
+
+function fullscreen() {
+  document.getElementById("iframe").className = "fullScreen"
+  document.getElementById("compressBtn").style.display = "block"
+  document.getElementById("expandBtn").style.display = "none"
+}
+
+function compressScreen(){
+  document.getElementById("iframe").classList.remove("fullScreen")
+  document.getElementById("expandBtn").style.display = "block"
+  document.getElementById("compressBtn").style.display = "none"
+}
