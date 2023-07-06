@@ -3,12 +3,16 @@ function myFunction() {
     if (x.style.visibility === "visible") {
       x.style.visibility = "hidden";
       x.style.opacity = "0";
-      x.style.height = "0";
+      x.style.maxHeight = "0";
+    
     } else {
       x.style.visibility = "visible";
       x.style.opacity = "1";
-      x.style.height = "350px";
+      x.style.maxHeight = "350px";
+      
     }
+
+
   }
 
 function fullscreen() {
