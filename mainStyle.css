@@ -332,6 +332,80 @@ input[type="submit"] {
   color: white;
 }
 
+#kaenaSeal{
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+
+.vlContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  margin-right: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.vl {
+  border-left: 2px solid#0399d9;
+  height: 50px;
+}
+
+.familyTree{
+  margin-top: 30px;
+  text-align: center;
+  color: #0399d9;
+  font-weight: bold;
+  display: block;
+}
+
+.familyTree2{
+  margin-top: 30px;
+  text-align: center;
+  color: #0399d9;
+  font-weight: bold;
+  display: block;
+}
+
+.familyTreeRelation{
+  font-weight: normal;
+  color: black;
+}
+
+.siblings{
+  display: inline;
+  position: relative;
+  bottom: 80px;
+  left: 105px;
+  font-size: 30px;
+}
+
+.siblingsText{
+
+  font-size: 18px;
+}
+
+.familyTreeName{
+  position: relative;
+  bottom: 55px;
+  margin-bottom: -45px;
+}
+
+#familyTreeHeading{
+  position: relative;
+  top: 5vw;
+  font-size: 9vw;
+  margin-left: 5vw;
+  color: #008ed6;
+  font-family: NimbusBold;
+}
+
+
 /* Add a grey background color on mouse-over */
 
 @media only screen and (min-width: 768px) {
@@ -466,6 +540,9 @@ input[type="submit"] {
     width: 100%;
     margin-top: 12%;
     text-align: center;
+  }
+  .vlContainer {
+    margin-right: 70px;
   }
 }
 
@@ -688,4 +765,13 @@ input[type="submit"] {
     margin: 10% 10% 0 0;
     color: white;
   }
+  .vlContainer {
+
+    margin-right: 40px;
+  }
+
+}
+@font-face {
+  font-family: NimbusBold;
+  src: url("/fonts/NimbusBold.otf") format("opentype");
 }

@@ -22,3 +22,7 @@ function compressScreen(){
   document.getElementById("expandBtn").style.display = "block"
   document.getElementById("compressBtn").style.display = "none"
 }
+
+function openFamilyTree() {
+  location.href = "familyTree.html"
+}
