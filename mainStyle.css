@@ -365,13 +365,7 @@ input[type="submit"] {
   display: block;
 }
 
-.familyTree2{
-  margin-top: 30px;
-  text-align: center;
-  color: #0399d9;
-  font-weight: bold;
-  display: block;
-}
+
 
 .familyTreeRelation{
   font-weight: normal;
@@ -397,6 +391,14 @@ input[type="submit"] {
   margin-bottom: -45px;
 }
 
+.kaenaSeal{
+  object-fit: cover;
+  border-radius: 60%;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 5px;
+}
+
 #familyTreeHeading{
   position: relative;
   top: 5vw;
@@ -404,6 +406,23 @@ input[type="submit"] {
   margin-left: 5vw;
   color: #008ed6;
   font-family: NimbusBold;
+  display: block;
+  margin-bottom: 50px;
+ 
+}
+
+.allRelatives{
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.familyTree2{
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  color: #0399d9;
+  font-weight: bold;
+  display: inline-block;
+
 }
 
 
