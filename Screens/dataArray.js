@@ -60,6 +60,8 @@ function selectNaturalBleachLocation() {
 
 
 
+
+
 function results() {
     if (typeof (Storage) !== "undefined") {
         localStorage.i = parseInt(localStorage.i) + 1
@@ -95,34 +97,88 @@ function results() {
 
     console.log(keys)
     console.log(inputs)
-    location.href = 'searchResults.html'
-    //add code for grabbing data from database here. 
-    //the array for all results is in "input"
+
+    const combinedObject = keys.reduce((obj, keys, index) => {
+        obj[keys] = inputs[index];
+        return obj;
+      }, {});
+      
+      
+     
+
+    getUser(combinedObject);
+
+    
+    inputs = []
+    keys = []
+}
+
+
+
+
+function results1() {
+    for (l = 0; l < parseInt(localStorage.i); l++) {
+        inputs[l] = localStorage.getItem("var" + (l + 1))
+        keys[l] = localStorage.getItem("key" + (l + 1))
+    }
+
+
+    const scarSearch = 'scar';
+    const bleachSearch = 'bleach';
+    const islands = ['Hawai‘i', 'Kaho‘olawe', 'Kauai', 'Lanai', 'Moloka‘i', 'Ni‘ihau', 'Maui', 'Oahu'];
+    const sendIslands = ['hawaiisighting', 'kahoolawesighting', 'kauaisighting', 'lanaisighting', 'molokaisighting', 'niihausighting', 'mauisighting', 'oahusighting'];
+    
+    for (let i = 0; i < inputs.length; i++) {
+      if ((inputs[i].includes(scarSearch)) || (inputs[i].includes(bleachSearch))) {
+        keys[i] = inputs [i]
+        inputs [i] = 'x'
+      }
+      for (let k = 0; k < islands.length; k++) {
+      if(inputs[i] == islands[k]){
+            keys[i] = sendIslands[k]
+            inputs[i] = 'x'
+      }
+      }
+    }
+
+    console.log(keys)
+    console.log(inputs)
+
+    const combinedObject = keys.reduce((obj, keys, index) => {
+        obj[keys] = inputs[index];
+        return obj;
+      }, {});
+      
+      
+     
+
+    getUser(combinedObject);
+
 
 
     inputs = []
     keys = []
 }
 
-function results1() {
-    for (l = 0; l < parseInt(localStorage.i); l++) {
-        inputs[l] = localStorage.getItem("var" + (l + 1))
+
+async function getUser(jsonBody) {
+    try {
+      const response = await fetch('http://localhost:3000/api/v1/monkseals/find', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonBody),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`);
+      }
+  
+      const result = await response.json();
+      console.log(result);
+      location.href = 'searchResults.html'
+    } catch (err) {
+      console.log(err);
     }
-
-
-    
-    
-    console.log(`The string "${searchString}" was found at index ${foundIndex}.`);
-
-    console.log(inputs)
-    location.href = 'searchResults.html'
-    //add code for grabbing data from database here. 
-    //the array for all results is in "input"
-
-
-    inputs = []
-}
-
-
-
-
+  }
