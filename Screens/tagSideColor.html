@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="homeStyle.css" />
+    <link rel="stylesheet" href="/mainStyle.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a89fb0fef9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script src="dataArray.js"></script>
+    <div id="iphoneMenu">
+      <div id="topnav">
+        <p id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </p>
+        <p class="right">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </p>
+        <p class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </p>
+      </div>
+
+      <div id="verticalMenu">
+        <ul>
+          <li id="findSeal"><a href="findSeals.html">FIND A SEAL</a></li>
+          <li><a href="/main.html">HOME</a></li>
+          <li><a href="learnMore.html">LEARN MORE</a></li>
+          <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+          <li><a href="aboutUs.html">ABOUT</a></li>
+          <li><a href="searchForSeal.html">SEARCH FOR A SEAL</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul id="tabletUL">
+      <div id="wrapper">
+        <li id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </li>
+        <li><a href="/main.html">HOME</a></li>
+        <li><a href="learnMore.html">LEARN MORE</a></li>
+        <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+        <li><a href="aboutUs.html">ABOUT</a></li>
+        <li><a href="searchForSeal.html">SEARCH FOR A SEAL</a></li>
+        <li id="findSeal2"><a href="findSeals.html">FIND A SEAL</a></li>
+        <p class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </p>
+      </div>
+    </ul>
+    <img class="img-monk" src="/img/sleepMonk.jpeg" alt="water monk seal" />
+    <progress value="0" max="100"></progress>
+    <div class="allText">
+      <h1 class="question">
+        Tag Information
+        <div class="container1">
+          <div class="tooltip1 facebook">
+            <span class="tooltipText1 fb"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              vulputate sagittis tortor, et sagittis ipsum accumsan sit amet.
+              Vivamus justo dui, tristique volutpat mollis vel, pulvinar sed
+              lectus. Nulla facilisi. Morbi odio sapien, gravida quis sodales
+              ac, porta eu odio. Quisque bibendum nulla id neque viverra, at
+              aliquam libero auctor. Aliquam lobortis feugiat odio ultrices
+              elementum. Mauris laoreet arcu odio.</span
+            >
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+      </h1>
+      <p class="description">What side is the tag located on?</p>
+
+      <div class="wrapper">
+        <input type="radio" name="side-select" id="option-1" checked>
+        <input type="radio" name="side-select" id="option-2">
+        <label for="option-1" class="option option-1">
+          <div class="dot"></div>
+          <span>Left</span>
+        </label>
+        <label for="option-2" class="option option-2">
+          <div class="dot"></div>
+          <span>Right</span>
+        </label>
+      </div>
+      
+      <p class="descriptionColor">What color is the tag?</p>
+      
+      <div class="wrapper" id="wrapper2">
+        <input type="radio" name="color-select" id="option-1-2" checked>
+        <input type="radio" name="color-select" id="option-2-2">
+        <label for="option-1-2" class="option option-1">
+          <div class="dot"></div>
+          <span>Red</span>
+        </label>
+        <label for="option-2-2" class="option option-2">
+          <div class="dot"></div>
+          <span>Yellow</span>
+        </label>
+      </div>
+      
+
+      <div></div>
+      <button class="mainButtons generalBtn" onclick="selectIsland()">
+        Next
+      </button>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
