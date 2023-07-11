@@ -176,7 +176,7 @@ async function getUser(jsonBody) {
       }
   
       const result = await response.json();
-      console.log(result);
+      console.log(json.stringify(result));
       location.href = 'searchResults.html'
     } catch (err) {
       console.log(err);
