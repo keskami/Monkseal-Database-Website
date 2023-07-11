@@ -117,6 +117,7 @@ function results() {
 
 
 function results1() {
+
     for (l = 0; l < parseInt(localStorage.i); l++) {
         inputs[l] = localStorage.getItem("var" + (l + 1))
         keys[l] = localStorage.getItem("key" + (l + 1))
@@ -167,7 +168,9 @@ async function getUser(jsonBody) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
         },
+       
         body: JSON.stringify(jsonBody),
       });
   
