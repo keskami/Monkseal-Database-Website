@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  #sealProfileModal {
+    display:none;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    left:0;
+    top:0;
+    z-index: 3;
+  }
+
+  .menuSection{
+    background-color: white;
+  }
+
+  #sealImg{
+    display: block;
+  }
+
+  #returnBtn{
+    position: fixed;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }

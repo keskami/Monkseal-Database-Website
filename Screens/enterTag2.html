@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="homeStyle.css" />
     <link rel="stylesheet" href="/mainStyle.css" />
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
-    <script src="dataArray.js"></script>
     <div id="iphoneMenu">
       <div id="topnav">
         <p id="MonkSeal">
@@ -38,7 +37,6 @@
           <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
           <li><a href="aboutUs.html">ABOUT</a></li>
           <li><a href="searchForSeal.html">SEARCH FOR A SEAL</a></li>
-          
         </ul>
       </div>
     </div>
@@ -64,15 +62,28 @@
     <progress value="85.8" max="100"></progress>
     <div class="allText">
       <h1 class="question">Tag ID</h1>
-      <p class="description">Please enter the tag ID  below</p>
+      <p class="description">Please enter the tag ID below</p>
     </div>
 
-    <input class="bleachInput" type="text"  name="bleachNum" placeholder="N18"><br><br>
+    <input
+      class="bleachInput"
+      type="text"
+      name="bleachNum"
+      placeholder="N18"
+    /><br /><br />
     <div class="enterNumbuttons">
-    <button class="indecipherableButton generalBtn" onclick="location.href='notFound.html'">Indecipherable</button>
-   <button class="sumbitButton generalBtn" onclick="results()">Sumbit</button>
-</div>
+      <button
+        class="indecipherableButton generalBtn"
+        onclick="location.href='notFound.html'"
+      >
+        Indecipherable
+      </button>
+      <button class="sumbitButton generalBtn" onclick="results()">
+        Sumbit
+      </button>
+    </div>
 
-<script src="/main.js"></script>
+    <script src="/main.js"></script>
+    <script src="dataArray.js"></script>
   </body>
 </html>
