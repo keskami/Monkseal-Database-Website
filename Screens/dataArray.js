@@ -170,7 +170,7 @@ async function getUser(jsonBody) {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         },
-       
+        mode: 'cors',
         body: JSON.stringify(jsonBody),
       });
   
