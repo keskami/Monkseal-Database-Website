@@ -6,8 +6,6 @@
   #sealProfileModal {
     display:none;
     position:absolute;
-    width: 100%;
-    height: 100%;
     background-color: white;
     left:0;
     top:0;
@@ -23,11 +21,17 @@
   }
 
   #returnBtn{
-    position: fixed;
-    bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    top: 0;
     left: 0;
-    right: 0;
-    z-index: 5;
+    z-index: 4;
+    margin: 5% 0 0 2.5%;
+    border: none;
+    background-color: white;
+    color: #0399d9;
+    font-size: xx-large;
+  }
+
+  #resultText{
+    z-index: 2;
   }

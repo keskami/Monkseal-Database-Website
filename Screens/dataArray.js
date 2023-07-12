@@ -199,18 +199,25 @@ function revealSeals() {
     var name = arrayResults[i].name
     var img = document.createElement('img');
     img.src = "/img/sleepMonk.jpeg"
-    img.classList.add("sealImg")
+    img.classList.add("img-monk")
 
     img.onclick = function revealSeals() {
       var resultDiv = document.getElementById("resultText")
       modal = document.getElementById("sealProfileModal")
       modal.style.display = "block"
       resultDiv.style.display = "none"
+      console.log(img[0])
     }
      
     resultDiv.appendChild(img)
   }
 
 
+}
+
+function hideProfile() {
+  var resultDiv = document.getElementById("resultText")
+  document.getElementById("sealProfileModal").style.display = 'none'
+  resultDiv.style.display = "block"
 }
 
