@@ -165,7 +165,7 @@ function results1() {
 async function getUser(jsonBody) {
 
   try {
-    const response = await fetch('http://localhost:3000/api/v1/monkseals/find', {
+    const response = await fetch('http://localhost:3001/api/v1/monkseals/find', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -192,18 +192,39 @@ async function getUser(jsonBody) {
 
 }
 
-function revealSeals() {
+function revealSeals(e) {
+  revealBtn = document.getElementById("reveal")
+  sealCount = document.getElementById("sealCount")
+
   let arrayResults = JSON.parse(localStorage.results)
   var resultDiv = document.getElementById('resultText');
+
+  revealBtn.style.display = 'none'
+  sealCount.innerHTML = arrayResults.length
+
+  if(arrayResults.length == 0){
+    location.href = "notFound.html"
+  }
+  
   for (i = 0; i < arrayResults.length; i++) {
+    var div = document.createElement('div');
+    div.id = "resultImgDiv"
+    
     var img = document.createElement('img');
     img.src = "/img/sleepMonk.jpeg"
     img.classList.add("img-monk")
     img.id = i
 
+    var name = document.createElement('p')
+    name.innerHTML = arrayResults[i].name
+    name.classList.add("nameDisplay")
+
     img.addEventListener("click", sealProfile)
-    resultDiv.appendChild(img)
+    resultDiv.appendChild(div)
+    div.appendChild(img)
+    div.appendChild(name)
   }
+  
 
 
 }
@@ -211,6 +232,15 @@ function revealSeals() {
 function sealProfile(e) {
   let arrayResults = JSON.parse(localStorage.results)
   var name = document.getElementById("name")
+  var id = document.getElementById("id")
+  var identifiers = document.getElementById("identifiers")
+  var scarring = document.getElementById("scarring")
+  scarring.replaceChildren()
+  var bleach = document.getElementById("bleach")
+  bleach.replaceChildren()
+  var island = document.getElementById("island")
+  island.replaceChildren()
+  var birthplace = document.getElementById("birthplace")
   var resultDiv = document.getElementById("resultText")
   var modal = document.getElementById("sealProfileModal") 
 
@@ -218,6 +248,42 @@ function sealProfile(e) {
   resultDiv.style.display = "none" //hide images
 
   name.innerHTML = arrayResults[e.target.id].name //change name of seal
+  id.innerHTML = arrayResults[e.target.id].sealid
+  identifiers.innerHTML = arrayResults[e.target.id].identifiers
+  for(i = 11; i < 19; i++){
+    var scar = document.createElement('p')
+    scar.innerHTML = null
+    if(Object.values(arrayResults[e.target.id])[i] == 'x'){
+      scar.innerHTML = Object.keys(arrayResults[e.target.id])[i]
+    }
+    else{
+      scar.innerHTML = null
+    }
+    scarring.appendChild(scar)
+  }
+  for(i = 20; i < 28; i++){
+    var bleachMarks = document.createElement('p')
+    bleachMarks.innerHTML = null
+    if(Object.values(arrayResults[e.target.id])[i] == 'x'){
+      bleachMarks.innerHTML = Object.keys(arrayResults[e.target.id])[i]
+    }
+    else{
+      bleachMarks.innerHTML = null
+    }
+    bleach.appendChild(bleachMarks)
+  }
+  for(i = 29; i < 35; i++){
+    var islandSightings = document.createElement('p')
+    islandSightings.innerHTML = null
+    if(Object.values(arrayResults[e.target.id])[i] == 'x'){
+      islandSightings.innerHTML = Object.keys(arrayResults[e.target.id])[i]
+    }
+    else{
+      islandSightings.innerHTML = null
+    }
+    island.appendChild(islandSightings)
+  }
+  birthplace.innerHTML = arrayResults[e.target.id].birthisland
 }
 
 function hideProfile() {
@@ -225,4 +291,3 @@ function hideProfile() {
   document.getElementById("sealProfileModal").style.display = 'none'
   resultDiv.style.display = "block"
 }
-

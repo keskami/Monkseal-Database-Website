@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -35,3 +37,23 @@
   #resultText{
     z-index: 2;
   }
+
+  #resultImgDiv{
+    position:relative;
+  }
+
+  .nameDisplay{
+    position: absolute;
+    top: 0;
+    right: 5%;
+    font-size: 20px;
+    z-index: 2;
+    color: #0399d9;
+    background-color: white;
+    padding: 3% 8%;
+    border-radius: 10px;
+    border: 1px solid #0399d9;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+

@@ -62,12 +62,13 @@
     </ul>
 
     <div class="allText scarText">
-      <h1 class="scarQuestion">There are 3 seals matching your description</h1>
+      <h1 class="scarQuestion">There are <span id="sealCount">?</span> seals matching your description</h1>
       <p class="scarInstructions">Click to explore</p>
     </div>
     <button
         class="mainButtons generalBtn"
         onclick="revealSeals()"
+        id="reveal"
     >
         Reveal Seals
     </button>
@@ -82,7 +83,7 @@
           </div>
           <div id="sealID">
             <p>ID</p>
-            <h1>R040</h1>
+            <h1 id="id">R040</h1>
           </div>
         </div>
         
@@ -90,14 +91,13 @@
         <div id="sealInfo">
           <div id="firstMenuSection">
             <p><i>Scarring</i></p>
-            <p>1. Dorsal: Cookie Cutter Bite</p>
-            <p>2. Ventral, Mid-body: Probable large shark</p>
+            <p id="scarring"></p>
             <br />
             <p><i>Bleach Marks</i></p>
-            <p>Right-lateral, Head/neck</p>
+            <p id="bleach"></p>
             <br />
             <p><i>Sighting Locations</i></p>
-            <p>Island of Hawaii</p>
+            <p id="island"></p>
             <br />
             <div id="tagNumber">
               <p><i>Last Tag Number</i></p>
@@ -113,7 +113,7 @@
             <p>
               <i>Birthplace</i>
             </p>
-            <p>Island of Hawaii</p>
+            <p id="birthplace">Island of Hawaii</p>
           </div>
           <div id = "familyTree" class="menuSection">
             <p>
@@ -141,20 +141,8 @@
           </div>
           
           <div class="menuSection">
-            <p>
-              <i>Story</i>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra
-              vel turpis nunc eget. Nisl vel pretium lectus quam id leo in vitae.
-              Risus commodo viverra maecenas accumsan. Massa eget egestas purus
-              viverra accumsan in nisl nisi scelerisque. Nulla pharetra diam sit
-              amet nisl suscipit. Consectetur adipiscing elit ut aliquam. Nunc sed
-              blandit libero volutpat sed cras ornare arcu dui. Sed tempus urna et
-              pharetra pharetra massa massa. Lobortis elementum nibh tellus
-              molestie.
-            </p>
+            <p><i>Identifiers</i></p>
+            <p id="identifiers"></p>
           </div>
         </div>
       </div>
@@ -167,11 +155,11 @@
     </div>
 
       <div id="resultText">
-
       </div>
+     
+
     
     </div>
-    
     <script src="selectSeal.js"></script>
     <script src="/main.js"></script>
     <script src="dataArray.js"></script>

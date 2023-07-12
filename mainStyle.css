@@ -151,17 +151,19 @@ img {
 }
 #sealName {
   float: left;
-  margin-left: 25%;
+  margin-left: 15%;
   margin-top: 5%;
 }
 #sealID {
   float: right;
-  margin-right: 25%;
+  margin-left: 15%;
   margin-top: 5%;
 }
 #sealIdentity {
   overflow: hidden;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
 }
 #sealInfo {
   padding: 4% 5% 0 5%;
