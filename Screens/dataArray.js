@@ -196,23 +196,28 @@ function revealSeals() {
   let arrayResults = JSON.parse(localStorage.results)
   var resultDiv = document.getElementById('resultText');
   for (i = 0; i < arrayResults.length; i++) {
-    var name = arrayResults[i].name
     var img = document.createElement('img');
     img.src = "/img/sleepMonk.jpeg"
     img.classList.add("img-monk")
+    img.id = i
 
-    img.onclick = function revealSeals() {
-      var resultDiv = document.getElementById("resultText")
-      modal = document.getElementById("sealProfileModal")
-      modal.style.display = "block"
-      resultDiv.style.display = "none"
-      console.log(img[0])
-    }
-     
+    img.addEventListener("click", sealProfile)
     resultDiv.appendChild(img)
   }
 
 
+}
+
+function sealProfile(e) {
+  let arrayResults = JSON.parse(localStorage.results)
+  var name = document.getElementById("name")
+  var resultDiv = document.getElementById("resultText")
+  var modal = document.getElementById("sealProfileModal") 
+
+  modal.style.display = "block" //display profile
+  resultDiv.style.display = "none" //hide images
+
+  name.innerHTML = arrayResults[e.target.id].name //change name of seal
 }
 
 function hideProfile() {
