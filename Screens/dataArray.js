@@ -165,7 +165,7 @@ function results1() {
 async function getUser(jsonBody) {
 
   try {
-    const response = await fetch('http://localhost:3001/api/v1/monkseals/find', {
+    const response = await fetch('http://localhost:3000/api/v1/monkseals/find', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

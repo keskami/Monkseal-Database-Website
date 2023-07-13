@@ -1,19 +1,31 @@
 function myFunction() {
     var x = document.getElementById("verticalMenu");
-    if (x.style.visibility === "visible") {
-      x.style.visibility = "hidden";
+    if (x.style.height === "350px") {
       x.style.opacity = "0";
-      x.style.maxHeight = "0";
+      x.style.height = "0";
     
     } else {
-      x.style.visibility = "visible";
       x.style.opacity = "1";
-      x.style.maxHeight = "350px";
+      x.style.height = "350px";
       
     }
-
-
   }
+
+function breathingFact() {
+  var circle = document.getElementById("breathingFact")
+  var modal = document.getElementById("breathingModal")
+
+  var offsetTop = circle.offsetTop
+  var offsetLeft = circle.offsetLeft
+  var scrollTop = window.scrollY
+  var distanceTop = offsetTop - scrollTop
+  circle.style.transform = "translate(-" + (offsetLeft - 20) + "px,-" + (distanceTop - 20) +"px)"
+
+  circle.addEventListener("transitionend", function(){
+    modal.style.height = "100%"
+    modal.style.opacity = "1"
+  })
+}
 
 function fullscreen() {
   document.getElementById("iframe").className = "fullScreen"

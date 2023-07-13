@@ -64,7 +64,6 @@
 
 #verticalMenu {
   z-index: 4;
-  position: absolute;
   width: 99.5%;
   text-align: center;
   background-color: #dddddd;
@@ -72,9 +71,15 @@
   font-size: 20px;
   list-style-type: none;
   border: 1px solid black;
-  visibility: hidden;
-  transition: opacity 0.75s, visibility 0.75s, max-height 0.75s;
-  max-height: 0;
+  transition: opacity 0.75s, height 0.75s;
+  height: 0vh;
+  opacity: 0;
+  position: absolute;
+}
+
+#verticalMenu ul {
+  height: 100%;
+  overflow: hidden;
 }
 
 

@@ -73,13 +73,35 @@
     margin: 6% auto 0 auto;
     text-align: center;
   }
-  #factCircle{
-    width: 120px;
+  .factCircle{
+    width: 40%;
     height: 120px;
     border: 1px solid black;
     border-radius: 50%;
     margin: 0 5% 0 5%;
   }
+
+
+  #breathingFact{
+    cursor: pointer;
+    transition: transform 2s;
+  
+  }
+
+  #breathingModal{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%; /* Full width */
+    opacity: 0;
+    transition: height 2s, opacity 0.5s;
+    height: 10px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #fefefe;
+  }
+
   .fact p{
     width:50%;
     font-size: 16px;;
