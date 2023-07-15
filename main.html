@@ -112,17 +112,77 @@
           <div
             class="factCircle"
             id="breathingFact"
-            onclick="breathingFact()"
+            onclick="factOpen('breathing')"
           ></div>
         </div>
         <div class="fact">
-          <div class="factCircle"></div>
+          <div
+            class="factCircle"
+            id="habitatFact"
+            onclick="factOpen('habitat')"
+          ></div>
         </div>
         <div class="fact">
-          <div class="factCircle"></div>
+          <div
+          class="factCircle"
+          id="lifespanFact"
+          onclick="factOpen('lifespan')"
+        ></div>
         </div>
       </div>
-      <div id="breathingModal">
+
+      <div id="breathingModal" class="factModal">
+        <div class="header">
+          <div class="modalCircle"></div>
+          <h1>Breathing</h1>
+        </div>
+        <p>
+          Hawaiian monk seals can hold their breath for up to 20 minutes and
+          dive more than 1,800 feet; however, they usually dive an average of 6
+          minutes to depths of less than 200 feet to forage at the seafloor.
+        </p>
+        <i
+          id="returnBtn"
+          class="fa fa-angle-left"
+          onclick="returnFact('breathing')"
+        ></i>
+      </div>
+
+      <div id="habitatModal" class="factModal">
+        <div class="header">
+          <div class="modalCircle"></div>
+          <h1>Habitat</h1>
+        </div>
+        <p>
+          Monk seals live in warm, subtropical waters and spend two-thirds of
+          their time at sea. They use the waters surrounding atolls and islands
+          and areas farther offshore on reefs and submerged banks; they also use
+          deepwater coral beds as foraging habitat.
+        </p>
+        <i
+          id="returnBtn"
+          class="fa fa-angle-left"
+          onclick="returnFact('habitat')"
+        ></i>
+      </div>
+
+      <div id="lifespanModal" class="factModal">
+        <div class="header">
+          <div class="modalCircle"></div>
+          <h1>Lifespan</h1>
+        </div>
+        <p>
+          Monk seals can live to over 30 years of age, but few live that long.
+          Monk seals mate in the water. The youngest documented female to give
+          birth was 4 years old, but typically females begin reproducing at age
+          5 to 6 in the main Hawaiian Islands and age 7 to 10 in the
+          Northwestern Hawaiian Islands.
+        </p>
+        <i
+          id="returnBtn"
+          class="fa fa-angle-left"
+          onclick="returnFact('lifespan')"
+        ></i>
       </div>
 
       <h2 id="learn">
