@@ -45,14 +45,15 @@
   .nameDisplay{
     position: absolute;
     top: 0;
-    right: 5%;
+    right: 10%;
     font-size: 20px;
     z-index: 2;
     color: #0399d9;
     background-color: white;
     padding: 3% 8%;
     border-radius: 10px;
-    border: 1px solid #0399d9;
+    border: 2px solid #0399d9;
+    border-right: none;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
   }

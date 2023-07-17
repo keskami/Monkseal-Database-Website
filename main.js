@@ -23,7 +23,7 @@ function factOpen(type) {
   var scrollTop = window.scrollY
   var distanceTop = offsetTop - scrollTop
   circle.style.transform = "translate(-" + (offsetLeft - 20) + "px,-" + (distanceTop - 20) + "px)"
-  modal.style.transitionDelay = '1s'
+  modal.style.transitionDelay = '0.6s'
   modal.style.height = "100%"
   circle.addEventListener('transitionend', function () {
     circle.style.transitionDelay = '0.5s'
