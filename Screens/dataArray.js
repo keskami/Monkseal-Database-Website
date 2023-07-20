@@ -233,6 +233,7 @@ function sealProfile(e) {
   let arrayResults = JSON.parse(localStorage.results)
   var name = document.getElementById("name")
   var id = document.getElementById("id")
+  var bleachID = document.getElementById("bleachID")
   var identifiers = document.getElementById("identifiers")
   var scarring = document.getElementById("scarring")
   scarring.replaceChildren()
@@ -246,9 +247,9 @@ function sealProfile(e) {
 
   modal.style.display = "block" //display profile
   resultDiv.style.display = "none" //hide images
-
   name.innerHTML = arrayResults[e.target.id].name //change name of seal
   id.innerHTML = arrayResults[e.target.id].sealid
+  bleachID.innerHTML = arrayResults[e.target.id].sealid
   identifiers.innerHTML = arrayResults[e.target.id].identifiers
   for(i = 11; i < 19; i++){
     var scar = document.createElement('p')

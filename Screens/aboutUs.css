@@ -5,32 +5,36 @@
 
 .circle-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 340px;
   margin: 0 auto;
+
 }
 
 .circle {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   background-color: #f2f2f2;
   border: 2px solid #ccc;
   transition: all 1s;
+  display:flex;
+  overflow: hidden;
+  justify-content: center;
+  transform: skew(0);
+  transform: translate(-50%,-50%);
 }
 
 #circularArrow {
+  transform: translate(-50%,-50%);
   background: none;
   border: none;
   width: 80%;
   position: absolute;
-  top: 68%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 71%;
+  left: 50%
+
 }
 
 .circle-container img {
@@ -38,9 +42,57 @@
 }
 
 .expanded {
-  width: 250px;
-  height: 250px;
+  transform-origin: center;
+  transform: scale(2.2);
+  z-index: 2;
+  border-radius: 10%;
+  width: 100%;
 }
+
+.blueArea{
+  display: block;
+}
+
+
+.topCirc{
+  background-color: #0399d9;
+  width: 55px;
+  height:20px;
+  border-radius: 0 0 50% 50%;
+
+}
+
+.rightCirc{
+  background-color: #0399d9;
+  width: 20px;
+  height: 55px;
+  border-radius: 50% 0 0 50%;
+  margin-left:auto;
+  align-self: center;
+}
+
+.leftCirc{
+  background-color: #0399d9;
+  width: 20px;
+  height: 55px;
+  border-radius: 0 50% 50% 0;
+  margin-right: auto;
+  align-self: center;
+}
+
+.bottomCirc{
+  background-color: #0399d9;
+  width: 55px;
+  height:20px;
+  border-radius: 50% 50% 0 0;
+  align-self: flex-end;
+}
+
+#numCirc{
+  top:40%;
+  position:absolute
+}
+
 
 /* Adjust the positions of the circles */
 .circle1 {
@@ -50,7 +102,7 @@
 }
 .circle2 {
   top: 25%;
-  left: 85%;
+  left: 85%; 
 }
 .circle3 {
   top: 75%;
