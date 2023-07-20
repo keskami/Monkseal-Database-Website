@@ -6,16 +6,15 @@ expandButtons.forEach(expandButton => {
     expandButton.addEventListener('click', e => {
         let button = e.currentTarget;
         button.classList.add('expanded');
-        var selected = document.querySelector(".expanded")
+        var selected = expandButtons[button.textContent - 1]
 
         for (i = 0; i < expandButtons.length; i++) {
             if (expandButtons[i] !== button) {
                 expandButtons[i].classList.remove('expanded');
                 blueArea[i].style.display = "block";
-                selected.style.transform = ''
+                expandButtons[i].style.transform = ''
             }
         };
-        body.addEventListener('wheel', preventScroll, { passive: false });
         blueArea[button.textContent - 1].style.display = "none"
 
         var offsetTop = selected.offsetTop

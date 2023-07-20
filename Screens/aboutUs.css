@@ -32,7 +32,7 @@
   border: none;
   width: 80%;
   position: absolute;
-  top: 71%;
+  top: 91%;
   left: 50%
 
 }
@@ -46,6 +46,7 @@
   transform: scale(2.2);
   z-index: 2;
   border-radius: 10%;
+  transition: width 2s, transform 1s, border-radius 1s;
   width: 100%;
 }
 
@@ -96,27 +97,27 @@
 
 /* Adjust the positions of the circles */
 .circle1 {
-  top: 5%;
+  top: 25%;
   left: 50%;
 
 }
 .circle2 {
-  top: 25%;
+  top: 45%;
   left: 85%; 
 }
 .circle3 {
-  top: 75%;
+  top: 95%;
   left: 85%;
 }
 .circle4 {
-  top: 95%;
+  top: 115%;
   left: 50%;
 }
 .circle5 {
-  top: 75%;
+  top: 95%;
   left: 15%;
 }
 .circle6 {
-  top: 25%;
+  top: 45%;
   left: 15%;
 }
