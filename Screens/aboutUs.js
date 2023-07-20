@@ -38,19 +38,19 @@ expandButtons.forEach(expandButton => {
         blueArea[button.textContent - 1].style.display = "none"
 
         if (button.textContent == 1) {
-            content[button.textContent - 1].textContent = "Spot the Monkseal"
+            content[button.textContent - 1].textContent = "Spot the Monkseal!"
         }
         if (button.textContent == 2) {
             content[button.textContent - 1].textContent = "Observe 50ft Away!"
         }
         if (button.textContent == 3) {
-            content[button.textContent - 1].textContent = "Take Note of Seal Characteristics"
+            content[button.textContent - 1].textContent = "Take Note of Seal Characteristics!"
         }
         if (button.textContent == 4) {
-            content[button.textContent - 1].textContent = "Go To Our 'Find A Seal' Page"
+            content[button.textContent - 1].textContent = "Go To Our 'Find A Seal' Page!"
         }
         if (button.textContent == 5) {
-            content[button.textContent - 1].textContent = "Fill Out The Questionaire"
+            content[button.textContent - 1].textContent = "Fill Out The Questionaire!"
         }
         if (button.textContent == 6) {
             content[button.textContent - 1].textContent = "Find Your Seal!"
