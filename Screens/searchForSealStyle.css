@@ -67,6 +67,10 @@
   margin-left: auto;
 }
 
+.sealNum{
+  margin-left: 5px;
+}
+
 .modal-content {
   background-color: #fefefe;
   overflow-y: auto;
