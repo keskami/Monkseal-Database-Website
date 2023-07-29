@@ -137,6 +137,11 @@
             name="tagNum"
             oninput="changeFilterNum()"
           />
+          <select name="tagSide" id="tagSide" onchange="changeFilterNum()">
+            <option value="" disabled selected hidden>Tag Side</option>
+            <option value="righttag">Right</option>
+            <option value="lefttag">Left</option>
+          </select>
         </div>
         <div id="filterBtn">
           <p>Bleach Number</p>
@@ -162,13 +167,13 @@
                 type="checkbox"
                 name="checkbox"
                 id="headFace"
-                value="headFace"
+                value="headfacescar"
               />
               <label for="headFace"> Head & Face </label>
             </div>
             <br />
             <div>
-              <input type="checkbox" name="dorsal" id="dorsal" value="dorsal" />
+              <input type="checkbox" name="dorsal" id="dorsal" value="dorsalscar" />
               <label for="dorsal"> Dorsal </label>
             </div>
             <br />
@@ -177,7 +182,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="ventral"
-                value="ventral"
+                value="ventralscar"
               />
               <label for="ventral"> Ventral </label>
             </div>
@@ -187,7 +192,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="rightLateral"
-                value="rightLateral"
+                value="rightlateralscar"
               />
               <label for="rightLateral"> Right-Lateral </label>
             </div>
@@ -197,7 +202,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="leftLateral"
-                value="leftLateral"
+                value="leftlateralscar"
               />
               <label for="leftLateral"> Left-Lateral </label>
             </div>
@@ -207,7 +212,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="rightForeflipper"
-                value="rightForeflipper"
+                value="rightforeflipperscar"
               />
               <label for="rightForeflipper"> Right Foreflipper </label>
             </div>
@@ -217,7 +222,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="leftForeflipper"
-                value="leftForeflipper"
+                value="leftforeflipperscar"
               />
               <label for="leftForeflipper"> Left Foreflipper </label>
             </div>
@@ -227,7 +232,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="hindflipper"
-                value="hindflipper"
+                value="hindflippersscar"
               />
               <label for="hindflipper"> Hindflipper </label>
             </div>
@@ -248,7 +253,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="headFace"
-                value="headFace"
+                value="headfacebleach"
               />
               <label for="headFace"> Head & Face </label>
             </div>
@@ -258,7 +263,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="dorsal"
-                value="dorsal"
+                value="dorsalbleach"
               />
               <label for="dorsal"> Dorsal </label>
             </div>
@@ -268,7 +273,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="ventral"
-                value="ventral"
+                value="ventralbleach"
               />
               <label for="ventral"> Ventral </label>
             </div>
@@ -278,7 +283,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="rightLateral"
-                value="rightLateral"
+                value="rightlateralbleach"
               />
               <label for="rightLateral"> Right-Lateral </label>
             </div>
@@ -288,7 +293,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="leftLateral"
-                value="leftLateral"
+                value="leftlateralbleach"
               />
               <label for="leftLateral"> Left-Lateral </label>
             </div>
@@ -298,7 +303,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="rightForeflipper"
-                value="rightForeflipper"
+                value="rightforeflipperbleach"
               />
               <label for="rightForeflipper"> Right Foreflipper </label>
             </div>
@@ -308,7 +313,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="leftForeflipper"
-                value="leftForeflipper"
+                value="leftforeflipperbleach"
               />
               <label for="leftForeflipper"> Left Foreflipper </label>
             </div>
@@ -318,7 +323,7 @@
                 type="checkbox"
                 name="checkbox"
                 id="hindflipper"
-                value="hindflipper"
+                value="hindflippersbleach"
               />
               <label for="hindflipper"> Hindflipper </label>
             </div>
