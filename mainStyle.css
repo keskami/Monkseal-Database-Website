@@ -401,20 +401,21 @@ input[type="submit"] {
 .kaenaSeal{
   object-fit: cover;
   border-radius: 60%;
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 110px;
   margin-bottom: 5px;
 }
 
 #familyTreeHeading{
+  margin-top: 5vw;
   position: relative;
-  top: 5vw;
-  font-size: 9vw;
+
+  font-size: 11vw;
   margin-left: 5vw;
   color: #008ed6;
   font-family: NimbusBold;
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
  
 }
 
@@ -423,8 +424,9 @@ input[type="submit"] {
   margin-right: 5vw;
 }
 .familyTree2{
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 15px;
   text-align: center;
   color: #0399d9;
   font-weight: bold;
@@ -570,6 +572,11 @@ input[type="submit"] {
   }
   .vlContainer {
     margin-right: 70px;
+  }
+
+  #familyTreeHeading{
+    font-size: 80px;
+    margin-bottom: 20px;
   }
 }
 
@@ -795,6 +802,11 @@ input[type="submit"] {
   .vlContainer {
 
     margin-right: 40px;
+  }
+
+  #familyTreeHeading{
+    font-size: 80px;
+    margin-bottom: 20px;
   }
 
 }
