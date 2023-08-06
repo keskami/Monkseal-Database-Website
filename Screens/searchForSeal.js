@@ -4,6 +4,9 @@ var btn = document.getElementById("filterButton")
 
 var closeBtn = document.getElementById("close")
 
+const finalSiblingResults = []
+
+
 function openModal() {
     console.log("yes")
     modal.style.display = "block";
@@ -296,11 +299,12 @@ function sealProfile(e) {
         motherRelation.remove()
         dividerLine.remove()
     }
-
+    
+    const siblingResult = []
     const targetKey2 = "siblings";
     const searchResults2 = String(searchForKey(arrayResults, targetKey2));
     console.log("Results for key '" + targetKey2 + "':", searchResults2);
-    const siblingResult = []
+   
 
     if (searchResults2.length > 1) {
         
@@ -321,7 +325,7 @@ function sealProfile(e) {
             siblingResult[i] = siblingResultPlace
         }
         console.log (siblingResult)
-        const finalSiblingResults = []
+       
 
         Promise.all(siblingResult)
   .then((fulfilledResults) => {
@@ -331,11 +335,14 @@ function sealProfile(e) {
     console.log(finalSiblingResults)
     console.log(finalSiblingResults[0][0].name)
 
+
+
   })
   .catch((err) => {
     console.error(err);
   });
-   
+
+
        
     }else{
         var siblingNumber = document.getElementById("siblingNumber")
@@ -496,3 +503,60 @@ async function getUser3(jsonBody) {
         console.log(err);
     }
 }
+
+function openFamilyTree() {
+    location.href = "familyTree.html"
+    console.log(finalSiblingResults)
+    localStorage.finalSiblings = JSON.stringify(finalSiblingResults)
+    localStorage.sibling1name = finalSiblingResults[0][0].name
+    localStorage.sibling1image = finalSiblingResults[0][0].image
+   
+  
+  }
+  
+
+class FamilyTreeParent extends HTMLElement {
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: 'open' });
+  
+      // Create the HTML structure for the custom element
+      const container = document.createElement('div');
+      container.className = 'familyTree2';
+  
+      const image = document.createElement('img');
+      image.className = 'kaenaSeal';
+      image.src = this.getAttribute('image');
+      image.addEventListener('click', () => this.openFamilyTree());
+  
+      const name = document.createElement('p');
+      name.textContent = this.getAttribute('name');
+      name.addEventListener('click', () => this.openFamilyTree());
+  
+      const relation = document.createElement('p');
+      relation.className = 'familyTreeRelation';
+      relation.textContent = this.getAttribute('relation');
+      relation.addEventListener('click', () => this.openFamilyTree());
+  
+      container.appendChild(image);
+      container.appendChild(name);
+      container.appendChild(relation);
+  
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '/mainStyle.css';
+  
+      shadow.appendChild(link);
+      shadow.appendChild(container);
+    }
+  
+    // Define the openFamilyTree method
+    openFamilyTree() {
+      // Add the logic to open the family tree
+      console.log('Opening family tree...');
+    }
+  }
+
+
+
+  customElements.define('family-tree-parent', FamilyTreeParent);

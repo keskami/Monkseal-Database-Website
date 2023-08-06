@@ -11,6 +11,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap");
     </style>
+ 
   </head>
   <body>
     <div id="iphoneMenu">
@@ -60,19 +61,45 @@
       </div>
     </ul>
 
+    
     <h id = "familyTreeHeading">Ka'ena's Siblings</h>
-    <div class="allRelatives">
-        <family-tree-parent name="Kaimana" relation="Sibling" image="/img/waterMonk.jpg"></family-tree-parent>
-        <family-tree-parent name="Kaimana" relation="Sibling" image="/img/waterMonk.jpg"></family-tree-parent>
-        <family-tree-parent name="Kaimana" relation="Sibling" image="/img/waterMonk.jpg"></family-tree-parent>
-        <family-tree-parent name="Kaimana" relation="Sibling" image="/img/waterMonk.jpg"></family-tree-parent>
-        <family-tree-parent name="Kaimana" relation="Sibling" image="/img/waterMonk.jpg"></family-tree-parent>
-        <family-tree-parent name="Kaimana" relation="Sibling" image="/img/waterMonk.jpg"></family-tree-parent>
-        
+    <p id = "doggy"></p>
+    <div id = "parent-element" class="allRelatives">
     </div>
-         
+  
 
-    <script src="/main.js"></script>
-    <script src="searchForSeal.js"></script>
-  </body>
+    <script>
+      // Function to create a new family-tree-parent element
+      function createFamilyTreeParent(id, name, relation, image) {
+          const newElement = document.createElement('family-tree-parent');
+          newElement.id = id;
+          newElement.setAttribute('name', name);
+          newElement.setAttribute('relation', relation);
+          newElement.setAttribute('image', image);
+          return newElement;
+      }
+
+     var siblingResults = JSON.parse(localStorage.finalSiblings)
+      console.log (siblingResults.length)
+
+     
+
+     console.log (siblingResults)
+      const newFamilyTreeParent = createFamilyTreeParent(
+          'new_sibling', // New ID
+          'dog',        // New name
+          'Sibling',     // New relation
+         '/img/waterMonk.jpg'// New image URL
+      );
+
+      // Add the new family-tree-parent element to the parent element
+      const parentElement = document.getElementById('parent-element');
+      parentElement.appendChild(newFamilyTreeParent);
+
+      
+  </script>
+  <script src="searchForSeal.js"></script>
+  <script src="/main.js"></script>
+</body>
 </html>
+  
