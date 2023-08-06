@@ -351,25 +351,27 @@
               <p id="birthplace">Island of Hawaii</p>
             </div>
             <div id = "familyTree" class="menuSection">
-              <p>
-                <i>Ka'ena's Family Tree</i>
-              </p>
+  
+        
+                <p id="familyTreeLabel"></p>
+         
+           
               <div class="familyTree">
                 <p class = "familyTreeParent" >
-                  <img id="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
-                  <p onclick= "openFamilyTree()">Martha</p>
-                  <p class = "familyTreeRelation" onclick= "openFamilyTree()">Mother</p>
-                  <div class="vlContainer">
+                  <img id = "motherImage" class="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
+                  <p id = "mother" onclick= "openFamilyTree()">Martha</p>
+                  <p id = "motherRelation" class = "familyTreeRelation" onclick= "openFamilyTree()">Mother</p>
+                  <div id = "dividerLine" class="vlContainer">
                     <div class="vl" onclick= "openFamilyTree()"></div>
                   </div>
                 </p>
                 <p class = "familyTreeIcon">
-                  <img id="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
+                  <img  id = "sealFamilyTreeImage" class="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
                   <div class = "siblings">
-                    <p onclick= "openFamilyTree()">+8</p>
-                    <p class="siblingsText" onclick= "openFamilyTree()">siblings</p>
+                    <p id = "siblingNumber" onclick= "openFamilyTree()">+8</p>
+                    <p id = "siblingText" class="siblingsText" onclick= "openFamilyTree()">sibling(s)</p>
                   </div>
-                  <p class= "familyTreeName" onclick= "openFamilyTree()">Ka'ena</p>
+                  <p id = "sealName2" class= "familyTreeName" onclick= "openFamilyTree()">Ka'ena</p>
                 
                 </p>
               </div>

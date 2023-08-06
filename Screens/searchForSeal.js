@@ -156,9 +156,11 @@ function clearModal() {
     var tagNum = document.getElementById('tagNum')
     var bleachNum = document.getElementById("bleachNum")
     var selected = document.getElementsByName("checkbox")
+    var tagSide = document.getElementById("tagSide")
 
 
     islands.value = ""
+    tagSide.value = ""
     tagNum.value = ""
     bleachNum.value = ""
     for (var i = 0; i < selected.length; i++) {
@@ -260,6 +262,88 @@ function revealSeals(e) {
 
 function sealProfile(e) {
     let arrayResults = JSON.parse(localStorage.results)
+    let motherResult =  JSON.parse(localStorage.motherResults)
+
+
+    const targetKey = "mother";
+    const searchResults = String(searchForKey(arrayResults, targetKey));
+    console.log("Results for key '" + targetKey + "':", searchResults);
+
+    if (searchResults.length > 2) {
+
+    var motherKey = "sealid"
+    var motherObject = { [motherKey]: searchResults };
+    console.log(motherObject)
+
+    getUser2(motherObject);
+
+    var mother = document.getElementById("mother")
+    var motherImage = document.getElementById("motherImage")
+    mother.innerHTML = motherResult[e.target.id].name
+    motherImage.src = motherResult[e.target.id].image
+    if ( motherResult[e.target.id].name === null) {
+        mother.innerHTML = "No Name";
+    }
+
+    console.log("dog" + mother)
+    }else{
+        var motherImage = document.getElementById("motherImage")
+        var mother = document.getElementById("mother")
+        var motherRelation = document.getElementById("motherRelation")
+        var dividerLine = document.getElementById("dividerLine")
+        mother.remove()
+        motherImage.remove()
+        motherRelation.remove()
+        dividerLine.remove()
+    }
+
+    const targetKey2 = "siblings";
+    const searchResults2 = String(searchForKey(arrayResults, targetKey2));
+    console.log("Results for key '" + targetKey2 + "':", searchResults2);
+    const siblingResult = []
+
+    if (searchResults2.length > 1) {
+        
+        var splitSearch2 = searchResults2.split(",");
+        console.log(splitSearch2)
+        var siblingNumber = document.getElementById("siblingNumber")
+        siblingNumber.innerHTML = splitSearch2.length
+      
+        var silbingKey = "sealid"
+        var siblingObject;
+        var siblingResultPlace;
+        
+        for (i = 0; i < splitSearch2.length; i++){
+            splitSearch2[i] = splitSearch2[i].replaceAll(' ', '');
+            siblingObject = { [silbingKey]: splitSearch2[i] };
+            console.log(siblingObject)
+            siblingResultPlace = getUser3(siblingObject)
+            siblingResult[i] = siblingResultPlace
+        }
+        console.log (siblingResult)
+        const finalSiblingResults = []
+
+        Promise.all(siblingResult)
+  .then((fulfilledResults) => {
+    fulfilledResults.forEach((result) => {
+        finalSiblingResults.push(result);
+    });
+    console.log(finalSiblingResults)
+    console.log(finalSiblingResults[0][0].name)
+
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+   
+       
+    }else{
+        var siblingNumber = document.getElementById("siblingNumber")
+        siblingNumber.innerHTML = ("0")
+
+    }
+
+
     var name = document.getElementById("name")
     var id = document.getElementById("id")
     var bleachID = document.getElementById("bleachID")
@@ -274,6 +358,11 @@ function sealProfile(e) {
     var resultDiv = document.getElementById("resultText")
     var modal = document.getElementById("sealProfileModal")
     var img = document.getElementById("img-seal")
+    var familyTreeLabel = document.getElementById("familyTreeLabel")
+    var sealFamilyTreeImage = document.getElementById("sealFamilyTreeImage")
+    var sealName2 = document.getElementById("sealName2")
+
+    
 
     modal.style.display = "block" //display profile
     resultDiv.style.display = "none" //hide images
@@ -281,6 +370,16 @@ function sealProfile(e) {
     id.innerHTML = arrayResults[e.target.id].sealid
     bleachID.innerHTML = arrayResults[e.target.id].sealid
     identifiers.innerHTML = arrayResults[e.target.id].identifiers
+    sealFamilyTreeImage.src = arrayResults[e.target.id].image
+    sealName2.innerHTML = arrayResults[e.target.id].name
+    if (arrayResults[e.target.id].name !== null){
+        familyTreeLabel.innerHTML = (arrayResults[e.target.id].name+"'s Family Tree")
+    }else{
+        familyTreeLabel.innerHTML = ("Family Tree")
+        sealName2.innerHTML = ("No Name")
+    }
+
+
     for (i = 11; i < 19; i++) {
         var scar = document.createElement('p')
         scar.innerHTML = null
@@ -323,4 +422,77 @@ function hideProfile() {
     var resultDiv = document.getElementById("resultText")
     document.getElementById("sealProfileModal").style.display = 'none'
     resultDiv.style.display = "block"
+}
+
+function searchForKey(obj, targetKey, results = []) {
+    if (typeof obj !== "object" || obj === null) {
+      return results;
+    }
+  
+    if (obj.hasOwnProperty(targetKey)) {
+      results.push(obj[targetKey]);
+    }
+  
+    for (const key in obj) {
+      if (typeof obj[key] === "object" && obj[key] !== null) {
+        searchForKey(obj[key], targetKey, results);
+      }
+    }
+  
+    return results;
+  }
+  
+  async function getUser2(jsonBody) {
+
+    try {
+        const response = await fetch('http://localhost:3000/api/v1/monkseals/find', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+            },
+            mode: 'cors',
+            body: JSON.stringify(jsonBody),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        localStorage.motherResults = JSON.stringify(result)
+        console.log(localStorage.motherResults)
+
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+
+
+async function getUser3(jsonBody) {
+    try {
+        const response = await fetch('http://localhost:3000/api/v1/monkseals/find', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+            },
+            mode: 'cors',
+            body: JSON.stringify(jsonBody),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+       const parsedResult0 = JSON.stringify(result)
+       const parsedResult = JSON.parse(parsedResult0)
+        
+        return parsedResult;
+
+    } catch (err) {
+        console.log(err);
+    }
 }
