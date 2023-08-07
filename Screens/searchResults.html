@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="homeStyle.css" />
     <link rel="stylesheet" href="/mainStyle.css" />
+    <link rel="stylesheet" href="homeStyle.css" />
+
+    <link rel="stylesheet" href="searchForSealStyle.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap");
+    </style>
     <link rel="stylesheet" href="searchResults.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+
   <body>
     <div id="iphoneMenu">
       <div id="topnav">
@@ -60,6 +65,7 @@
         </p>
       </div>
     </ul>
+    
 
     <div class="allText scarText">
       <h1 class="scarQuestion">There are <span id="sealCount">?</span> seals matching your description</h1>
@@ -72,9 +78,12 @@
     >
         Reveal Seals
     </button>
+    <div id="resultText">
 
+    </div>
+   
     <div id="sealProfileModal">
-        <img id="img-seal" src="" alt="water monk seal" />
+      <img id="img-seal" src="" alt="water monk seal" />
       <div id="tabletMenuInfo">
         <div id="sealIdentity">
           <div id="sealName">
@@ -86,7 +95,7 @@
             <h1 id="id">R040</h1>
           </div>
         </div>
-        
+      
 
         <div id="sealInfo">
           <div id="firstMenuSection">
@@ -116,25 +125,27 @@
             <p id="birthplace">Island of Hawaii</p>
           </div>
           <div id = "familyTree" class="menuSection">
-            <p>
-              <i>Ka'ena's Family Tree</i>
-            </p>
+
+      
+              <p id="familyTreeLabel"></p>
+       
+         
             <div class="familyTree">
               <p class = "familyTreeParent" >
-                <img id="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
-                <p onclick= "openFamilyTree()">Martha</p>
-                <p class = "familyTreeRelation" onclick= "openFamilyTree()">Mother</p>
-                <div class="vlContainer">
+                <img id = "motherImage" class="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
+                <p id = "mother" onclick= "openFamilyTree()">Martha</p>
+                <p id = "motherRelation" class = "familyTreeRelation" onclick= "openFamilyTree()">Mother</p>
+                <div id = "dividerLine" class="vlContainer">
                   <div class="vl" onclick= "openFamilyTree()"></div>
                 </div>
               </p>
               <p class = "familyTreeIcon">
-                <img id="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
+                <img  id = "sealFamilyTreeImage" class="kaenaSeal" src="/img/waterMonk.jpg" onclick= "openFamilyTree()"/>
                 <div class = "siblings">
-                  <p onclick= "openFamilyTree()">+8</p>
-                  <p class="siblingsText" onclick= "openFamilyTree()">siblings</p>
+                  <p id = "siblingNumber" onclick= "openFamilyTree()">+8</p>
+                  <p id = "siblingText" class="siblingsText" onclick= "openFamilyTree()">sibling(s)</p>
                 </div>
-                <p class= "familyTreeName" onclick= "openFamilyTree()">Ka'ena</p>
+                <p id = "sealName2" class= "familyTreeName" onclick= "openFamilyTree()">Ka'ena</p>
               
               </p>
             </div>
@@ -147,21 +158,16 @@
         </div>
       </div>
       <button
-        onclick="hideProfile()"
-        id="returnBtn"
+      onclick="hideProfile()"
+      id="returnBtn"
       >
-      <i class="fa fa-angle-left"></i>
+        <i class="fa fa-angle-left"></i>
       </button>
     </div>
-
-      <div id="resultText">
-      </div>
-     
-
-    
-    </div>
-    <script src="selectSeal.js"></script>
-    <script src="/main.js"></script>
-    <script src="dataArray.js"></script>
-  </body>
+  </div>
+  
+  <script src="searchForSeal.js"></script>
+  <script src="selectSeal.js"></script>
+  <script src="/main.js"></script>
+</body>
 </html>

@@ -4,7 +4,9 @@ var btn = document.getElementById("filterButton")
 
 var closeBtn = document.getElementById("close")
 
-const finalSiblingResults = []
+var sealName;
+
+var finalSiblingResults = []
 
 
 function openModal() {
@@ -263,13 +265,25 @@ function revealSeals(e) {
 
 }
 
-function sealProfile(e) {
-    let arrayResults = JSON.parse(localStorage.results)
-    let motherResult =  JSON.parse(localStorage.motherResults)
+async function sealProfile(e) {
+    finalSiblingResults = [];
+    var motherImage = document.getElementById("motherImage")
+    var mother = document.getElementById("mother")
+    var motherRelation = document.getElementById("motherRelation")
+    var dividerLine = document.getElementById("dividerLine")
+    mother.style.display = 'block';
+    motherImage.style.display = 'block';
+    motherRelation.style.display = 'block';
+    dividerLine.style.display = 'flex';
 
+    let arrayResults = JSON.parse(localStorage.results)
+    console.log(arrayResults[e.target.id].sealid)
+
+    sealName = arrayResults[e.target.id].name
+    localStorage.sealName = JSON.stringify(sealName)
 
     const targetKey = "mother";
-    const searchResults = String(searchForKey(arrayResults, targetKey));
+    const searchResults = String(searchForKey(arrayResults[e.target.id], targetKey));
     console.log("Results for key '" + targetKey + "':", searchResults);
 
     if (searchResults.length > 2) {
@@ -278,15 +292,19 @@ function sealProfile(e) {
     var motherObject = { [motherKey]: searchResults };
     console.log(motherObject)
 
-    getUser2(motherObject);
+    await getUser2(motherObject);
+    let motherResult =  JSON.parse(localStorage.motherResults)
+    console.log(motherResult)
 
+    if (motherResult.length > 0){
     var mother = document.getElementById("mother")
     var motherImage = document.getElementById("motherImage")
-    mother.innerHTML = motherResult[e.target.id].name
-    motherImage.src = motherResult[e.target.id].image
-    if ( motherResult[e.target.id].name === null) {
+    if ( motherResult[0].name == null) {
         mother.innerHTML = "No Name";
     }
+    mother.innerHTML = motherResult[0].name
+    motherImage.src = motherResult[0].image
+  
 
     console.log("dog" + mother)
     }else{
@@ -294,15 +312,25 @@ function sealProfile(e) {
         var mother = document.getElementById("mother")
         var motherRelation = document.getElementById("motherRelation")
         var dividerLine = document.getElementById("dividerLine")
-        mother.remove()
-        motherImage.remove()
-        motherRelation.remove()
-        dividerLine.remove()
+        mother.style.display = 'none';
+        motherImage.style.display = 'none';
+        motherRelation.style.display = 'none';
+        dividerLine.style.display = 'none';
+    }
+    }else{
+        var motherImage = document.getElementById("motherImage")
+        var mother = document.getElementById("mother")
+        var motherRelation = document.getElementById("motherRelation")
+        var dividerLine = document.getElementById("dividerLine")
+        mother.style.display = 'none';
+        motherImage.style.display = 'none';
+        motherRelation.style.display = 'none';
+        dividerLine.style.display = 'none';
     }
     
     const siblingResult = []
     const targetKey2 = "siblings";
-    const searchResults2 = String(searchForKey(arrayResults, targetKey2));
+    var searchResults2 = String(searchForKey(arrayResults[e.target.id], targetKey2));
     console.log("Results for key '" + targetKey2 + "':", searchResults2);
    
 
@@ -334,6 +362,7 @@ function sealProfile(e) {
     });
     console.log(finalSiblingResults)
     console.log(finalSiblingResults[0][0].name)
+    siblingResult = null
 
 
 
@@ -507,12 +536,13 @@ async function getUser3(jsonBody) {
 function openFamilyTree() {
     location.href = "familyTree.html"
     console.log(finalSiblingResults)
+    console.log(finalSiblingResults[0][0].name)
     localStorage.finalSiblings = JSON.stringify(finalSiblingResults)
-    localStorage.sibling1name = finalSiblingResults[0][0].name
-    localStorage.sibling1image = finalSiblingResults[0][0].image
    
   
   }
+
+  
   
 
 class FamilyTreeParent extends HTMLElement {

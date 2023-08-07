@@ -69,6 +69,10 @@
   
 
     <script>
+
+  var sealName = JSON.parse(localStorage.sealName)
+    var familyHeading = document.getElementById('familyTreeHeading')
+    familyHeading.innerHTML = (sealName+"'s Siblings")
       // Function to create a new family-tree-parent element
       function createFamilyTreeParent(id, name, relation, image) {
           const newElement = document.createElement('family-tree-parent');
@@ -81,21 +85,35 @@
 
      var siblingResults = JSON.parse(localStorage.finalSiblings)
       console.log (siblingResults.length)
-
      
 
-     console.log (siblingResults)
-      const newFamilyTreeParent = createFamilyTreeParent(
+    var newFamilyTreeParent = [];
+     for (i = 0; i<siblingResults.length; i++){
+      if (siblingResults[i][0].name == null){
+        siblingResults[i][0].name = "No Name"
+      }
+      if (siblingResults[i][0].image == null){
+        siblingResults[i][0].image = "/img/noImage.webp"
+      }
+      newFamilyTreeParent[i] = createFamilyTreeParent(
           'new_sibling', // New ID
-          'dog',        // New name
+          siblingResults[i][0].name,        // New name
           'Sibling',     // New relation
-         '/img/waterMonk.jpg'// New image URL
+          siblingResults[i][0].image// New image URL
       );
+      const parentElement = document.getElementById('parent-element');
+      parentElement.appendChild(newFamilyTreeParent[i]);
+     }
+
+   
+      
 
       // Add the new family-tree-parent element to the parent element
-      const parentElement = document.getElementById('parent-element');
-      parentElement.appendChild(newFamilyTreeParent);
-
+     
+      
+      // Clear the local storage variable
+      localStorage.removeItem("finalSiblings");
+   
       
   </script>
   <script src="searchForSeal.js"></script>
