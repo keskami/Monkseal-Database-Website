@@ -72,6 +72,9 @@
 
   var sealName = JSON.parse(localStorage.sealName)
     var familyHeading = document.getElementById('familyTreeHeading')
+    if (sealName == null){
+      sealName = "No Name"
+    }
     familyHeading.innerHTML = (sealName+"'s Siblings")
       // Function to create a new family-tree-parent element
       function createFamilyTreeParent(id, name, relation, image) {
