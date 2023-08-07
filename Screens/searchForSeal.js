@@ -210,11 +210,7 @@ function revealSeals(e) {
     
     let arrayResults = JSON.parse(localStorage.results)
 
-    revealBtn = document.getElementById("reveal")
-    sealCount = document.getElementById("sealCount")
-
-    revealBtn.style.display = 'none'
-    sealCount.innerHTML = arrayResults.length
+   
     
     var resultDiv = document.getElementById('resultText');
     resultDiv.innerHTML = ""
@@ -222,6 +218,7 @@ function revealSeals(e) {
         location.href = "notFound.html"
     }
 
+    
     for (i = 0; i < arrayResults.length; i++) {
         var div = document.createElement('div');
         div.classList = "searchedSeal"
