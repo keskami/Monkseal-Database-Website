@@ -192,7 +192,7 @@ async function getUser(jsonBody) {
 
 }
 
-function revealSeals(e) {
+function revealSeals1(e) {
   revealBtn = document.getElementById("reveal")
   sealCount = document.getElementById("sealCount")
 

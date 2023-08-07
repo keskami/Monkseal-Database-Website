@@ -206,8 +206,16 @@ async function getUser(jsonBody) {
 }
 
 function revealSeals(e) {
-
+    
+    
     let arrayResults = JSON.parse(localStorage.results)
+
+    revealBtn = document.getElementById("reveal")
+    sealCount = document.getElementById("sealCount")
+
+    revealBtn.style.display = 'none'
+    sealCount.innerHTML = arrayResults.length
+    
     var resultDiv = document.getElementById('resultText');
     resultDiv.innerHTML = ""
     if (arrayResults.length == 0) {
