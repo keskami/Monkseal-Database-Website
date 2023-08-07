@@ -210,7 +210,13 @@ function revealSeals(e) {
     
     let arrayResults = JSON.parse(localStorage.results)
 
-   
+    revealBtn = document.getElementById("reveal")
+    sealCount = document.getElementById("sealCount")
+
+    if (revealBtn !== null && sealCount !== null){
+    revealBtn.style.display = 'none'
+   sealCount.innerHTML = arrayResults.length
+    }
     
     var resultDiv = document.getElementById('resultText');
     resultDiv.innerHTML = ""
@@ -304,13 +310,15 @@ async function sealProfile(e) {
     if (motherResult.length > 0){
     var mother = document.getElementById("mother")
     var motherImage = document.getElementById("motherImage")
-    if ( motherResult[0].name == null) {
-        mother.innerHTML = "No Name";
+    if ( motherResult[0].name !== null) {
+        mother.innerHTML = motherResult[0].name
+    }else{
+        mother.innerHTML = motherResult[0].sealid
     }
-    mother.innerHTML = motherResult[0].name
+   
+   
+   
     motherImage.src = motherResult[0].image
-  
-
     console.log("dog" + mother)
     }else{
         var motherImage = document.getElementById("motherImage")
@@ -417,7 +425,7 @@ async function sealProfile(e) {
         familyTreeLabel.innerHTML = (arrayResults[e.target.id].name+"'s Family Tree")
     }else{
         familyTreeLabel.innerHTML = ("Family Tree")
-        sealName2.innerHTML = ("No Name")
+        sealName2.innerHTML = arrayResults[e.target.id].sealid
     }
 
 
