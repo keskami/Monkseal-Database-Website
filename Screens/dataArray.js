@@ -267,6 +267,10 @@ function sealProfile(e) {
     scar.innerHTML = null
     if (Object.values(arrayResults[e.target.id])[i] == 'x') {
       scar.innerHTML = Object.keys(arrayResults[e.target.id])[i]
+      let scarStr = Object.keys(arrayResults[e.target.id])[i]
+      let firstPart = scarStr.charAt(0).toUpperCase() + scarStr.substring(1, scarStr.length - 4)
+      let formattedScar = firstPart + ' Scar'
+      scar.innerHTML = formattedScar
     }
     else {
       scar.innerHTML = null
@@ -277,7 +281,10 @@ function sealProfile(e) {
     var bleachMarks = document.createElement('p')
     bleachMarks.innerHTML = null
     if (Object.values(arrayResults[e.target.id])[i] == 'x') {
-      bleachMarks.innerHTML = Object.keys(arrayResults[e.target.id])[i]
+      let bleachStr = Object.keys(arrayResults[e.target.id])[i]
+      let firstPart = bleachStr.charAt(0).toUpperCase() + bleachStr.substring(1, bleachStr.length - 6)
+      let formattedBleach = firstPart + " Bleach"
+      bleachMarks.innerHTML = formattedBleach
     }
     else {
       bleachMarks.innerHTML = null
@@ -288,7 +295,9 @@ function sealProfile(e) {
     var islandSightings = document.createElement('p')
     islandSightings.innerHTML = null
     if (Object.values(arrayResults[e.target.id])[i] == 'x') {
-      islandSightings.innerHTML = Object.keys(arrayResults[e.target.id])[i]
+      islandStr = Object.keys(arrayResults[e.target.id])[i]
+      let formattedIslandStr = islandStr.charAt(0).toUpperCase() + islandStr.substring(1, islandStr.length - 8)
+      islandSightings.innerHTML = formattedIslandStr
     }
     else {
       islandSightings.innerHTML = null
@@ -296,7 +305,12 @@ function sealProfile(e) {
     island.appendChild(islandSightings)
   }
   birthplace.innerHTML = arrayResults[e.target.id].birthisland
-  img.src = arrayResults[e.target.id].image
+  if (arrayResults[e.target.id].image == null) {
+    img.src = "/img/waterMonk.jpg"
+  }
+  else {
+    img.src = arrayResults[e.target.id].image
+  }
 
 }
 
