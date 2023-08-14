@@ -61,6 +61,7 @@ function applyFilters() {
     if (typeof (Storage) !== "undefined") {
         localStorage.i = 0
         var islands = document.getElementById('islands')
+        var sex = document.getElementById('sex')
         var tagNum = document.getElementById('tagNum')
         var tagSide = document.getElementById('tagSide')
         var bleachNum = document.getElementById("bleachNum")
@@ -76,6 +77,12 @@ function applyFilters() {
             }
             localStorage.i = parseInt(localStorage.i) + 1
             localStorage.setItem("var" + localStorage.i, "x")
+        }
+        if (sex.value != "") {
+            keys[localStorage.i] = "sex"
+            localStorage.i = parseInt(localStorage.i) + 1
+            localStorage.setItem("var" + localStorage.i, sex.value)
+
         }
         if (tagNum.value.length != 0) {
             keys[localStorage.i] = tagSide.value
@@ -114,6 +121,7 @@ function applyFilters() {
             obj[keys] = inputs[index];
             return obj;
         }, {});
+        
 
         getUser(combinedObject);
 
@@ -129,12 +137,16 @@ function changeFilterNum() {
     if (typeof (Storage) !== "undefined") {
         localStorage.i = 0
         var islands = document.getElementById('islands')
+        var sex = document.getElementById('sex')
         var tagNum = document.getElementById('tagNum')
         var bleachNum = document.getElementById("bleachNum")
         var selectedScars = document.querySelectorAll('input[type="checkbox"]:checked')
         var selectedBleach = document.querySelectorAll('input[id="bleachDropdown"]:checked')
 
         if (islands.value != "") {
+            localStorage.i = parseInt(localStorage.i) + 1
+        }
+        if (sex.value != "") {
             localStorage.i = parseInt(localStorage.i) + 1
         }
         if (tagNum.value.length != 0) {
@@ -158,6 +170,7 @@ function changeFilterNum() {
 
 function clearModal() {
     var islands = document.getElementById('islands')
+    var sex = document.getElementById('sex')
     var tagNum = document.getElementById('tagNum')
     var bleachNum = document.getElementById("bleachNum")
     var selected = document.getElementsByName("checkbox")
@@ -165,6 +178,7 @@ function clearModal() {
 
 
     islands.value = ""
+    sex.value = ""
     tagSide.value = ""
     tagNum.value = ""
     bleachNum.value = ""
