@@ -545,6 +545,26 @@ input[type="radio"]{
   margin-left: 4px;
 }
 
+#genderButton{
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+#maleButton{
+  display: inline-block;
+  width: calc((100vw)/3.25);
+  height: calc((100vw)/3.25);
+
+}
+
+#femaleButton{
+  display: inline-block;
+  width: calc((100vw)/3.25);
+  height: calc((100vw)/3.25);
+ 
+}
+
+
   @media only screen and (min-width: 700px) {
     .img-monk{
         width: 650px;
@@ -561,6 +581,17 @@ input[type="radio"]{
       height: 150px;
       font-size: 22px;
         width: 155px
+    }
+
+    #maleButton{
+      height: 220px;
+      font-size: 22px;
+        width: 225px
+    }
+    #femaleButton{
+      height: 220px;
+      font-size: 22px;
+        width: 225px
     }
 
    

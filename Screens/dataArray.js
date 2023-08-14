@@ -10,9 +10,34 @@ function selectIsland() {
     // Sorry! No Web Storage support..
   }
   console.log(localStorage.var1)
-  location.href = 'bleachNumber1.html';
+  location.href = 'enterGender.html';
 }
 
+function getGender() {
+  localStorage.i = parseInt(localStorage.i) + 1
+  var element1 = document.getElementById("maleButton");
+  var element2 = document.getElementById("femaleButton");
+  var isSelected = "false";
+  if (element1 && element1.classList.contains("selected")) {
+    var textValue1 = element1.textContent;
+    console.log( textValue1);
+    localStorage.setItem("var" + localStorage.i, textValue1.toLowerCase());
+    localStorage.setItem("key" + localStorage.i, 'sex')
+    isSelected = "true"
+    
+  }
+    if (element2 && element2.classList.contains("selected")) {
+      var textValue2 = element2.textContent;
+      console.log( textValue2);
+      localStorage.setItem("var" + localStorage.i, textValue2.toLowerCase());
+      localStorage.setItem("key" + localStorage.i, 'sex')
+      isSelected = "true"
+    }
+    if (isSelected == "true"){
+    location.href = 'bleachNumber1.html';
+    }
+  
+}
 
 function selectBleachNumber() {
   if (typeof (Storage) !== "undefined") {

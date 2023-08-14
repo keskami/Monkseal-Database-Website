@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="homeStyle.css" />
+    <link rel="stylesheet" href="/mainStyle.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="iphoneMenu">
+      <div id="topnav">
+        <p id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </p>
+        <p class="right">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </p>
+        <p class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </p>
+      </div>
+
+      <div id="verticalMenu">
+        <ul>
+          <li id="findSeal"><a href="findSeals.html">FIND A SEAL</a></li>
+          <li><a href="/main.html">HOME</a></li>
+          <li><a href="learnMore.html">LEARN MORE</a></li>
+          <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+          <li><a href="aboutUs.html">ABOUT</a></li>
+          <li><a href="searchForSeal.html">SEARCH FOR A SEAL</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul id="tabletUL">
+      <div id="wrapper">
+        <li id="MonkSeal">
+          Hawaiian <br />
+          Monk Seal
+        </li>
+        <li><a href="/main.html">HOME</a></li>
+        <li><a href="learnMore.html">LEARN MORE</a></li>
+        <li><a href="oceanActivities.html">OCEAN ACTIVITES</a></li>
+        <li><a href="aboutUs.html">ABOUT</a></li>
+        <li><a href="searchForSeal.html">SEARCH FOR A SEAL</a></li>
+        <li id="findSeal2"><a href="findSeals.html">FIND A SEAL</a></li>
+        <p class="right" id="reportNumber">
+          Report a sighting <br />
+          <b>(888) 256-9840</b>
+        </p>
+      </div>
+    </ul>
+    <img class="img-monk" src="/img/sealSex.png" alt="water monk seal" />
+    <progress value="85.8" max="100"></progress>
+    <div class="allText">
+      <h1 class="question">Gender</h1>
+      <p class="description">Please select the seal's gender below</p>
+    </div>
+    <div class="allButtons" id="genderButton">
+      <button type="button" class="btn generalBtn" id = "maleButton">Male</button>
+      <button type="button" class="btn generalBtn" id = "femaleButton">Female</button>
+    </div>
+    
+    <script>
+      const buttons = document.querySelectorAll('.btn');
+      
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          buttons.forEach(btn => {
+            btn.classList.remove('selected');
+          });
+          button.classList.add('selected');
+        });
+      });
+    </script>
+        
+    <div class="enterNumbuttons">
+      <button
+        class="indecipherableButton generalBtn"
+        onclick="location.href='bleachNumber1.html'"
+      >
+        Indecipherable
+      </button>
+      <button class="sumbitButton generalBtn" onclick="getGender()">
+        Next
+      </button>
+    </div>
+
+    <script src="/main.js"></script>
+    <script src="dataArray.js"></script>
+  </body>
+</html>
